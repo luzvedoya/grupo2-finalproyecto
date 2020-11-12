@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+    font-family:  'Slabo 27px', serif;
+    background-color: rgb(1, 22, 39);
+}
+
+img{
+    width: 100%;
+}
+
+li{
+    list-style-type: none;
+}
+
+.peliculas{
+    margin: 0;
+}
+
+.tituloP{
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.cadaTitulo{
+    color: white;
+    font-size: 1rem;
+    margin-top: 30px;
+}
+
+.cadaPeli{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+@media (min-width: 1024px){
+    .cadaPeli{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 10px;
+    }
+
+
+}
+
