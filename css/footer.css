@@ -1,0 +1,150 @@
+*{
+    box-sizing: border-box;
+    font-family:  'Slabo 27px', serif;
+}
+
+img{
+    width: 100%;
+}
+ 
+li{
+    list-style-type: none;
+}
+
+/*CSS FOOTER*/
+
+.footer{
+    display: grid;
+    background-color: rgb(33, 37, 41);
+    width: 100%;
+}
+
+.logo{
+    display: grid;
+    width: 35%;
+    height: 30%;
+    text-align: center;
+    align-items: center;
+    margin-left: 33%;
+   
+
+}
+
+.fotuli{
+    display: grid;
+    align-items: center;
+    text-align: center;
+   
+}
+
+.opciones{
+    margin-right: 45px;
+}
+
+.opciones li{
+    padding: 10px;
+    margin: 0%;
+}
+
+.opciones li a{
+    display: grid;
+    color:white;
+    text-decoration: none;
+    font-size: 10px;
+    justify-content: center;
+    
+
+}
+
+.opciones li a:hover{ 
+    text-decoration: underline;
+}
+
+.redes{
+    display: grid;
+    align-items: center;
+    text-align: center;
+
+}
+h2 a{
+    color:white;
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+
+}
+
+
+.copyright{
+    display: grid;
+    color: white;
+    background-color: rgb(33, 37, 41);
+    text-align: center;
+    justify-content: center;
+    font-weight: 0;
+    font-size: 8px;
+    width: 100%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+@media (min-width: 1024px){
+    
+    .footer{
+        display: flex;
+        background-color: rgb(33, 37, 41);
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        
+    }
+    .fotuli{
+        margin-left: 30px;
+        height: 70px;
+        width: 120px;
+    }
+
+    .logo{
+        height: 50px;
+        width: 75px;
+        margin: 0%;
+    }
+    
+    .opciones{
+        display: flex;
+        
+    }
+    
+    .opciones li a{
+        display: grid;
+        color:white;
+        text-decoration: none;
+        font-size: 20px;
+        margin-right: 30px;
+        margin-left: 30px;
+        align-items: center;
+        text-align: center;
+        
+    }
+
+    h2 a{
+        color:white;
+        font-size: 30px;
+    
+    }
+    
+    
+    .copyright{
+        display: grid;
+        color: white;
+        background-color: rgb(33, 37, 41);
+        text-align: center;
+        justify-content: center;
+        font-weight: 0;
+        font-size: 15px;
+        width: 100%;
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+}    
+   

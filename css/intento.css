@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+    font-family:  'Slabo 27px', serif;
+    margin: 0;
+}
+
+img{
+    width: 100%;
+}
+
+li{
+    list-style-type: none;
+    
+}
+
+/*CSS HEADER*/
+.primerah{
+    display: grid;
+    grid-template-columns: 1fr 0.25fr 0.25fr;
+    background-color: rgb(33, 37, 41) ;
+    justify-items: right;
+}
+
+.logo{
+    height: 40px;
+    width: 70px;
+    margin-right: 190px;
+}
+
+.buscador{
+    display: none;
+}
+
+.menuham{
+    color: white;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.lupa{
+    color: white;
+    margin-top: 10px;
+}
+
+.clickmenu{
+    display: none;
+}
+
+.clickmenu .opciones li a {
+    text-decoration: none;
+    color: white;
+}
+
