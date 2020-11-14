@@ -10,11 +10,13 @@ window.addEventListener('load', function(){
     .then(function(peliculas){
         console.log(peliculas)
 
-        peliculas.results.forEach(peli => {  
-            cadaPeli.innerHTML += `<div>
-                                    <h2 class="cadaTitulo">${peli.title}</h2>
-                                    <img src="https://image.tmdb.org/t/p/w500${peli.poster_path}" alt="${peli.title}"/>
-                                    </div>`
+        peliculas.results.forEach(populares => {  
+            cadaPeli.innerHTML += `<a href='detallePelis.html?id=${populares.id}&titulo=${populares.title}&overview=${populares.overview}&popularity=${populares.popularity}&portada=${populares.poster_path}&fecha=${populares.release_date}&duracion=${populares.runtime}&votos=${populares.vote_average}'
+                                    <div>
+                                    <img src="https://image.tmdb.org/t/p/w500${populares.poster_path}" alt="${populares.title}"/>
+                                    <h2 class="cadaTitulo">${populares.title}</h2>
+                                    </div>
+                                    </a>`
         });
     })
     .catch(function(error){

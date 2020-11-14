@@ -1,0 +1,345 @@
+*{
+    box-sizing: border-box;
+    font-family:  'Slabo 27px', serif;
+    margin: 0;
+}
+
+img{
+    width: 100%;
+}
+
+li{
+    list-style-type: none;
+}
+
+/*CSS HEADER*/
+.header{
+    display: flex;
+    background-color: rgb(33, 37, 41); 
+    
+}
+
+.hlogo{
+    width: 112px;
+    margin: 0%;
+
+}
+
+.hfotologo{
+    height: 75px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-left: 12px;
+
+}
+
+.hmenu .hopciones{
+    width: 50%;
+    
+}
+
+.hopciones{
+    display: flex;
+    margin-left: 30px;
+}
+
+.hopciones2{
+    display: flex;
+    margin-left: 30px;
+}
+
+.hopciones2 li a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-left: 20px;
+
+}
+
+
+.hopciones li a{
+    color:white;
+    text-decoration: none;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.hopciones li a:hover{ 
+    text-decoration: underline;
+}
+
+.hopciones2 li a:hover{ 
+    text-decoration: underline;
+}
+
+
+/*CSS DETALLE*/
+.desktop{
+    display: none;
+}
+
+.celular{
+    background-color: rgb(1, 22, 39);
+}
+
+.tituloCel{
+    text-align: center;
+    font-size: 3rem;
+    text-decoration: underline;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.infoCel{
+    color: white;
+    font-size: 1rem;
+    justify-content: left;
+    text-align: justify;
+}
+
+.datoCel{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.dato2Cel{
+    margin-top: 3px;
+    margin-left: 8px;
+}
+
+.portadaCel{
+    margin: 10px;
+}
+
+
+
+
+
+
+/*CSS FOOTER*/
+
+.footer{
+    display: grid;
+    background-color: rgb(33, 37, 41);
+    width: 100%;
+    border-top: 4px solid white;
+}
+
+.logo{
+    display: grid;
+    width: 35%;
+    height: 30%;
+    text-align: center;
+    align-items: center;
+    margin-left: 33%;
+   
+
+}
+
+.fotuli{
+    display: grid;
+    align-items: center;
+    text-align: center;
+   
+}
+
+.opciones{
+    margin-right: 45px;
+}
+
+.opciones li{
+    padding: 10px;
+    margin: 0%;
+}
+
+.opciones li a{
+    display: grid;
+    color:white;
+    text-decoration: none;
+    font-size: 10px;
+    justify-content: center;
+    
+
+}
+
+.opciones li a:hover{ 
+    text-decoration: underline;
+}
+
+.redes{
+    display: grid;
+    align-items: center;
+    text-align: center;
+
+}
+h2 a{
+    color:white;
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+
+}
+
+
+.copyright{
+    display: grid;
+    color: white;
+    background-color: rgb(33, 37, 41);
+    text-align: center;
+    justify-content: center;
+    font-weight: 0;
+    font-size: 8px;
+    width: 100%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+
+@media (min-width: 1024px){
+
+   /*HEADER*/
+   .hlogo{
+    width: 120px;
+
+    }
+
+    .hfotologo{
+        height: 70px;
+        margin-top: 10px;
+        margin-left: 12px;
+    }
+
+    .hmenu{
+        display: flex;
+        align-items: center;
+    }
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid white ;
+    }
+
+    .hopciones{
+        margin-left: 0;
+    }
+
+    .hopciones2{
+        margin-left: 15px;
+    }
+
+    .hopciones li a{
+        padding: 50px;
+        font-size: 20px;
+    }
+
+    .hopciones2 li a{
+        padding: 50px;
+        font-size: 20px;
+    }
+
+    /*DETALLE*/
+    .celular{
+        display: none;
+    }
+
+    .desktop{
+        display: block;
+        background-color: rgb(1, 22, 39);
+    }
+
+    .todoDetalle{
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+    }
+
+    .tituloDesk{
+        text-align: center;
+        font-size: 5rem;
+        text-decoration: underline;
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    .abajoTitulo{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        color: white;
+    }
+    .fecha{
+        text-align: right;
+        margin-right: 10px;
+        margin-bottom: 30px;
+    }
+
+    .duracion{
+        margin-left: 10px;
+        margin-bottom: 30px;
+    }
+    
+
+
+ 
+    /*FOOTER*/
+    .footer{
+        display: flex;
+        background-color: rgb(33, 37, 41);
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+    .fotuli{
+        margin-left: 30px;
+        height: 70px;
+        width: 120px;
+    }
+
+    .logo{
+        height: 50px;
+        width: 75px;
+        margin: 0%;
+    }
+    
+    .opciones{
+        display: flex;
+    }
+    
+    .opciones li a{
+        display: grid;
+        color:white;
+        text-decoration: none;
+        font-size: 20px;
+        margin-right: 30px;
+        margin-left: 30px;
+        align-items: center;
+        text-align: center;
+    }
+
+    h2 a{
+        color:white;
+        font-size: 30px;
+    }
+    
+    
+    .copyright{
+        display: grid;
+        color: white;
+        background-color: rgb(33, 37, 41);
+        text-align: center;
+        justify-content: center;
+        font-weight: 0;
+        font-size: 15px;
+        width: 100%;
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+}
