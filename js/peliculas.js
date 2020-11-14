@@ -14,10 +14,10 @@ window.addEventListener('load', function(){
         console.log(peliculasPopulares)
 
         peliculasPopulares.results.forEach(populares => {  
-            cadaPeliPopu.innerHTML += `<a href='detallePelis.html?id=${populares.id}&titulo=${populares.title}&overview=${populares.overview}&popularity=${populares.popularity}&portada=${populares.poster_path}&fecha=${populares.release_date}&duracion=${populares.runtime}&votos=${populares.vote_average}'
+            cadaPeliPopu.innerHTML += `<a href='detallePelis.html?id=${populares.id}&titulo=${populares.title}&overview=${populares.overview}&popularity=${populares.popularity}&portada=${populares.poster_path}&fecha=${populares.release_date}&duracion=${populares.runtime}&votos=${populares.vote_average}&genero=${populares.genre_ids}'
                                     <div>
-                                    <img src="https://image.tmdb.org/t/p/w500${populares.poster_path}" alt="${populares.title}"/>
-                                    <h2 class="cadaTitulo">${populares.title}</h2>
+                                        <img src="https://image.tmdb.org/t/p/w500${populares.poster_path}" alt="${populares.title}"/>
+                                        <h2 class="cadaTitulo">${populares.title}</h2>
                                     </div>
                                     </a>`
         });

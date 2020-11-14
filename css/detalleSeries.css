@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
     font-family:  'Slabo 27px', serif;
+    margin: 0;
 }
 
 img{
@@ -79,134 +80,50 @@ li{
 }
 
 
-/*CSS DETAIL*/
-.primeraparte{
-    display: grid;
-    grid-template-rows: 105px 35px 50px;
+/*CSS DETALLE*/
+.desktop{
+    display: none;
+}
+
+.celular{
     background-color: rgb(1, 22, 39);
 }
 
-.buttons{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center; 
-}
-
-.ver{
-    border: solid;
-    color: white;
+.nombreCel{
     text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-    background-color: rgba(255, 255, 255, 0.2);
-    width: 80%;
-    height: 30px;
-    margin: auto;
-}
-
-.buttons a:hover{ 
-    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 3rem;
     text-decoration: underline;
-    color: black;
-}
-
-.titulopeli {
-    text-align: center;
-    font-size: 60px;
     color: white;
+    margin-bottom: 20px;
 }
 
-.primeraparte .titulopeli .titulo h1{
-    align-items: center;
-    margin-top: 10px;
-}
-
-.abajotitulo{
-    display: grid;
-    grid-template-columns: 1fr 2fr 3fr;
+.infoCel{
     color: white;
-    margin-top: 10px;
-}
-
-.abajotitulo article h3{
-    text-align: center; 
-}
-
-.fotodesktop{
-    display: none;
-}
-
-.container{
-    display: flex;
-    background-color: rgb(1, 22, 39);
-}
-
-.informacion{
-    color: white;
-    display: grid;
-    grid-template-rows: 310px 50px 100px 50px;
-}
-
-.datos{
-    display: flex;
-    margin-left: 34px;
-    margin-right: 0;
-}
-
-.comedia{
-    margin-left: 0;
-    margin-right: 34px;
-}
-
-.datos h3 {
-    padding-left: 10px;
-    font-weight: lighter;
-    font-size: 18px;
-}
-
-.comedia h3{
-    padding-left: 10px;
-    font-weight: lighter;
-    font-size: 18px;
-}
-
-.datos3{
-    display: none;
-}
-
-.resumen{
-    display: flex;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.resumen h3{
-    font-weight: lighter;
+    font-size: 1rem;
+    justify-content: left;
     text-align: justify;
 }
 
-.tituloresumen{
-    display: none;
-}
-
-
-.datos2 {
+.datoCel{
     display: flex;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin-top: 20px;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
-.datos2 h3{
-    padding-left: 10px;
-    font-weight: lighter;
-    font-size: 16px;
+.dato2Cel{
+    margin-top: 3px;
+    margin-left: 8px;
 }
 
-h2{
-    text-decoration: underline;
-    font-size: 16px;
-    font-weight: lighter;
+.portadaCel{
+    margin: 10px;
 }
+
+
+
+
+
 
 /*CSS FOOTER*/
 
@@ -330,64 +247,55 @@ h2 a{
         font-size: 20px;
     }
 
-
-    /*DETAIL*/
-    .fotoportada{
+    /*DETALLE*/
+    .celular{
         display: none;
     }
 
-    .primeraparte{
-        grid-template-rows: 160px 35px 10px;
-    }
-    
-    .abajotitulo{
-        display: none;
-    }
-
-    .titulopeli{
-        font-size: 70px;
-        margin-top: 0;
-    }
-
-    .primeraparte .titulopeli .titulo h1{
-        margin-top: 20px;
-        font-size: 80px;
-    }
-
-    .fotodesktop{
+    .desktop{
         display: block;
+        background-color: rgb(1, 22, 39);
     }
 
-    .container{
+    .todoDetalle{
         display: grid;
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: 0.5fr 1fr;
     }
 
-    .informacion{
-        grid-template-rows: 40px 40px 40px 130px 40px 40px;
+    .nombreDesk{
+        text-align: center;
+        font-size: 4.5rem;
+        text-decoration: underline;
+        color: white;
+        margin-bottom: 20px;
+        padding-top: 20px;
     }
 
-    .tituloresumen{
-        display: block;
-    }
-
-    .datos3{
-        display: flex;
-        padding-left: 20px;
-        padding-right: 20px;
+    .abajoTitulo{
+        color: white;
+        margin-top: 20px;
     }
     
-    .datos3 h3{
-        font-weight: lighter;
-        margin-top: 1.5%;
-        margin-left: 4px;
+    .info{
+        color: white;
     }
 
-    .resumen h3{
-        margin-top: 1.5%;
-        margin-left: 4px;
+    .datos{
+        display: flex;
+        margin: 20px;
+        font-size: 1.25rem;
     }
 
+    .dato2{
+        margin-left: 8px;
+    }
+
+    .portada{
+        margin: 5px;
+    }
+
+
+ 
     /*FOOTER*/
     .footer{
         display: flex;
