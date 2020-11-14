@@ -111,6 +111,9 @@ li{
 .listaGeneros{
     display: grid;
     background-color: rgb(233, 236, 240);
+    padding: 0%;
+    margin-top: 0;
+    margin-bottom: 0%;
 }
 
 .palabra{
@@ -120,12 +123,6 @@ li{
     font-size: 30px;
 }
 
-.lista{
-    display: grid;
-    padding: 0%;
-    margin-top: 0;
-    margin-bottom: 0%;
-}
 
 .todos{
     display: flex;
@@ -263,7 +260,7 @@ h2 a{
         height: 350px;
         
     }
-    .lista{
+    .listaGeneros{
         display: grid;
         padding: 5px;
         grid-template-columns: 1fr 1fr 1fr;

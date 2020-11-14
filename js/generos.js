@@ -11,15 +11,13 @@ window.addEventListener('load', function(){
         generos.genres.forEach(genero => {
             listaGeneros.innerHTML += 
             `<a href="GenresDetail.html">
-            <section class= "lista">
-            <article class="todos">
-            <h2 class="palabra"> ${genero.name} </h2>
-            </article>
-            </section>
+                    <article class="todos">
+                        <h2 class="palabra"> ${genero.name} </h2>
+                    </article>
             </a>` 
           
         });
-
+        
     })
     .catch(function(error){
         console.log(error)
