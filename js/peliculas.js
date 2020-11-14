@@ -4,7 +4,8 @@ window.addEventListener('load', function(){
     let cadaTitulo = document.querySelector('.cadaTitulo');
     let aclamadasPublico = document.querySelector('.aclamadasPublico');
     let aclamadasPor = document.querySelector ('.aclamadasPor');
-
+    let proximamente = document.querySelector ('.proximamente');
+    let proxima = document.querySelector ('.proxima');
 
     fetch('https://api.themoviedb.org/3/movie/popular?api_key=18581b65b3e6ad002984aa4952878117&language=en-US&page=1')
     .then(function(respuesta){
@@ -47,6 +48,29 @@ window.addEventListener('load', function(){
         console.log(error)
 
     })
+
+    fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=18581b65b3e6ad002984aa4952878117&language=en-US&page=1')
+    .then(function(respuesta){
+        return respuesta.json()
+    })
+    .then(function(proximamente){
+        console.log(proximamente)
+
+        proximamente.results.forEach(prox => {  
+            proxima.innerHTML += `<a href='detallePelis.html?id=${prox.id}&titulo=${prox.title}&overview=${prox.overview}&popularity=${prox.popularity}&portada=${prox.poster_path}&fecha=${prox.release_date}&duracion=${prox.runtime}&votos=${prox.vote_average}'
+                                    <div>
+                                    <img src="https://image.tmdb.org/t/p/w500${prox.poster_path}" alt="${prox.title}"/>
+                                    <h2 class="cadaTitulo">${prox.title}</h2>
+                                    </div>
+                                    </a>`
+        });
+    })
+    .catch(function(error){
+        console.log(error)
+
+    })
+
+    
 
 
 
