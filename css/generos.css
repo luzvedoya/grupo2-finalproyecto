@@ -103,12 +103,12 @@ li{
 .imagen{
     display: grid;
     height: 300px;
-    background-image: url("../img/generos.jpg");
+    background-image: url('img/generos.jpg');
     background-attachment: fixed;
     
 }
 
-.generos{
+.listaGeneros{
     display: grid;
     background-color: rgb(233, 236, 240);
 }
@@ -255,7 +255,7 @@ h2 a{
     /*Generos*/
 
     .titulo {
-        font-size: 45px;
+        font-size: 60px;
     }
 
     .imagen{
@@ -264,12 +264,12 @@ h2 a{
         
     }
     .lista{
+        display: grid;
         padding: 5px;
         grid-template-columns: 1fr 1fr 1fr;
         
     }
-
-
+    
     .todosimg{
         height: 100px;
         width: 100px;

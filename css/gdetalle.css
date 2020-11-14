@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+    font-family:  'Slabo 27px', serif;
+    
+}
+
+img{
+    width: 100%;
+}
+
+li{
+    list-style-type: none;
+}
