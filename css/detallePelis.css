@@ -264,16 +264,18 @@ h2 a{
 
     .tituloDesk{
         text-align: center;
-        font-size: 5rem;
+        font-size: 4.5rem;
         text-decoration: underline;
         color: white;
         margin-bottom: 20px;
+        padding-top: 20px;
     }
 
     .abajoTitulo{
         display: grid;
         grid-template-columns: 1fr 1fr;
         color: white;
+        margin-top: 20px;
     }
     .fecha{
         text-align: right;
@@ -286,6 +288,23 @@ h2 a{
         margin-bottom: 30px;
     }
     
+    .info{
+        color: white;
+    }
+
+    .datos{
+        display: flex;
+        margin: 20px;
+        font-size: 1.25rem;
+    }
+
+    .dato2{
+        margin-left: 8px;
+    }
+
+    .portada{
+        margin: 5px;
+    }
 
 
  

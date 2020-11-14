@@ -28,11 +28,10 @@ window.addEventListener('load',function(){
                                     </section>
                                     
                                     <section class="info">
-                                        <section>
-                                            <h2>Popularity: ${popularity}</h2>
-                                            <h2>Votes' average: ${votos}</h2>
-                                            <p>Sinopsis: ${overview}</p>
-                                        </section>
+
+                                    <article class="datos"><h3 class="dato1">Popularity: </h3><p class="dato2">${popularity}</p></article>
+                                    <article class="datos"><h3 class="dato1">Votes' average: </h3><p class="dato2">${votos}</p></article>
+                                    <article class="datos"><h3 class="dato1">Sinopsis: </h3><p class="dato2">${overview}</p></article>
                                     </section>
 
                                 </div>

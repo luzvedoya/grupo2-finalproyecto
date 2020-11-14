@@ -25,21 +25,26 @@ li{
     padding: 0;
 }
 
+.subtitulo{
+    color: white;
+}
+
 .cadaTitulo{
     color: white;
     font-size: 1rem;
     margin-top: 5px;
     margin-bottom: 30px;
+    text-decoration: none;
 }
 
-.cadaPeli{
+.cadaPeliPopu{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
 }
 
 @media (min-width: 1024px){
-    .cadaPeli{
+    .cadaPeliPopu{
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         gap: 10px;
     }
