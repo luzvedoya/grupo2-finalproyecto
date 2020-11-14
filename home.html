@@ -6,6 +6,7 @@
     <title>Elit-home</title>
     <link rel="stylesheet" href="css/home.css">
     <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/uikit.min.css">
 </head>
 <body>
     <main class="container">
@@ -38,12 +39,18 @@
                 
             </header>
         </div>
-        <section>
+        <section class="restopagina">
             <section class="fotocover" id="fotocover">
 
             </section>
             <section>
-
+                <h2></h2>
+                <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="sets: true">
+                    <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-4@m  uk-grid" id="populares">
+                    </ul>               
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>               
+                </div>
             </section>
         </section>
         <!--<section class="restopagina">
@@ -200,7 +207,8 @@
         
         <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     </main>
-
+    <script src="js/uikit-icons.min.js"></script>
+    <script src="js/uikit.min.js"></script>
     <script src="js/home.js"></script>
 </body>
 </html>
