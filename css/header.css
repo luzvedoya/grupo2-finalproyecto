@@ -2,6 +2,7 @@
     box-sizing: border-box;
     font-family:  'Slabo 27px', serif;
     /*background-color: #1d3557;*/
+    margin: 0%;
 }
 
 img{
@@ -12,9 +13,69 @@ li{
     list-style-type: none;
     
 }
+.desktop{
+    display: none;
+}
+.primeraparte{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(33, 37, 41);
 
+}
+.hlogo{
+    width: 4.5rem;
+}
+.hfotologo{
+    margin-top: 4px;
+    margin-left: 10px;
+}
+.menuham{
+    color: white;
+    font-size: 1.8rem;
+    margin-top: 9px;
+    margin-right: 20px;
+}
+.clickmenu{
+    background-color: rgb(33, 37, 41);
+    display: none;
+}
+.clickmenu .opciones li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.clickmenu .opciones li a{
+    text-decoration: none;
+    color: white;
+}
+@media (min-width: 1024px){
+    .celular{
+        display: none;
+    }
+    .desktop{
+        display: block;
+        display: grid;
+        grid-template-columns: 0.25fr 1fr;
+        background-color:  rgb(33, 37, 41);
+    }
+    .hlogo{
+        width: 8rem;
+    }
+    .hopciones{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 0.6rem;
+    }
+    .hmenu .hopciones li a{
+        text-decoration: none;
+        color: white;
+        font-size: 1.5rem;
+    }
+    .hmenu .hopciones li{
+        margin-top: 1.5rem;
+    }
+}
 /*CSS HEADER*/
-.header{
+/*.header{
     display: flex;
     background-color: rgb(33, 37, 41); 
     
@@ -114,4 +175,4 @@ li{
     }
 
 
-}
+}*/
