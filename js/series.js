@@ -10,12 +10,12 @@ window.addEventListener('load', function(){
     .then(function(seriesPopulares){
         console.log(seriesPopulares)
 
-        seriesPopulares.results.forEach(populares => {  
+        seriesPopulares.results.forEach(popular => {  
             cadaSeriePopular.innerHTML += `
-                                        <a href='detalleSeries.html?id=${populares.id}&nombre=${populares.name}&overview=${populares.overview}&popularity=${populares.popularity}&portada=${populares.poster_path}&fecha=${populares.first_air_date}&votos=${populares.vote_average}&genero=${populares.genre_ids}'>
+                                        <a href='detalleSeries.html?id=${popular.id}&titulo=${popular.name}&overview=${popular.overview}&popularity=${popular.popularity}&portada=${popular.poster_path}&fecha=${popular.first_air_date}&votos=${popular.vote_average}&genero=${popular.genre_ids}'>
                                             <div>
-                                                 <img src="https://image.tmdb.org/t/p/w500${populares.poster_path}" alt="${populares.name}"/>
-                                                <h2 class="cadaTitulo">${populares.name}</h2>
+                                                 <img src="https://image.tmdb.org/t/p/w500${popular.poster_path}" alt="${popular.name}"/>
+                                                <h2 class="cadaTitulo">${popular.name}</h2>
                                             </div>
                                         </a>
                                     `

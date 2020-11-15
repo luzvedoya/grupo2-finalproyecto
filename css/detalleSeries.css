@@ -89,7 +89,7 @@ li{
     background-color: rgb(1, 22, 39);
 }
 
-.nombreCel{
+.tituloCel{
     text-align: center;
     font-size: 3rem;
     text-decoration: underline;
@@ -262,7 +262,7 @@ h2 a{
         grid-template-columns: 0.5fr 1fr;
     }
 
-    .nombreDesk{
+    .tituloDesk{
         text-align: center;
         font-size: 4.5rem;
         text-decoration: underline;

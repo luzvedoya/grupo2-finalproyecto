@@ -1,5 +1,6 @@
 window.addEventListener('load',function(){
     //VARIABLES DEL HTML Y QUERY STRING
+    let videos = document.querySelector('.videos');
     let detalle = document.querySelector('.detalle')
     let detallePelicula = location.search;
     let detallePeliculaObjeto = new URLSearchParams(detallePelicula);
@@ -12,7 +13,26 @@ window.addEventListener('load',function(){
     let fecha = detallePeliculaObjeto.get('fecha');
     let duracion = detallePeliculaObjeto.get('duracion');
     let votos = detallePeliculaObjeto.get('votos');
+    let id = detallePeliculaObjeto.get('id');
 
+
+    //RECORRO LOS VIDEOS
+    /*fetch('https://api.themoviedb.org/3/movie/550/videos?api_key=18581b65b3e6ad002984aa4952878117')
+    .then(function(respuesta){
+        return respuesta.json()
+    })
+    .then(function(video){
+        console.log(video);
+        video.results.forEach(trailer => {
+            videos.innerHTML +=`
+                            <video src="https://www.youtube.com/watch?v=${trailer.key}"></video>
+                            `
+        });
+    })
+    .catch(function(error){
+        console.log(error)
+    })*/
+    
     
 
     //LO AGREGO AL HTML
@@ -30,9 +50,10 @@ window.addEventListener('load',function(){
                                     </section>
                                     
                                     <section class="info">
-                                    <article class="datos"><h3 class="dato1">Popularity: </h3><p class="dato2">${popularity}</p></article>
-                                    <article class="datos"><h3 class="dato1">Votes' average: </h3><p class="dato2">${votos}</p></article>
-                                    <article class="datos"><h3 class="dato1">Sinopsis: </h3><p class="dato2">${overview}</p></article>
+                                        <article class="datos"><h3 class="dato1">Popularity: </h3><p class="dato2">${popularity}</p></article>
+                                        <article class="datos"><h3 class="dato1">Votes' average: </h3><p class="dato2">${votos}</p></article>
+                                        <article class="datos"><h3 class="dato1">Sinopsis: </h3><p class="dato2">${overview}</p></article>
+                                        
                                     </section>
 
                                 </div>

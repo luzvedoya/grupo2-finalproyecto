@@ -7,6 +7,20 @@ window.addEventListener('load', function(){
     let proximamente = document.querySelector ('.proximamente');
     let proxima = document.querySelector ('.proxima');
 
+
+    //NECESITO TRAER LAS REVIEWS
+    /*fetch('https://api.themoviedb.org/3/review/{review_id}?api_key=18581b65b3e6ad002984aa4952878117')
+    .then(function(respuesta){
+        return respuesta.json()
+    })
+    .then(function(resenia){
+        console.log(resenia);
+    })
+    .catch(function(error){
+        console.log(error)
+    })*/
+
+
     fetch('https://api.themoviedb.org/3/movie/popular?api_key=18581b65b3e6ad002984aa4952878117&language=en-US&page=1')
     .then(function(respuesta){
         return respuesta.json()

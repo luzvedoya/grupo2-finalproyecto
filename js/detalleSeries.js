@@ -5,7 +5,7 @@ window.addEventListener('load',function(){
     let detalleSerieObjeto = new URLSearchParams(detalleSerie);
 
     //VARIABLES DEL JS
-    let nombre = detalleSerieObjeto.get('nombre');
+    let titulo = detalleSerieObjeto.get('titulo');
     let overview = detalleSerieObjeto.get('overview');
     let popularity = detalleSerieObjeto.get('popularity');
     let portada = detalleSerieObjeto.get('portada');
@@ -17,7 +17,7 @@ window.addEventListener('load',function(){
     //LO AGREGO AL HTML
     detalle.innerHTML += `  <div class="desktop">
                                 <div class="primeraParte">
-                                    <h1 class="nombreDesk">${nombre}</h1>
+                                    <h1 class="tituloDesk">${titulo}</h1>
                                     <section class="abajoTitulo">
                                         <h2 class="fecha">${fecha}</h2>
                                     </section>
@@ -37,7 +37,7 @@ window.addEventListener('load',function(){
                             </div>
                             <div class="celular">
                                 <div class="todoDetalleCel">
-                                    <h1 class="nombreCel">${nombre}</h1>
+                                    <h1 class="tituloCel">${titulo}</h1>
                                     <section class="infoCel">
                                         <article class="datoCel"><h3 class="dato1Cel">Release date: </h3><p class="dato2Cel">${fecha}</p></article>
                                         <article class="datoCel"><h3 class="dato1Cel">Popularity: </h3><p class="dato2Cel">${popularity}</p></article>
