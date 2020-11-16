@@ -1,15 +1,15 @@
 window.addEventListener('load', function(){
-    let menuham = document.querySelector('.menuham');
     let clickmenu = document.querySelector('.clickmenu');
     let hopciones = document.querySelector('.hopciones');
     let hopcioncitas = document.getElementById('hopcioncitas')
     let hopcioncitas1 = document.getElementById('hopcioncitas1')
     let hopcioncitas2 = document.getElementById('hopcioncitas2')
     let hopcioncitas3 = document.getElementById('hopcioncitas3')
-
+    const menuham = document.querySelector('.menuham')
+            hamenu = document.querySelector('#hamenu')
     menuham.addEventListener('click', function(){
-        clickmenu.classList.toggle('clickmenu')
-
+        clickmenu.style.display = 'block'
+        clickmenu.classList.add('clickmenu')    
     })
 
     hopcioncitas.addEventListener('mouseover', function(){

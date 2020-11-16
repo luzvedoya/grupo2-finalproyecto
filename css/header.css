@@ -29,6 +29,7 @@ li{
     margin-top: 4px;
     margin-left: 10px;
 }
+
 .menuham{
     color: white;
     font-size: 1.8rem;
@@ -37,6 +38,7 @@ li{
 }
 .clickmenu{
     background-color: rgb(33, 37, 41);
+    width: 100vw;
     display: none;
 }
 .clickmenu .opciones li{
