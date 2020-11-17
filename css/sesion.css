@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    font-family:  'Slabo 27px', serif;
+    /*background-color: #1d3557;*/
+    margin: 0%;
+}
+
+img{
+    width: 100%;
+}
+
+li{
+    list-style-type: none;
+    
+}
+.container{
+    background-image: url("/img/generos.jpg");
+}
+
+.formulario{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: grey ;
+
+}
+
+.boton{
+    display: grid;
+    justify-content: center;
+    
+}
+
+.titulo{
+    font-size: 2rem;
+}
+
+#boton{
+    background-color:  rgb(33, 37, 41);
+    color: white;
+    
+}
+

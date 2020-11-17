@@ -72,13 +72,21 @@ li{
     
 }
 
-.imagen{
-    display: grid;
-    height: 300px;
-    background-image: url('img/generos.jpg');
+.fotocover{
+    /*background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
-    
+    width: 100%;*/
+    display: grid;
+    width: 100%;
+    height: 28rem;
+    background-image: url("../img/generos.jpg");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    position: relative;
 }
+
+
 
 .listaGeneros{
     display: grid;
