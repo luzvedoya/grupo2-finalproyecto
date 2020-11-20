@@ -14,6 +14,7 @@ window.addEventListener('load',function(){
     let duracion = detallePeliculaObjeto.get('duracion');
     let votos = detallePeliculaObjeto.get('votos');
     let id = detallePeliculaObjeto.get('id');
+    let genero =detallePeliculaObjeto.get('genero');
 
 
     //RECORRO LOS VIDEOS
@@ -51,6 +52,7 @@ window.addEventListener('load',function(){
                                     
                                     <section class="info">
                                         <article class="datos"><h3 class="dato1">Popularity: </h3><p class="dato2">${popularity}</p></article>
+                                        <article class="datos"><h3 class="dato1">Genero: </h3><p class="dato2">${genero}</p></article>
                                         <article class="datos"><h3 class="dato1">Votes' average: </h3><p class="dato2">${votos}</p></article>
                                         <article class="datos"><h3 class="dato1">Sinopsis: </h3><p class="dato2">${overview}</p></article>
                                         
