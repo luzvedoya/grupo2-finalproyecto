@@ -10,7 +10,7 @@ window.addEventListener('load', function(){
         console.log(generos);
         generos.genres.forEach(genero => {
             listaGeneros.innerHTML += 
-            `<a href="GenresDetail.html" + generos>
+            `<a href="detalleGeneros.html?id= ${genero.id}">
                     <article class="todos">
                         <h2 class="palabra"> ${genero.name} </h2>
                     </article>
