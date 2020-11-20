@@ -10,10 +10,9 @@ window.addEventListener('load', function(){
     })
     .then(function(peliculasPopulares){
         for(let i = 0 ; i < peliculasPopulares.results.length; i++){
-            populares.innerHTML += `<li> <div class="uk-panel"> <img src="https://image.tmdb.org/t/p/w500/${peliculasPopulares.results[i].poster_path} " alt="${peliculasPopulares.results[i].title}"> <div class="uk-position-center  uk-panel"><h1> ${i+1} </h1></div> </div> </li>
-            <div>
+            populares.innerHTML += `<li> <div class="uk-panel"> <img src="https://image.tmdb.org/t/p/w500/${peliculasPopulares.results[i].poster_path} " alt="${peliculasPopulares.results[i].title}"> <div class="uk-position-center  uk-panel"><h1> ${i+1} </h1></div>            <div>
             <a  id= '${JSON.stringify(peliculasPopulares.results[i])}' href= '#' class='btn btn-success btn-block botonMiLsta' >Agregar a mi lista </a>
-            </div>
+            </div> </div> </li>
             ` 
         }
         let botonMiLista = document.querySelectorAll('.botonMiLsta')
