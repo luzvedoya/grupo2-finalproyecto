@@ -3,6 +3,7 @@
     font-family:  'Slabo 27px', serif;
 }
 
+
 img{
     width: 100%;
 }
@@ -13,7 +14,48 @@ li{
 }
 
 /*CSS HEADER*/
-.header{
+.menu{
+    background-color:  rgb(33, 37, 41);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hfotologo{
+    width: 4.5rem;
+    margin-top: 4px;
+    margin-left: 10px;
+}
+.menu_items{
+    display: flex;
+    list-style: none;
+    margin-right: 20px;
+}
+.menu_items li{
+    border-radius: 3px;
+    margin: 0 5px;
+}
+.menu_items li a{
+    padding: 7px 13px ;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: block;
+    text-transform: uppercase;
+    color: white;
+}
+.menu_items li:hover, li.active{
+    background-color: rgba(0, 0, 0, 0.3) ;
+    transition: .4s;
+}
+.menuham{
+    color: white;
+    font-size: 1.3rem;
+    margin-top: 9px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+}
+/*.header{
     display: flex;
     background-color: rgb(33, 37, 41); 
     
@@ -76,7 +118,7 @@ li{
 
 .hopciones2 li a:hover{ 
     text-decoration: underline;
-}
+}*/
 /*CSS RESTOPAGINA*/
 .restopagina{
     background-color: rgb(1, 22, 39);
