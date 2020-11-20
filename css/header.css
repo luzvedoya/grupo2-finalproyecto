@@ -41,6 +41,9 @@ li{
     width: 100vw;
     display: none;
 }
+.clickmenujs{
+    display: block;  
+}
 .clickmenu .opciones li{
     margin-top: 10px;
     margin-bottom: 10px;

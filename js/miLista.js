@@ -1,6 +1,6 @@
 window.addEventListener('load', function(){
     let miListaDeFavoritas =  JSON.parse(localStorage.getItem('miLista'))
-    //console.log(miListaDeFavoritas);
+    console.log(miListaDeFavoritas);
     let peliculas = document.querySelector('.peliculas')
     for(let i = 0; i < miListaDeFavoritas.length; i++){
         //console.log(populares.results[i].poster_path);
@@ -11,6 +11,7 @@ window.addEventListener('load', function(){
             <a  class='btn btn-danger btn-block ' href='javascript:;' onclick= 'sacarDeMiLista(${miListaDeFavoritas[i].id})'  >Sacar de mi lista </a>
         </div>
         `
+        peliculas.append(articulo)
     }
 
 

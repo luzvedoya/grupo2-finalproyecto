@@ -13,3 +13,9 @@
 img{
     width: 100%;
 }
+.articulo{
+    min-height: 400px;
+}
+.articulo img{
+    min-height: 400px;
+}

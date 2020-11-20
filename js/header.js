@@ -8,8 +8,8 @@ window.addEventListener('load', function(){
     const menuham = document.querySelector('.menuham')
             hamenu = document.querySelector('#hamenu')
     menuham.addEventListener('click', function(){
-        clickmenu.style.display = 'block'
-        clickmenu.classList.add('clickmenu')    
+        //clickmenu.style.display = 'block'
+        clickmenu.classList.toggle('clickmenujs')   
     })
 
     hopcioncitas.addEventListener('mouseover', function(){
