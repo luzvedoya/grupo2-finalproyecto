@@ -12,12 +12,12 @@ li{
     list-style-type: none;
 }
 
-/*CSS HEADER*/
+/*HEADER*/
 
-.desktop{
+.desktoph{
     display: none;
 }
-.primeraparte{
+.primeraparteh{
     display: flex;
     justify-content: space-between;
     background-color: rgb(33, 37, 41);
@@ -42,16 +42,21 @@ li{
     width: 100vw;
     display: none;
 }
-.clickmenu .opciones li{
-    margin-top: 10px;
-    margin-bottom: 10px;
+.clickmenujs{
+    display: block;  
 }
-.clickmenu .opciones li a{
+
+.clickmenu .hhopciones li{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.clickmenu .hhopciones li a{
     text-decoration: none;
     color: white;
 }
+
     
-/*Generos*/
+/*GENEROS*/
 
 .container{
     width: 100%;
@@ -126,7 +131,7 @@ li{
     text-decoration: underline;
 }
 
-/*CSS FOOTER*/
+/*FOOTER*/
 
 .footer{
     background-color: rgb(33, 37, 41);
@@ -192,35 +197,35 @@ h2 a{
 
 @media (min-width: 1024px){
 
-    /*CSS HEADER*/
+    /*HEADER*/
 
-    .celular{
+    .hcelular{
         display: none;
-    }
-    .desktop{
-        display: block;
-        display: grid;
-        grid-template-columns: 0.25fr 1fr;
-        background-color:  rgb(33, 37, 41);
-    }
-    .hlogo{
-        width: 8rem;
-    }
-    .hopciones{
-        display: flex;
-        justify-content: space-between;
-        margin-right: 0.6rem;
-    }
-    .hmenu .hopciones li a{
-        text-decoration: none;
-        color: white;
-        font-size: 1.5rem;
-    }
-    .hmenu .hopciones li{
-        margin-top: 1.5rem;
-    }
+        }
+        .desktoph{
+            display: block;
+            display: grid;
+            grid-template-columns: 0.25fr 1fr;
+            background-color:  rgb(33, 37, 41);
+        }
+        .hlogo{
+            width: 8rem;
+        }
+        .hopciones{
+            display: flex;
+            justify-content: space-between;
+            margin-right: 0.6rem;
+        }
+        .hmenu .hopciones li a{
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+        }
+        .hmenu .hopciones li{
+            margin-top: 1.5rem;
+        }
 
-    /*Generos*/
+    /*GENEROS*/
 
     .titulo {
         font-size: 60px;
@@ -243,7 +248,7 @@ h2 a{
         width: 100px;
     }
 
-    /*CSS FOOTER*/
+    /*FOOTER*/
 
     .footer{
         display: flex;

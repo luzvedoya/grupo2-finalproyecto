@@ -1,4 +1,6 @@
 window.addEventListener('load',function(){
+   
+    //GENEROS
     //VARIABLES DEL HTML Y QUERY STRING
     let nombreGenero = document.querySelector('.nombreGenero')
     let cadaGenero =  document.querySelector('.cadaGenero')
@@ -8,7 +10,7 @@ window.addEventListener('load',function(){
     let id = detalleGeneroObjeto.get('id');
     
     //let name =detalleGeneroObjeto.get('name');
-    
+
     fetch(`
     https://api.themoviedb.org/3/discover/movie?api_key=f9762d5338820badb13e8cc378cef322&language=en-US&with_genres=${id}`)
 
@@ -18,7 +20,12 @@ window.addEventListener('load',function(){
     .then(function(generos){
         //console.log(generos);
         generos.results.forEach(genero => {
-            cadaGenero.innerHTML += `<img src="https://image.tmdb.org/t/p/w500${genero.poster_path}" alt="${genero.title}"/>`
+            cadaGenero.innerHTML += 
+            `<div class="cadaUno">
+            <img src="https://image.tmdb.org/t/p/w500${genero.poster_path}" />
+            <h2 class="gtitulo">${genero.title}</h2>
+            </div>`
+
         });
 
        /* generos.results.forEach(genero => {  
@@ -39,3 +46,4 @@ window.addEventListener('load',function(){
 
 
 })
+
