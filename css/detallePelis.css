@@ -91,7 +91,7 @@ li{
 }
 
 .portadaCel{
-    margin: 10px;
+    padding: 10px;
 }
 
 .parteDetalle{
@@ -130,6 +130,13 @@ li{
 .dato2Critica{
     margin-top: 3px;
     margin-left: 8px;
+}
+
+.botonCriticas{
+    /*text-decoration: none;*/
+    color: white;
+    text-align: center;
+    /*margin-left: 37%;*/
 }
 
 
@@ -269,6 +276,7 @@ h2 a{
     .todoDetalle{
         display: grid;
         grid-template-columns: 0.5fr 1fr;
+        padding-top: 40px;
     }
 
     .tituloDesk{
@@ -322,6 +330,11 @@ h2 a{
     .dato2Cel{
         margin-top: 0px;
         margin-left: 0px;
+    }
+
+    .botonCriticas{
+        font-size: 1.5rem;
+        justify-content: center;
     }
 
  

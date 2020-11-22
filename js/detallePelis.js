@@ -2,6 +2,7 @@ window.addEventListener('load',function(){
     //VARIABLES DEL HTML Y QUERY STRING
     let critica = document.querySelector('.critica');
     let detalle = document.querySelector('.detalle');
+    let botonCriticas = document.querySelector('.botonCriticas');
     let detallePelicula = location.search;
     let detallePeliculaObjeto = new URLSearchParams(detallePelicula);
 
@@ -101,10 +102,7 @@ window.addEventListener('load',function(){
         detalle.innerHTML += `  <div class="desktop">
                                     <div class="primeraParte">
                                         <h1 class="tituloDesk">${peli.title}</h1>
-                                        <section class="abajoTitulo">
-                                            <h2 class="fecha">${peli.release_date}</h2>
-                                            <h2 class="duracion">${peli.runtime}</h2>
-                                        </section>
+                                        <a href="#criticas" class="botonCriticas">Leer criticas</a>
                                     </div>
                                     <div class="todoDetalle">
                                         <section class="portada">
@@ -112,8 +110,9 @@ window.addEventListener('load',function(){
                                         </section>
                                         
                                         <section class="info">
+                                            <article class="datos"><h3 class="dato1">Release date: </h3><p class="dato2">${peli.release_date}</p></article>
                                             <article class="datos"><h3 class="dato1">Popularity: </h3><p class="dato2">${peli.popularity}</p></article>
-                                            <article class="datos"><h3 class="dato1">Genero: </h3><p class="dato2">${peli.nombreGenero}</p></article>
+                                            <article class="datos"><h3 class="dato1">Genre: </h3><p class="dato2">${peli.nombreGenero}</p></article>
                                             <article class="datos"><h3 class="dato1">Votes' average: </h3><p class="dato2">${peli.vote_average}</p></article>
                                             <article class="datos"><h3 class="dato1">Sinopsis: </h3><p class="dato2">${peli.overview}</p></article>
                                             
@@ -124,9 +123,10 @@ window.addEventListener('load',function(){
                                 <div class="celular">
                                 <div class="todoDetalleCel">
                                     <h1 class="tituloCel">${peli.title}</h1>
+                                    <a href="#criticas" class="botonCriticas">Leer criticas</a>
                                     <section class="infoCel">
                                         <article class="datoCel"><h3 class="dato1Cel">Release date: </h3><p class="dato2Cel">${peli.release_date}</p></article>
-                                        <article class="datoCel"><h3 class="dato1Cel">Duracion: </h3><p class="dato2Cel">${peli.runtime}</p></article>
+                                        <article class="datoCel"><h3 class="dato1Cel">Genre: </h3><p class="dato2Cel">${peli.nombreGenero}</p></article>
                                         <article class="datoCel"><h3 class="dato1Cel">Popularity: </h3><p class="dato2Cel">${peli.popularity}</p></article>
                                         <article class="datoCel"><h3 class="dato1Cel">Votes' average: </h3><p class="dato2Cel">${peli.vote_average}</p></article>
                                         <article class="datoCel"><h3 class="dato1Cel">Sinopsis: </h3><p class="dato2Cel">${peli.overview}</p></article>                    
@@ -140,6 +140,13 @@ window.addEventListener('load',function(){
                                 
                                 `
 
+    })
+
+    botonCriticas.addEventListener('mouseover', function(){
+        botonCriticas.style.textDecoration = 'underline'
+    })
+    botonCriticas.addEventListener('mouseout', function(){
+        botonCriticas.style.textDecoration = 'none'
     })
 
 
