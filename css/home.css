@@ -1,6 +1,11 @@
 *{
     box-sizing: border-box;
     font-family:  'Slabo 27px', serif;
+    margin: 0;
+    padding: 0;
+    padding-left: 0%;
+    padding-right: 0%;
+    
 }
 
 
@@ -16,113 +21,48 @@ li{
     padding-left: 0;
     padding-right: 0;
 }
-
-/*CSS HEADER*/
-.menu{
-    background-color:  rgb(33, 37, 41);
-    width: 100%;
+/*CSS Header*/
+.desktop{
+    display: none;
+}
+.primeraparte{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    background-color: rgb(33, 37, 41);
+
+}
+.hlogo{
+    width: 4.5rem;
 }
 .hfotologo{
-    width: 4.5rem;
     margin-top: 4px;
     margin-left: 10px;
 }
-.menu_items{
-    display: flex;
-    list-style: none;
-    margin-right: 20px;
-}
-.menu_items li{
-    border-radius: 3px;
-    margin: 0 5px;
-}
-.menu_items li a{
-    padding: 7px 13px ;
-    text-decoration: none;
-    font-size: 0.9rem;
-    display: block;
-    text-transform: uppercase;
-    color: white;
-}
-.menu_items li:hover, li.active{
-    background-color: rgba(0, 0, 0, 0.3) ;
-    transition: .4s;
-}
+
 .menuham{
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     margin-top: 9px;
     margin-right: 20px;
-    cursor: pointer;
+}
+.clickmenu{
+    background-color: rgb(33, 37, 41);
+    width: 100vw;
     display: none;
 }
-/*.header{
-    display: flex;
-    background-color: rgb(33, 37, 41); 
-    
+.clickmenujs{
+    display: block;  
 }
-
-.hlogo{
-    width: 112px;
-    margin: 0%;
-
+.clickmenu .opciones li{
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-
-.hfotologo{
-    height: 75px;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    margin-top: 15px;
-    margin-left: 12px;
-
-}
-
-.hmenu .hopciones{
-    width: 50%;
-    
-}
-
-.hopciones{
-    display: flex;
-    margin-left: 30px;
-}
-
-.hopciones2{
-    display: flex;
-    margin-left: 30px;
-}
-
-.hopciones2 li a{
+.clickmenu .opciones li a{
+    text-decoration: none;
     color: white;
-    text-decoration: none;
-    font-size: 15px;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    margin-left: 20px;
-
 }
 
-.hopciones li a{
-    color:white;
-    text-decoration: none;
-    font-size: 15px;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-}
 
-.hopciones li a:hover{ 
-    text-decoration: underline;
-}
-
-.hopciones2 li a:hover{ 
-    text-decoration: underline;
-}*/
 /*CSS RESTOPAGINA*/
 .restopagina{
     background-color: rgb(1, 22, 39);
@@ -189,6 +129,7 @@ article.movie{
     display: grid;
     background-color: rgb(33, 37, 41);
     width: 100%;
+    
 }
 
 .logo{
@@ -201,6 +142,16 @@ article.movie{
    
 
 }
+.logo2{
+    display: grid;
+    height: 4.5rem;
+    width: 4rem;
+    margin-top: 1.5rem;
+    text-align: center;
+    align-items: center;
+   
+
+}
 
 .fotuli{
     display: grid;
@@ -208,9 +159,11 @@ article.movie{
     text-align: center;
    
 }
+
 .opciones{
     margin-right: 45px;
 }
+
 .opciones li{
     padding: 10px;
     margin: 0%;
@@ -259,51 +212,38 @@ h2 a{
 }
 
 
+
 /*Media Queries*/
 
 @media (min-width: 1024px){
 
- /*HEADER*/
- .hlogo{
-    width: 120px;
-
+    /* MEDIA HEADER*/
+    .celular{
+        display: none;
     }
-
-    .hfotologo{
-        height: 70px;
-        margin-top: 10px;
-        margin-left: 12px;
+    .desktop{
+        display: block;
+        display: grid;
+        grid-template-columns: 0.25fr 1fr;
+        background-color:  rgb(33, 37, 41);
     }
-
-    .hmenu{
-        display: flex;
-        align-items: center;
+    .hlogo{
+        width: 8rem;
     }
-
-    .header{
+    .hopciones{
         display: flex;
         justify-content: space-between;
-        border-bottom: 1px solid white ;
+        margin-right: 0.6rem;
     }
-
-    .hopciones{
-        margin-left: 0;
+    .hmenu .hopciones li a{
+        text-decoration: none;
+        color: white;
+        font-size: 1.5rem;
     }
-
-    .hopciones2{
-        margin-left: 15px;
+    .hmenu .hopciones li{
+        margin-top: 1.5rem;
     }
-
-    .hopciones li a{
-        padding: 50px;
-        font-size: 20px;
-    }
-
-.hopciones2 li a{
-    padding: 50px;
-    font-size: 20px;
-}
-    /*media restopagina*/
+    /*MEDIA RESTOPAGINA*/
     .fotocover{
         display: grid;
         width: 100%;
@@ -341,6 +281,7 @@ h2 a{
         justify-content: space-between;
         width: 100%;
         align-items: center;
+        
     }
     .fotuli{
         margin-left: 30px;
@@ -352,8 +293,8 @@ h2 a{
         height: 50px;
         width: 75px;
         margin: 0%;
-
     }
+    
     .opciones{
         display: flex;
         
@@ -370,6 +311,7 @@ h2 a{
         text-align: center;
         
     }
+
     h2 a{
         color:white;
         font-size: 30px;

@@ -11,53 +11,75 @@
 </head>
 <body>
     <main class="container-fluid">
-        <nav class="menu fixed-top">
-            <figure class="hlogo">
-                <a href="home.html"><img class= "hfotologo" src="img/Logo.png"></a>
-            </figure>
-            <ul class="menu_items">
-                <li class="active"><a href="home.html">Inicio</a></li>
-                <li><a href="peliculas.html">Peliculas</a></li>
-                <li><a href="series.html">Series</a></li>
-                <li><a href="generos.html">Generos</a></li>
-                <li><a href="#">Iniciar Sesion</a></li>
-                <li><a href="miLista.html">Mi Lista</a></li>
-                <li><input type="search" name="buscador" placeholder="Series, peliculas, generos"><input type="submit" value="Search"></li>
-            </ul>
-            <span class="menuham">
-                <ion-icon  class= "bars" name="menu-outline"></ion-icon>
-            </span>
-        </nav>
-    
-        <!--<div class="hcontainer">
+        <div class="hcontainer">
             <header class="header">
-                <figure class="hlogo">
-                    <img class= "hfotologo" src="img/Logo.png">
-                </figure>
-                <nav class="hmenu">
-                    <ul class="hopciones">
-                        <li>
-                            <a href="home.html">Inicio</a>
-                        </li>
-                        <li>
-                            <a href="#pelis">Películas</a>
-                        </li>
-                        <li>
-                            <a href="#series">Series</a>
-                        </li>
-                    </ul>
-                    <ul class="hopciones2">
-                        <li>
-                            <a href="generos.html">Géneros</a>
-                        </li>
-                        <li>
-                            <a href="miLista.html">Buscar</a>
-                        </li>
-                    </ul>
-                </nav>
-                
+                <div class="desktop">
+                    <figure class="hlogo">
+                        <a href="home.html"><img class= "hfotologo" src="img/Logo.png"></a>
+                    </figure>
+                    <nav class="hmenu">
+                        <ul class="hopciones">
+                            <li >
+                                <a href="peliculas.html" id="hopcioncitas">Películas</a>
+                            </li>
+                            <li  >
+                                <a href="series.html" id="hopcioncitas1">Series</a>
+                            </li>
+                            <li>
+                                <a href="generos.html" id="hopcioncitas2">Géneros</a>
+                            </li>
+                            <li >
+                                <a href="miLista.html" id="hopcioncitas3">Mi lista</a>
+                            </li>
+                            <li>
+                                <input type="search" name="buscador" placeholder="Series, peliculas, generos">
+                                <input type="submit" value="Search">
+                            </li>
+                            <li >
+                                <a href="sesion.html" id="hopcioncitas4">Iniciar Sesión</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="celular">
+                    <div class="primeraparte">
+                        <figure class="hlogo">
+                            <a href="home.html"><img class= "hfotologo" src="img/Logo.png"></a>
+                        </figure>
+                        <div>
+                            <ion-icon  class= "menuham" id="hamenu" name="menu-outline"></ion-icon> 
+                        </div>
+                    </div>
+                    <nav class="clickmenu">
+                        <ul class="opciones">
+                            <li>
+                                <a href="home.html">Inicio</a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="peliculas.html">Peliculas</a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="series.html">Series</a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="generos.html">Generos</a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="miLista.html">Mi Lista</a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="sesion.html">Iniciar sesion</a>
+                            </li>
+                        </ul>
+                    </nav>     
+                </div>
             </header>
-        </div>-->
+        </div>
         <section class="restopagina">
             <section class="fotocover" id="fotocover">
 
@@ -83,7 +105,7 @@
                 </section>
             </section>
             <section>
-                <h2>Series</h2>
+                <h2>Series dignas de maratón</h2>
                 <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="sets: true">
                     <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-4@m  uk-grid" id="spopulares">
                     </ul>               
@@ -92,7 +114,7 @@
                 </div>
             </section>
             <section>
-                <h2> Series 2</h2>
+                <h2> Dramas de TV</h2>
                 <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="sets: true">
                     <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-4@m  uk-grid" id="svaloradas">
                     </ul>               
@@ -104,140 +126,16 @@
 
 
         </section>
-        <!--<section class="restopagina">
-            <section class="fotocover">
-                <h1 class="elitslogan">Disfruta de tus series y películas preferidas</h1>
-            </section>
-            <section class="section">
-                <div id="ofertas">
-                <h2 id="pelis">Nuevos lanzamientos</h2>
-                </div>
-                <section class="product-wrapper">
-                    <article class="movie" >
-                        <figure>
-                           <a href="Moviedetail.html" target="_blank" > <img src="img/mama mia agus.png" alt="peliculamm"></a>
-                        </figure>
-                        <div>
-                            <a href="Moviedetail.html"><h3 id="titleproduct">Mamma Mia</h3></a>
-                        </div>
-                    </article>
-                    <article class="movie">
-                        <figure>
-                            <img src="img/joker.png" alt="peliculajoker">
-                        </figure>
-                        <div>
-                            <h3>Joker</h3>
-                        </div>
-                    </article>
-                    <article class="movie">
-                        <figure>
-                            <img src="img/harry.png" alt="portadahp">
-                        </figure>
-                        <div>
-                            <h3>Harry Potter y el Cáliz de Fuego</h3>
-                        </div>
-                    </article>
-                    <article class="movie">
-                        <figure>
-                            <img src="img/mean girls.png" alt="portadamean">
-                        </figure>
-                        <div>
-                            <h3>Mean Girls</h3>
-                        </div>
-                    </article>
-                </section>
-            </section>
-            <section class="section">
-                <div id="ofertas">
-                    <h2 id="series">Populares en Elit</h2>
-                </div>
-                <section class="product-wrapper">
-                    <article class="movie">
-                        <figure>
-                            <a href="seriesDetail.html" target="_blank" ><img src="img/pretty.png" alt="portadapretty"></a>
-                        </figure>
-                        <div>
-                            <a href="seriesDetail.html"><h3 id="titleproduct" >Pretty Little Liars</h3></a>
-                        </div>
-                    </article>
-                    <article class="movie">
-                        <figure>
-                            <img src="img/outer.png" alt="portadaobx">
-                        </figure>
-                        <div>
-                            <h3>Outer Banks</h3>
-                        </div>
-                    </article>
-                    <article class="movie">
-                        <figure>
-                            <img src="img/Greys.png" alt="portadaga">
-                        </figure>
-                        <div>
-                            <h3>Grey´s Anatomy</h3>
-                        </div>
-                    </article>
-                    <article class="movie">
-                        <figure>
-                            <img src="img/friends.png" alt="portadafriends">
-                        </figure>
-                        <div>
-                            <h3>Friends</h3>
-                        </div>
-                    </article>
-                </section>
-            <section class="section">
-                    <div id="ofertas" >
-                        <h2>Recomendados para vos</h2>
-                    </div>
-                <section class="product-wrapper">
-                    <article class="movie">
-                        <figure>
-                            <img src="img/dunkirk.png" alt="portadadunkirk">
-                        </figure>
-                        <div>
-                            <h3>Dunkirk</h3>
-                        </div>
-                    </article>
-                    <article class="movie">
-                        <figure>
-                            <img src="img/Stranger.png" alt="portadast">
-                        </figure>
-                        <div>
-                            <h3>Stranger Things</h3>
-                        </div>
-                    </article>
-                    <article class="movie">
-                        <figure>
-                            <img src="img/wonder.png" alt="portadawonder">
-                        </figure>
-                        <div>
-                            <h3>Wonder</h3>
-                        </div>
-                    </article>
-                    <article class="movie">
-                        <figure>
-                            <img src="img/casa de papel.png" alt="portadalcdp">
-                        </figure>
-                        <div>
-                            <h3>La Casa de Papel</h3>
-                        </div>
-                    </article>
-                </section>
-            </section>
-        </section>
-        </section>-->
         <footer class="footer">
             <article class="logo"><img class="fotuli" src="img/Logo.png"></article>
+            <article class="logo2"><img class="fotuli" src="img/TMDB1.jpg"></article>
             <article class="menu"> 
                 <ul class="opciones">
                     <li>
                         <a href="#"> Aviso Legal</a>
                     </li>
                     <li>
-                        <a href="#">Elit </a>
-                    </li>
-                    <li>
-                        <a href="#">Sobre Nosotros</a>
+                        <a href="nosotros.html">Sobre Nosotros</a>
                     </li>
                     <li>
                         <a href="#">Webmail</a>
@@ -252,12 +150,14 @@
                 </h2>
             </article>
         </footer>
-        <nav class="copyright"> 
+    <nav class="copyright"> 
         <h6>© 2020 Elit Peliculas y Series Online, Todos los derechos reservados. Hay 500 películas y series disponibles.</h6>
-        </nav>
+    </nav>
+    
         
-        <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
     </main>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     <script src="js/uikit-icons.min.js"></script>
     <script src="js/uikit.min.js"></script>
     <script src="js/home.js"></script>
