@@ -98,6 +98,40 @@ li{
     margin-bottom: 0;
 }
 
+.parteCritica{
+    background-color: rgb(1, 22, 39); 
+    margin-top: 0;
+}
+
+.infoCritica{
+    color: white;
+   padding-left: 15px;
+   padding-right: 15px;
+   padding-bottom: 15px;
+   text-align: justify;
+}
+
+.tituloCritica{
+    background-color: rgb(1, 22, 39); 
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 0px;
+}
+
+.datosCritica{
+    display: flex;
+    font-size: 1.25rem;
+    color: white;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+
+.dato2Critica{
+    margin-top: 3px;
+    margin-left: 8px;
+}
+
 
 
 
@@ -271,16 +305,24 @@ h2 a{
         display: flex;
         margin: 20px;
         font-size: 1.25rem;
+        color: white;
     }
 
     .dato2{
         margin-left: 8px;
+        color: white;
     }
 
     .portada{
         margin: 5px;
     }
 
+    
+
+    .dato2Cel{
+        margin-top: 0px;
+        margin-left: 0px;
+    }
 
  
     /*FOOTER*/
@@ -305,7 +347,7 @@ h2 a{
 
     .logo2{
         display: grid;
-        height: 4.5rem;
+        height: 4rem;
         width: 4rem;
         margin-top: 1.5rem;
         text-align: center;
