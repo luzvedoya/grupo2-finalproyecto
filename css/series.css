@@ -42,8 +42,30 @@ li{
     gap: 8px;
 }
 
+.aclamadasPor{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.cadaAgregada{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
 @media (min-width: 1024px){
     .cadaSeriePopular{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 10px;
+    }
+
+    .aclamadasPor{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 10px;
+    }
+
+    .cadaAgregada{
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         gap: 10px;
     }
