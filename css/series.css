@@ -16,6 +16,11 @@ li{
     margin: 0;
 }
 
+.subtitulo{
+    color: white;
+    font-size: 2rem;
+}
+
 .tituloP{
     color: white;
     text-align: center;
