@@ -87,12 +87,12 @@ window.addEventListener('load', function(){
     .then(function(peliculasValoradas){
         for(let i = 0 ; i < peliculasValoradas.results.length; i++){
             valoradas.innerHTML += `<li> <div class="uk-panel"> <img src="https://image.tmdb.org/t/p/w500/${peliculasValoradas.results[i].poster_path} " alt="${peliculasValoradas.results[i].title}"> <div class="uk-position-center  uk-panel"><h1> ${i+1} </h1></div>             <div>
-            <a  id= '${JSON.stringify(peliculasValoradas.results[i])}' href= '#' class='btn btn-success btn-block botonMiLsta' >Agregar a mi lista </a>
+            <a  id= '${JSON.stringify(peliculasValoradas.results[i])}' href= '#' class='btn btn-success btn-block botonMiLstaa' >Agregar a mi lista </a>
             </div> </div> </li> `
         }
-        let botonMiListaa = document.querySelectorAll('.botonMiLsta')
+        let botonMiListaa = document.querySelectorAll('.botonMiLstaa')
         let arrayMiListaDeFavoritass;
-        //console.log(botonMiLista)
+        console.log(botonMiListaa)
         botonMiListaa.forEach(peliculaa => {
             peliculaa.addEventListener('click', function(e){
                 e.preventDefault()
@@ -100,10 +100,11 @@ window.addEventListener('load', function(){
                 if(miListadePeliculass == null){
                     arrayMiListaDeFavoritass = [];
                 }else{
-                    arrayMiListaDeFavoritass = JSON.parse(miListadePeliculas)
+                    arrayMiListaDeFavoritass = JSON.parse(miListadePeliculass)
                 }
                 arrayMiListaDeFavoritass.push(JSON.parse(this.id))
                 localStorage.setItem('miLista', JSON.stringify(arrayMiListaDeFavoritass))
+                
 
             } )
 
@@ -115,8 +116,28 @@ window.addEventListener('load', function(){
     })
     .then(function(serieSpopulares){
         for(let i = 0 ; i < serieSpopulares.results.length; i++){
-            spopulares.innerHTML += `<li> <div class="uk-panel"> <img src="https://image.tmdb.org/t/p/w500/${serieSpopulares.results[i].poster_path} " alt="${serieSpopulares.results[i].title}"> <div class="uk-position-center  uk-panel"><h1> ${i+1} </h1></div> </div> </li> `
+            spopulares.innerHTML += `<li> <div class="uk-panel"> <img src="https://image.tmdb.org/t/p/w500/${serieSpopulares.results[i].poster_path} " alt="${serieSpopulares.results[i].title}"> <div class="uk-position-center  uk-panel"><h1> ${i+1} </h1></div>    <div>
+            <a  id= '${JSON.stringify(serieSpopulares.results[i])}' href= '#' class='btn btn-success btn-block botonMiLsta2' >Agregar a mi lista </a>
+            </div>  </div> </li> `
         }
+        let botonMiLista2 = document.querySelectorAll('.botonMiLsta2')
+        let arrayMiListaDeFavoritas2;
+        //console.log(botonMiLista)
+        botonMiLista2.forEach(pelicula2 => {
+            pelicula2.addEventListener('click', function(e){
+                e.preventDefault()
+                let miListadePeliculas2 = localStorage.getItem('miLista2')
+                if(miListadePeliculas2 == null){
+                    arrayMiListaDeFavoritas2 = [];
+                }else{
+                    arrayMiListaDeFavoritas2 = JSON.parse(miListadePeliculas2)
+                }
+                arrayMiListaDeFavoritas2.push(JSON.parse(this.id))
+                localStorage.setItem('miLista2', JSON.stringify(arrayMiListaDeFavoritas2))
+
+            })
+        });
+
     })
     fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=3fdb6796a354372e7fda65df33ed0329&language=en-US&page=1')
     .then(respuesta =>{

@@ -60,6 +60,16 @@ img{
 .articulo img{
     min-height: 400px;
 }
+.restopagina{
+    background-color: rgb(1, 22, 39);
+    padding-top: 7rem;
+    padding-bottom: 23rem;
+}
+.titulolista{
+    color: white;
+    text-align: center;
+
+}
 /*FOOTER*/
 .footer{
     display: grid;

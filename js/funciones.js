@@ -14,7 +14,7 @@ function sacarDeMiLista(idEliminar){
     }
     let misPeliculasFavoritass =  JSON.parse( localStorage.getItem('miLista'))
 console.log(misPeliculasFavoritass);
-function sacarDeMiListaa(idEliminar){
+function sacarDeMiLista1(idEliminar){
     let miListaDeFavoritass = []
     
     for (let favoritaa of misPeliculasFavoritass) {
