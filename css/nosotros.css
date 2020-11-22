@@ -1,17 +1,17 @@
 *{
     box-sizing: border-box;
     font-family:  'Slabo 27px', serif;
-    margin: 0;
-    padding: 0;
-    outline: 0;
+    /*background-color: #1d3557;*/
+    margin: 0%;
 }
-.peliculas{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 10px;
-}
+
 img{
     width: 100%;
+}
+
+li{
+    list-style-type: none;
+    
 }
 /*HEADER*/
 .desktop{
@@ -54,12 +54,6 @@ img{
     color: white;
 }
 /*RESTOPAGINA*/
-.articulo{
-    min-height: 400px;
-}
-.articulo img{
-    min-height: 400px;
-}
 /*FOOTER*/
 .footer{
     display: grid;
