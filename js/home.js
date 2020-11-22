@@ -86,8 +86,28 @@ window.addEventListener('load', function(){
     })
     .then(function(peliculasValoradas){
         for(let i = 0 ; i < peliculasValoradas.results.length; i++){
-            valoradas.innerHTML += `<li> <div class="uk-panel"> <img src="https://image.tmdb.org/t/p/w500/${peliculasValoradas.results[i].poster_path} " alt="${peliculasValoradas.results[i].title}"> <div class="uk-position-center  uk-panel"><h1> ${i+1} </h1></div> </div> </li> `
+            valoradas.innerHTML += `<li> <div class="uk-panel"> <img src="https://image.tmdb.org/t/p/w500/${peliculasValoradas.results[i].poster_path} " alt="${peliculasValoradas.results[i].title}"> <div class="uk-position-center  uk-panel"><h1> ${i+1} </h1></div>             <div>
+            <a  id= '${JSON.stringify(peliculasValoradas.results[i])}' href= '#' class='btn btn-success btn-block botonMiLsta' >Agregar a mi lista </a>
+            </div> </div> </li> `
         }
+        let botonMiListaa = document.querySelectorAll('.botonMiLsta')
+        let arrayMiListaDeFavoritass;
+        //console.log(botonMiLista)
+        botonMiListaa.forEach(peliculaa => {
+            peliculaa.addEventListener('click', function(e){
+                e.preventDefault()
+                let miListadePeliculass = localStorage.getItem('miLista')
+                if(miListadePeliculass == null){
+                    arrayMiListaDeFavoritass = [];
+                }else{
+                    arrayMiListaDeFavoritass = JSON.parse(miListadePeliculas)
+                }
+                arrayMiListaDeFavoritass.push(JSON.parse(this.id))
+                localStorage.setItem('miLista', JSON.stringify(arrayMiListaDeFavoritass))
+
+            } )
+
+        });
     })
     fetch('https://api.themoviedb.org/3/tv/popular?api_key=18581b65b3e6ad002984aa4952878117&language=en-US&page=1')
     .then(respuesta =>{
