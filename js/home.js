@@ -42,12 +42,24 @@ window.addEventListener('load', function(){
     hopcioncitas4.addEventListener('mouseout', function(){
         hopcioncitas4.style.textDecoration = 'none'
     })
-
+    let coverfotos = document.querySelector ('#coverfotos')
     let populares = document.querySelector('#populares')
     let valoradas = document.getElementById('valoradas')
     let spopulares = document.getElementById('spopulares')
     let svaloradas = document.getElementById('svaloradas')
     let peliculas = document.querySelector('.peliculas')
+    fetch('https://api.themoviedb.org/3/trending/all/day?api_key=3fdb6796a354372e7fda65df33ed0329')
+    .then(respuesta =>{
+        return respuesta.json()
+    })
+    .then(function (coverFotoss) {
+        for (let i = 0; i < coverFotoss.results.length; i++) {
+            coverfotos.innerHTML += `<li>
+            <img src="https://image.tmdb.org/t/p/w500${coverFotoss.results[i].poster_path}" alt="${coverFotoss.results[i].title}" uk-cover>
+        </li>
+        `         
+        }
+    })
     fetch('https://api.themoviedb.org/3/movie/popular?api_key=18581b65b3e6ad002984aa4952878117&language=en-US&page=1')
     .then(respuesta =>{
         return respuesta.json()
@@ -62,7 +74,7 @@ window.addEventListener('load', function(){
                     </div>
                 </a>         
                 <div>
-                    <a  id= '${JSON.stringify(peliculasPopulares.results[i])}' href= '#' class='btn btn-success btn-block botonMiLsta' >Agregar a mi lista </a>
+                    <a  id= '${JSON.stringify(peliculasPopulares.results[i])}' href= '#' class='btn btn-success btn-block botonMiLsta' >Mi lista </a>
                 </div> 
             </div> 
             </li>
@@ -103,7 +115,7 @@ window.addEventListener('load', function(){
                     </div>
                 </a>
             <div>
-            <a  id= '${JSON.stringify(peliculasValoradas.results[i])}' href= '#' class='btn btn-success btn-block botonMiLstaa' >Agregar a mi lista </a>
+            <a  id= '${JSON.stringify(peliculasValoradas.results[i])}' href= '#' class='btn btn-success btn-block botonMiLstaa' >Mi lista </a>
             </div> </div> </li> `
         }
         let botonMiListaa = document.querySelectorAll('.botonMiLstaa')
@@ -140,7 +152,7 @@ window.addEventListener('load', function(){
                     </div>
                 </a>
                 <div>
-                    <a  id= '${JSON.stringify(seriesPopulares.results[i])}' href= '#' class='btn btn-success btn-block botonMiLsta2' >Agregar a mi lista </a>
+                    <a  id= '${JSON.stringify(seriesPopulares.results[i])}' href= '#' class='btn btn-success btn-block botonMiLsta2' >Mi lista </a>
                 </div> 
                  </div> </li> `
         }
