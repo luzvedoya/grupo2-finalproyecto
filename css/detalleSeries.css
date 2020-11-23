@@ -13,72 +13,46 @@ li{
 }
 
 /*CSS HEADER*/
-.header{
-    display: flex;
-    background-color: rgb(33, 37, 41); 
-    
+.desktoph{
+    display: none;
 }
+.primeraparteh{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(33, 37, 41);
 
+}
 .hlogo{
-    width: 112px;
-    margin: 0%;
-
+    width: 4.5rem;
 }
-
 .hfotologo{
-    height: 75px;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    margin-top: 15px;
-    margin-left: 12px;
-
+    margin-top: 4px;
+    margin-left: 10px;
 }
 
-.hmenu .hopciones{
-    width: 50%;
-    
-}
-
-.hopciones{
-    display: flex;
-    margin-left: 30px;
-}
-
-.hopciones2{
-    display: flex;
-    margin-left: 30px;
-}
-
-.hopciones2 li a{
+.menuham{
     color: white;
+    font-size: 1.8rem;
+    margin-top: 9px;
+    margin-right: 20px;
+}
+.clickmenu{
+    background-color: rgb(33, 37, 41);
+    width: 100vw;
+    display: none;
+}
+.clickmenujs{
+    display: block;  
+}
+
+.clickmenu .hhopciones li{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.clickmenu .hhopciones li a{
     text-decoration: none;
-    font-size: 15px;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    margin-left: 20px;
-
+    color: white;
 }
-
-
-.hopciones li a{
-    color:white;
-    text-decoration: none;
-    font-size: 15px;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-}
-
-.hopciones li a:hover{ 
-    text-decoration: underline;
-}
-
-.hopciones2 li a:hover{ 
-    text-decoration: underline;
-}
-
 
 /*CSS DETALLE*/
 .desktop{
@@ -247,47 +221,33 @@ h2 a{
 
 @media (min-width: 1024px){
 
-   /*HEADER*/
-   .hlogo{
-    width: 120px;
-
+ /*HEADER*/
+ .hcelular{
+    display: none;
     }
-
-    .hfotologo{
-        height: 70px;
-        margin-top: 10px;
-        margin-left: 12px;
+    .desktoph{
+        display: block;
+        display: grid;
+        grid-template-columns: 0.25fr 1fr;
+        background-color:  rgb(33, 37, 41);
     }
-
-    .hmenu{
-        display: flex;
-        align-items: center;
+    .hlogo{
+        width: 8rem;
     }
-
-    .header{
+    .hopciones{
         display: flex;
         justify-content: space-between;
-        border-bottom: 1px solid white ;
+        margin-right: 0.6rem;
     }
-
-    .hopciones{
-        margin-left: 0;
+    .hmenu .hopciones li a{
+        text-decoration: none;
+        color: white;
+        font-size: 1.5rem;
     }
-
-    .hopciones2{
-        margin-left: 15px;
+    .hmenu .hopciones li{
+        margin-top: 1.5rem;
     }
-
-    .hopciones li a{
-        padding: 50px;
-        font-size: 20px;
-    }
-
-    .hopciones2 li a{
-        padding: 50px;
-        font-size: 20px;
-    }
-
+    
     /*DETALLE*/
     .celular{
         display: none;

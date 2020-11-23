@@ -13,34 +13,76 @@
         <!--HEADER-->
         <div class="hcontainer">
             <header class="header">
-                <figure class="hlogo">
-                    <img class= "hfotologo" src="img/Logo.png">
-                </figure>
-                <nav class="hmenu">
-                    <ul class="hopciones">
-                        <li>
-                            <a href="home.html">Inicio</a>
-                        </li>
-                        <li>
-                            <a href="#">Películas</a>
-                        </li>
-                        <li>
-                            <a href="#">Series</a>
-                        </li>
-                    </ul>
-                    <ul class="hopciones2">
-                        <li>
-                            <a href="generos.html">Géneros</a>
-                        </li>
-                        <li>
-                            <a href="#">Buscar</a>
-                        </li>
-                    </ul>
-                </nav>
+                <div class="desktoph">
+                    <figure class="hlogo">
+                        <a href="home.html"><img class= "hfotologo" src="img/Logo.png"></a>
+                    </figure>
+                    <nav class="hmenu">
+                        <ul class="hopciones">
+                            <li >
+                                <a href="peliculas.html" id="hopcioncitas">Películas</a>
+                            </li>
+                            <li  >
+                                <a href="series.html" id="hopcioncitas1">Series</a>
+                            </li>
+                            <li>
+                                <a href="generos.html" id="hopcioncitas2">Géneros</a>
+                            </li>
+                            <li >
+                                <a href="miLista.html" id="hopcioncitas3">Mi lista</a>
+                            </li>
+                            <li>
+                                <input type="search" name="buscador" placeholder="Series, peliculas, generos">
+                                <input type="submit" value="Search">
+                            </li>
+                            <li >
+                                <a href="sesion.html" id="hopcioncitas4">Iniciar Sesión</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="hcelular">
+                    <div class="primeraparteh">
+                        <figure class="hlogo">
+                            <a href="home.html"><img class= "hfotologo" src="img/Logo.png"></a>
+                        </figure>
+                        <div>
+                            <ion-icon  class= "menuham" id="hamenu" name="menu-outline"></ion-icon> 
+                        </div>
+                    </div>
+                    <nav class="clickmenu">
+                        <ul class="hhopciones">
+                            <li>
+                                <a href="home.html">Inicio</a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="peliculas.html">Peliculas</a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="series.html">Series</a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="generos.html">Generos</a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="miLista.html">Mi Lista</a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="sesion.html">Iniciar sesion</a>
+                            </li>
+                        </ul>
+                    </nav>     
+                </div>
+    
+    
                 
             </header>
         </div>
-
         <!--DETALLE-->
         <div class="parteDetalle">
             <section class="detalle">
@@ -88,5 +130,6 @@
 
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script> 
     <script src="js/detalleSeries.js"></script>
+    <script src="js/header.js"></script>
 </body>
 </html>
