@@ -148,6 +148,10 @@ li{
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         gap: 10px;
     }
+    .subtitulo{
+        font-size: 2rem;
+        padding-left: 10px;
+    }
 
     
 

@@ -123,6 +123,14 @@ article.movie{
     text-align: center;
 }
 
+.subtituloHome{
+    color: white;
+    font-size: 2rem;
+    padding-left: 10px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
 
 /*CSS FOOTER*/
 .footer{

@@ -54,9 +54,18 @@ window.addEventListener('load', function(){
     })
     .then(function(peliculasPopulares){
         for(let i = 0 ; i < peliculasPopulares.results.length; i++){
-            populares.innerHTML += `<li> <div class="uk-panel"> <img src="https://image.tmdb.org/t/p/w500/${peliculasPopulares.results[i].poster_path} " alt="${peliculasPopulares.results[i].title}"> <div class="uk-position-center  uk-panel"><h1> ${i+1} </h1></div>            <div>
-            <a  id= '${JSON.stringify(peliculasPopulares.results[i])}' href= '#' class='btn btn-success btn-block botonMiLsta' >Agregar a mi lista </a>
-            </div> </div> </li>
+            populares.innerHTML += `<li> 
+            <div class="uk-panel"> 
+                <a href='detallePelis.html?id=${peliculasPopulares.results[i].id}&titulo=${peliculasPopulares.results[i].title}&overview=${peliculasPopulares.results[i].overview}&popularity=${peliculasPopulares.results[i].popularity}&portada=${peliculasPopulares.results[i].poster_path}&fecha=${peliculasPopulares.results[i].release_date}&duracion=${peliculasPopulares.results[i].runtime}&votos=${peliculasPopulares.results[i].vote_average}'
+                    <div>
+                        <img src="https://image.tmdb.org/t/p/w500${peliculasPopulares.results[i].poster_path}" alt="${peliculasPopulares.results[i].title}"/>
+                    </div>
+                </a>         
+                <div>
+                    <a  id= '${JSON.stringify(peliculasPopulares.results[i])}' href= '#' class='btn btn-success btn-block botonMiLsta' >Agregar a mi lista </a>
+                </div> 
+            </div> 
+            </li>
             ` 
         }
         let botonMiLista = document.querySelectorAll('.botonMiLsta')
@@ -86,7 +95,14 @@ window.addEventListener('load', function(){
     })
     .then(function(peliculasValoradas){
         for(let i = 0 ; i < peliculasValoradas.results.length; i++){
-            valoradas.innerHTML += `<li> <div class="uk-panel"> <img src="https://image.tmdb.org/t/p/w500/${peliculasValoradas.results[i].poster_path} " alt="${peliculasValoradas.results[i].title}"> <div class="uk-position-center  uk-panel"><h1> ${i+1} </h1></div>             <div>
+            valoradas.innerHTML += `<li> 
+            <div class="uk-panel"> 
+                <a href='detallePelis.html?id=${peliculasValoradas.results[i].id}&titulo=${peliculasValoradas.results[i].title}&overview=${peliculasValoradas.results[i].overview}&popularity=${peliculasValoradas.results[i].popularity}&portada=${peliculasValoradas.results[i].poster_path}&fecha=${peliculasValoradas.results[i].release_date}&duracion=${peliculasValoradas.results[i].runtime}&votos=${peliculasValoradas.results[i].vote_average}'
+                    <div>
+                        <img src="https://image.tmdb.org/t/p/w500${peliculasValoradas.results[i].poster_path}" alt="${peliculasValoradas.results[i].title}"/>
+                    </div>
+                </a>
+            <div>
             <a  id= '${JSON.stringify(peliculasValoradas.results[i])}' href= '#' class='btn btn-success btn-block botonMiLstaa' >Agregar a mi lista </a>
             </div> </div> </li> `
         }
@@ -114,11 +130,19 @@ window.addEventListener('load', function(){
     .then(respuesta =>{
         return respuesta.json()
     })
-    .then(function(serieSpopulares){
-        for(let i = 0 ; i < serieSpopulares.results.length; i++){
-            spopulares.innerHTML += `<li> <div class="uk-panel"> <img src="https://image.tmdb.org/t/p/w500/${serieSpopulares.results[i].poster_path} " alt="${serieSpopulares.results[i].title}"> <div class="uk-position-center  uk-panel"><h1> ${i+1} </h1></div>    <div>
-            <a  id= '${JSON.stringify(serieSpopulares.results[i])}' href= '#' class='btn btn-success btn-block botonMiLsta2' >Agregar a mi lista </a>
-            </div>  </div> </li> `
+    .then(function(seriesPopulares){
+        for(let i = 0 ; i < seriesPopulares.results.length; i++){
+            spopulares.innerHTML += `<li> 
+            <div class="uk-panel">
+                <a href='detalleSeries.html?id=${seriesPopulares.results[i].id}&titulo=${seriesPopulares.results[i].name}&overview=${seriesPopulares.results[i].overview}&popularity=${seriesPopulares.results[i].popularity}&portada=${seriesPopulares.results[i].poster_path}&fecha=${seriesPopulares.results[i].first_air_date}&votos=${seriesPopulares.results[i].vote_average}&genero=${seriesPopulares.results[i].genre_ids.id}'>
+                    <div>
+                        <img src="https://image.tmdb.org/t/p/w500${seriesPopulares.results[i].poster_path}" alt="${seriesPopulares.results[i].name}"/>
+                    </div>
+                </a>
+                <div>
+                    <a  id= '${JSON.stringify(seriesPopulares.results[i])}' href= '#' class='btn btn-success btn-block botonMiLsta2' >Agregar a mi lista </a>
+                </div> 
+                 </div> </li> `
         }
         let botonMiLista2 = document.querySelectorAll('.botonMiLsta2')
         let arrayMiListaDeFavoritas2;
@@ -145,7 +169,14 @@ window.addEventListener('load', function(){
     })
     .then(function(serieSvaloradas){
         for(let i = 0 ; i < serieSvaloradas.results.length; i++){
-            svaloradas.innerHTML += `<li> <div class="uk-panel"> <img src="https://image.tmdb.org/t/p/w500/${serieSvaloradas.results[i].poster_path} " alt="${serieSvaloradas.results[i].title}"> <div class="uk-position-center  uk-panel"><h1> ${i+1} </h1></div> </div> </li> `
+            svaloradas.innerHTML += `<li> 
+            <div class="uk-panel"> 
+                <a href='detalleSeries.html?id=${serieSvaloradas.results[i].id}&titulo=${serieSvaloradas.results[i].name}&overview=${serieSvaloradas.results[i].overview}&popularity=${serieSvaloradas.results[i].popularity}&portada=${serieSvaloradas.results[i].poster_path}&fecha=${serieSvaloradas.results[i].first_air_date}&votos=${serieSvaloradas.results[i].vote_average}&genero=${serieSvaloradas.results[i].genre_ids.id}'>
+                    <div>
+                        <img src="https://image.tmdb.org/t/p/w500${serieSvaloradas.results[i].poster_path}" alt="${serieSvaloradas.results[i].name}"/>
+                    </div>
+                </a>
+            </div> </li> `
         }
     })
 
