@@ -59,15 +59,34 @@ li{
 
 /*DETALLE GENERO*/
 
-.cadaGenero{
+.cadaGenerop{
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+.cadaGeneros{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.movies{
+    color: white;
+    font-size: 1rem;
+    text-decoration: underline;
+    text-align: center;
+
+}
+
+.series{
+    color: white;
+    font-size: 1rem;
+    text-decoration: underline;
+    text-align: center;
 }
 .cadaUno{
     padding: 0.1rem;
 }
 
-.gtitulo{
+.cadaTitulo{
     color: white;
     text-align: center;
 }
@@ -104,9 +123,23 @@ li{
 
     /*DETALLE GENEROS*/
 
-    .cadaGenero{
+    .cadaGenerop{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    }
+
+    .cadaGeneros{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    }
+
+    .movies{
+        font-size: 4rem;
+    
+    }
+    
+    .series{
+        font-size: 4rem;
     }
 
     .cadaUno{
