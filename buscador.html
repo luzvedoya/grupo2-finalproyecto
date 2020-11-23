@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peliculas</title>
-    <link rel="stylesheet" href="css/peliculas.css">
-    <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
+    <title>Buscador</title>
+    <link rel="stylesheet" href="css/buscador.css">
 </head>
 <body>
-    <main class="container">
-         <!--HEADER-->
+    <main>
+        <!--HEADER-->
         <div class="hcontainer">
             <header class="header">
                 <div class="desktoph ">
@@ -85,42 +84,47 @@
             </header>
         </div>
 
-        <!--PELICULAS-->
-        <div class="partePeliculas">
-            <section class="tituloP">
-                <h1>Peliculas en Elit</h1>
-            </section>
+        <!--BUSCADOR-->
+    
+        <section class="parteBuscador">
+            <div class="listaPeliculas">
+               
+            </div>
+        </section>
 
-            <!--POPULARES-->
-            <section class="peliculasPopulares">
-                <h2 class="subtitulo">Populares en Elit</h2>
-                <article class="cadaPeliPopu">
-
-                </article>
-            </section>
-
-            <!--ACLAMADAS POR EL PUBLICO-->
-            <section class="aclamadasPublico">
-                <h2 class="subtitulo">Aclamadas por el publico</h2>
-                <article class="aclamadasPor">
-
-                </article>
-            </section>
-
-            <!--AGREGADAS RECIENTEMENTE-->
-            <section class="proximamente">
-                <h2 class="subtitulo">Agregadas recientemente</h2>
-                <article class="proxima">
-
-                </article>
-            </section>
-        </div>
-
+        <!--FOOTER-->
+        <footer class="footer">
+            <article class="logo"><img class="fotuli" src="img/Logo.png"></article>
+            <article class="logo2"><img class="fotuli2" src="img/TMDB1.jpg"></article>
+            <article class="menu"> 
+                <ul class="opciones">
+                    <li>
+                        <a href="#"> Aviso Legal</a>
+                    </li>
+                    <li>
+                        <a href="#">Sobre Nosotros</a>
+                    </li>
+                    <li>
+                        <a href="#">Webmail</a>
+                    </li>
+                </ul>
+            </article>
+            <article class="redes">
+                <h2>
+                    <a href="https://www.facebook.com"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://www.instagram.com"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://www.twitter.com"><ion-icon name="logo-twitter"></ion-icon></a>
+                </h2>
+            </article>
+        </footer>
+    <nav class="copyright"> 
+        <h6>© 2020 Elit Peliculas y Series Online, Todos los derechos reservados. Hay 500 películas y series disponibles.</h6>
+    </nav>
+    
     </main>
 
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script> 
-    <script src="js/peliculas.js"></script>
-    <script src="js/header.js"></script>
     <script src="js/buscador.js"></script>
+    <script src="js/header.js"></script>
 </body>
 </html>
