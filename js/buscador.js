@@ -1,5 +1,8 @@
 window.addEventListener('load', function(){
 
+    //el loader
+    document.getElementById('loader').classList.toggle('loader2');
+
     //query string
     let quieroBuscar = location.search;
     quieroBuscar = new URLSearchParams(quieroBuscar);

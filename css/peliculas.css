@@ -139,14 +139,20 @@ li{
     .cadaPeliPopu{
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         gap: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .aclamadasPor{
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         gap: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .proxima{
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         gap: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .subtitulo{
         font-size: 2rem;
