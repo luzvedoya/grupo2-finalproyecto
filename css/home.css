@@ -69,10 +69,18 @@ li{
     padding-left: 0%;
     padding-right: 0%;
     padding-bottom: 2rem;
+    margin-left: 0%;
+    margin-right: 0%;
 }
 .covercover{
     padding-top: 5rem;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
+}
+#coverfotos{
+    height: 10rem;
+}
+.showfotos{
+    height: 8rem;
 }
 .subtituloHome{
     color: white;
@@ -227,6 +235,11 @@ h2 a{
     }
     #svaloradas li{
         width: 12rem;
+    }
+    
+    .covercover{
+        padding-top: 7rem;
+        padding-bottom: 3rem;
     }
     
 

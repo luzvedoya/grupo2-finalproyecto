@@ -55,7 +55,9 @@ window.addEventListener('load', function(){
     .then(function (coverFotoss) {
         for (let i = 0; i < coverFotoss.results.length; i++) {
             coverfotos.innerHTML += `<li>
-            <img src="https://image.tmdb.org/t/p/w500${coverFotoss.results[i].poster_path}" alt="${coverFotoss.results[i].title}" uk-cover>
+            <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
+            <img class="showfotos" src="https://image.tmdb.org/t/p/w500${coverFotoss.results[i].poster_path}" alt="${coverFotoss.results[i].title}" uk-cover>
+            </div>
         </li>
         `         
         }
