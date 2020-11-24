@@ -38,6 +38,20 @@ li{
     margin-top: 9px;
     margin-right: 20px;
 }
+.lupita{
+    color: white;
+    font-size: 1.6rem;
+    margin-top: 9px;
+    margin-left: 140px;
+}
+.hbuscador{
+    background-color: rgb(33, 37, 41);
+    width: 100vw;
+    display: none;   
+}
+.hbuscadorjs{
+    display: block;
+}
 .clickmenu{
     background-color: rgb(33, 37, 41);
     width: 100vw;

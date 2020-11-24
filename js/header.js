@@ -5,11 +5,18 @@ window.addEventListener('load', function(){
     let hopcioncitas1 = document.getElementById('hopcioncitas1')
     let hopcioncitas2 = document.getElementById('hopcioncitas2')
     let hopcioncitas3 = document.getElementById('hopcioncitas3')
+    let lupita = document.querySelector('.lupita')
+    let hbuscador = document.querySelector('.hbuscador')
+
     const menuham = document.querySelector('.menuham')
             hamenu = document.querySelector('#hamenu')
     menuham.addEventListener('click', function(){
         //clickmenu.style.display = 'block'
         clickmenu.classList.toggle('clickmenujs')   
+    })
+
+    lupita.addEventListener('click', function(){
+        hbuscador.classList.toggle('hbuscadorjs')   
     })
 
     hopcioncitas.addEventListener('mouseover', function(){
@@ -42,6 +49,8 @@ window.addEventListener('load', function(){
     hopcioncitas4.addEventListener('mouseout', function(){
         hopcioncitas4.style.textDecoration = 'none'
     })
+
+
    
 
 })
