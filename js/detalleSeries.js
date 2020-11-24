@@ -82,6 +82,7 @@ window.addEventListener('load',function(){
     */
 
     let nombreGenero = []
+    let idGenero = []
 
     
     
@@ -95,6 +96,8 @@ window.addEventListener('load',function(){
     serie.genres.forEach(genero => { 
         //console.log(genero);
         nombreGenero.push(genero.name) 
+        idGenero.push(genero.id)
+        //console.log(idGenero);
         //console.log(nombreGenero);
         
     })
@@ -112,7 +115,12 @@ window.addEventListener('load',function(){
                                     
                                     <section class="info">
                                     
-                                    <article class="datos"><h3 class="dato1">Genre: </h3><p class="dato2">${nombreGenero.toString()}</p></article>
+                                    <article class="datos">
+                                        <h3 class="dato1">Genre: </h3> 
+                                        <a href="detalleGeneros.html?id= ${idGenero}&name=${nombreGenero}">
+                                            <p class="dato2">${nombreGenero.toString()}</p>
+                                        </a>
+                                    </article>
                                     <article class="datos"><h3 class="dato1">Release date: </h3><p class="dato2">${serie.first_air_date}</p></article>
                                     <article class="datos"><h3 class="dato1">Seasons: </h3><p class="dato2">${serie.number_of_seasons}</p></article>
                                     <article class="datos"><h3 class="dato1">Episodes:: </h3><p class="dato2">${serie.number_of_episodes}</p></article>
@@ -131,7 +139,7 @@ window.addEventListener('load',function(){
                                         <article class="datoCel"><h3 class="dato1Cel">Release date: </h3><p class="dato2Cel">${serie.first_air_date}</p></article>
                                         <article class="datoCel"><h3 class="dato1Cel">Popularity: </h3><p class="dato2Cel">${serie.popularity}</p></article>
                                         <article class="datoCel"><h3 class="dato1Cel">Votes' average: </h3><p class="dato2Cel">${serie.vote_average}</p></article>
-                                        <article class="datoCel"><h3 class="dato1Cel">Genero: </h3><p class="dato2Cel">${generos}</p></article>
+                                        <article class="datoCel"><h3 class="dato1Cel">Genero: </h3><p class="dato2Cel">${nombreGenero.toString()}</p></article>
                                         <article class="datoCel"><h3 class="dato1Cel">Sinopsis: </h3><p class="dato2Cel">${serie.overview}</p></article>                    
                                         <section class="portadaCel">
                                             <img src="https://image.tmdb.org/t/p/w500${serie.poster_path}"/>

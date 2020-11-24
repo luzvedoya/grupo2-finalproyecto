@@ -85,6 +85,9 @@ window.addEventListener('load',function(){
                         `
     */
 
+    let nombreGenero = []
+    let idGenero = []
+
     //INTENTO DE TRAER DESDE DETAILS
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=18581b65b3e6ad002984aa4952878117&language=en-US`)
     .then(function(respuesta){
@@ -93,11 +96,15 @@ window.addEventListener('load',function(){
     .then(function(peli){
         //console.log(peli);
 
-        peli.genres.forEach(genero => { //NO ESTOY PUDIENDO PONER LOS GENEROS
+        peli.genres.forEach(genero => { 
             //console.log(genero);
-            let nombreGenero = (genero.name)
-            console.log(nombreGenero);
-        });
+            nombreGenero.push(genero.name) 
+            idGenero.push(genero.id)
+            //console.log(idGenero);
+            //console.log(nombreGenero);
+            
+        })
+
         
         detalle.innerHTML += `  <div class="desktop">
                                     <div class="primeraParte">
@@ -110,9 +117,14 @@ window.addEventListener('load',function(){
                                         </section>
                                         
                                         <section class="info">
+                                            <article class="datos">
+                                                <h3 class="dato1">Genre: </h3> 
+                                                <a href="detalleGeneros.html?id= ${idGenero}&name=${nombreGenero}">
+                                                    <p class="dato2">${nombreGenero.toString()}</p>
+                                                </a>
+                                            </article>
                                             <article class="datos"><h3 class="dato1">Release date: </h3><p class="dato2">${peli.release_date}</p></article>
                                             <article class="datos"><h3 class="dato1">Popularity: </h3><p class="dato2">${peli.popularity}</p></article>
-                                            <article class="datos"><h3 class="dato1">Genre: </h3><p class="dato2">${peli.nombreGenero}</p></article>
                                             <article class="datos"><h3 class="dato1">Votes' average: </h3><p class="dato2">${peli.vote_average}</p></article>
                                             <article class="datos"><h3 class="dato1">Sinopsis: </h3><p class="dato2">${peli.overview}</p></article>
                                             
@@ -142,12 +154,12 @@ window.addEventListener('load',function(){
 
     })
 
-    botonCriticas.addEventListener('mouseover', function(){
+    /*botonCriticas.addEventListener('mouseover', function(){
         botonCriticas.style.textDecoration = 'underline'
     })
     botonCriticas.addEventListener('mouseout', function(){
         botonCriticas.style.textDecoration = 'none'
-    })
+    })*/
 
 
 

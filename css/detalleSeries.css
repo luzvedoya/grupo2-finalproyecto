@@ -13,6 +13,9 @@ li{
 }
 
 /*CSS HEADER*/
+.header{
+    background-color: rgb(33, 37, 41);
+}
 .desktoph{
     display: none;
 }
