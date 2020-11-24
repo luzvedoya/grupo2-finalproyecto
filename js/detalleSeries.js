@@ -86,6 +86,13 @@ window.addEventListener('load',function(){
        return respuesta.json()
    })
    .then(function(serie){
+
+    serie.genres.forEach(genero => { //NO ESTOY PUDIENDO PONER LOS GENEROS
+        //console.log(genero);
+        let nombreGenero = (genero.name)
+        console.log(nombreGenero);
+    });
+
     detalle.innerHTML += `  <div class="desktop">
                                 <div class="primeraParte">
                                     <h1 class="tituloDesk">${serie.name}</h1>
@@ -97,6 +104,7 @@ window.addEventListener('load',function(){
                                     </section>
                                     
                                     <section class="info">
+                                    <article class="datos"><h3 class="dato1">Genre: </h3><p class="dato2">${serie.nombreGenero}</p></article>
                                     <article class="datos"><h3 class="dato1">Release date: </h3><p class="dato2">${serie.first_air_date}</p></article>
                                     <article class="datos"><h3 class="dato1">Seasons: </h3><p class="dato2">${serie.number_of_seasons}</p></article>
                                     <article class="datos"><h3 class="dato1">Episodes:: </h3><p class="dato2">${serie.number_of_episodes}</p></article>
