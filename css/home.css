@@ -206,6 +206,7 @@ h2 a{
         display: grid;
         grid-template-columns: 0.25fr 1fr;
         background-color:  rgb(33, 37, 41);
+        
     }
     .hlogo{
         width: 8rem;
