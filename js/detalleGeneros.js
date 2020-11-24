@@ -63,10 +63,10 @@ window.addEventListener('load',function(){
         //console.log(generos);
         generos.results.forEach(genero => {
             cadaGeneros.innerHTML += 
-            `<a href='detalleSeries.html?id=${genero.id}&titulo=${genero.title}&overview=${genero.overview}&popularity=${genero.popularity}&portada=${genero.poster_path}&fecha=${genero.release_date}&duracion=${genero.runtime}&votos=${genero.vote_average}&genero=${genero.genre_ids}'
+            `<a href='detalleSeries.html?id=${genero.id}&titulo=${genero.name}&overview=${genero.overview}&popularity=${genero.popularity}&portada=${genero.poster_path}&fecha=${genero.release_date}&duracion=${genero.runtime}&votos=${genero.vote_average}&genero=${genero.genre_ids}'
                                     <div>
                                         <article class= "cadaUno"><img src="https://image.tmdb.org/t/p/w500${genero.poster_path}" alt="${genero.title}"/>
-                                        <h2 class="cadaTitulo">${genero.title}</h2></article>
+                                        <h2 class="cadaTitulo">${genero.name}</h2></article>
                                     </div>
                                     </a>`
 

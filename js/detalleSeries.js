@@ -81,17 +81,24 @@ window.addEventListener('load',function(){
 
     */
 
+    let nombreGenero = []
+
+    
+    
+
    fetch(`https://api.themoviedb.org/3/tv/${id}?api_key=18581b65b3e6ad002984aa4952878117&language=en-US`)
    .then(function(respuesta){
        return respuesta.json()
    })
    .then(function(serie){
 
-    serie.genres.forEach(genero => { //NO ESTOY PUDIENDO PONER LOS GENEROS
+    serie.genres.forEach(genero => { 
         //console.log(genero);
-        let nombreGenero = (genero.name)
-        console.log(nombreGenero);
-    });
+        nombreGenero.push(genero.name) 
+        //console.log(nombreGenero);
+        
+    })
+    
 
     detalle.innerHTML += `  <div class="desktop">
                                 <div class="primeraParte">
@@ -104,7 +111,8 @@ window.addEventListener('load',function(){
                                     </section>
                                     
                                     <section class="info">
-                                    <article class="datos"><h3 class="dato1">Genre: </h3><p class="dato2">${serie.nombreGenero}</p></article>
+                                    
+                                    <article class="datos"><h3 class="dato1">Genre: </h3><p class="dato2">${nombreGenero.toString()}</p></article>
                                     <article class="datos"><h3 class="dato1">Release date: </h3><p class="dato2">${serie.first_air_date}</p></article>
                                     <article class="datos"><h3 class="dato1">Seasons: </h3><p class="dato2">${serie.number_of_seasons}</p></article>
                                     <article class="datos"><h3 class="dato1">Episodes:: </h3><p class="dato2">${serie.number_of_episodes}</p></article>
