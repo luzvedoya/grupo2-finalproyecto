@@ -101,12 +101,15 @@ window.addEventListener('load',function(){
         //console.log(nombreGenero);
         
     })
-    
+
+   
 
     detalle.innerHTML += `  <div class="desktop">
                                 <div class="primeraParte">
                                     <h1 class="tituloDesk">${serie.name}</h1>
-                                    <a href="#criticas" class="botonCriticas">Leer criticas</a>
+                                    <div class="parteBotonCriticas">
+                                        <a href="#criticas" class="botonCriticas">Leer criticas</a>
+                                    </div>
                                 </div>
                                 <div class="todoDetalle">
                                     <section class="portada">
@@ -134,7 +137,9 @@ window.addEventListener('load',function(){
                             <div class="celular">
                                 <div class="todoDetalleCel">
                                     <h1 class="tituloCel">${serie.name}</h1>
-                                    <a href="#criticas" class="botonCriticas">Leer criticas</a>
+                                    <div class="parteBotonCriticas">
+                                        <a href="#criticas" class="botonCriticas">Leer criticas</a>
+                                    </div>
                                     <section class="infoCel">
                                         <article class="datoCel"><h3 class="dato1Cel">Release date: </h3><p class="dato2Cel">${serie.first_air_date}</p></article>
                                         <article class="datoCel"><h3 class="dato1Cel">Popularity: </h3><p class="dato2Cel">${serie.popularity}</p></article>

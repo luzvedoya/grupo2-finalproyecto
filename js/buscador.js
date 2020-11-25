@@ -10,7 +10,11 @@ window.addEventListener('load', function(){
     //variables del html
     let buscador = document.querySelector('.buscador');
     let loBuscado = quieroBuscar.get('inputbuscador');
+    //let todoAvanzado = document.querySelector('.todoAvanzado');
+    //let opcionesSeleccionarDos= document.querySelector('.opcionesSeleccionarDos');
 
+
+    //BUSCADOR
     fetch(`https://api.themoviedb.org/3/search/multi?api_key=18581b65b3e6ad002984aa4952878117&language=en-US&query=${loBuscado}&page=1&include_adult=false`)
     .then(function(response){
         return response.json()
@@ -52,11 +56,7 @@ window.addEventListener('load', function(){
         console.log(error);
     })
 
-
-
-
-
-
+    
 
 
 })
