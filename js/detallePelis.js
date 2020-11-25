@@ -84,6 +84,7 @@ window.addEventListener('load',function(){
                             </div>  
                         `
     */
+   let populares = document.querySelector('.info')
 
     let nombreGenero = []
     let idGenero = []
@@ -151,6 +152,29 @@ window.addEventListener('load',function(){
                             </div>  
                                 
                                 `
+
+        for (let i = 0; i < peli.results.length; i++) {
+            populares.innerHTML += `<article class="datos">
+                                        <a id= '${JSON.stringify(peli.results[i])}' href= '#' class="botonMiLista dato1">Agrgar a mi Lista</a>
+                                    </article>`
+        }
+        let botonMiLista = document.querySelectorAll('.botonMiLsta')
+        let arrayMiListaDeFavoritas;
+        //console.log(botonMiLista)
+        botonMiLista.forEach(pelicula => {
+            pelicula.addEventListener('click', function(e){
+            e.preventDefault()
+            let miListadePeliculas = localStorage.getItem('miLista')
+            if(miListadePeliculas == null){
+                arrayMiListaDeFavoritas = [];
+            }else{
+                 arrayMiListaDeFavoritas = JSON.parse(miListadePeliculas)
+            }
+            arrayMiListaDeFavoritas.push(JSON.parse(this.id))
+            localStorage.setItem('miLista', JSON.stringify(arrayMiListaDeFavoritas))
+        
+        })
+       })           
 
     })
 

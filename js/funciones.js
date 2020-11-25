@@ -12,19 +12,5 @@ function sacarDeMiLista(idEliminar){
     location.href = 'miLista.html'
 
     }
-    let misPeliculasFavoritass =  JSON.parse( localStorage.getItem('miLista'))
-console.log(misPeliculasFavoritass);
-function sacarDeMiLista1(idEliminar){
-    let miListaDeFavoritass = []
-    
-    for (let favoritaa of misPeliculasFavoritass) {
-        if(favoritaa.id != idEliminar){
-            miListaDeFavoritass.push(favoritaa)
-        }
-    }
-    localStorage.setItem('miLista', JSON.stringify(miListaDeFavoritass))
-    location.href = 'miLista.html'
-
-    }
 
     
