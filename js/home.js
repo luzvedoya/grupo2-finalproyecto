@@ -5,12 +5,19 @@ window.addEventListener('load', function(){
     let hopcioncitas1 = document.getElementById('hopcioncitas1')
     let hopcioncitas2 = document.getElementById('hopcioncitas2')
     let hopcioncitas3 = document.getElementById('hopcioncitas3')
+    let lupita = document.querySelector('.lupita')
+    let hbuscador = document.querySelector('.hbuscador')
+
     const menuham = document.querySelector('.menuham')
             hamenu = document.querySelector('#hamenu')
     menuham.addEventListener('click', function(){
         //clickmenu.style.display = 'block'
         clickmenu.classList.toggle('clickmenujs')   
     })
+    lupita.addEventListener('click', function(){
+        hbuscador.classList.toggle('hbuscadorjs')   
+    })
+
 
     hopcioncitas.addEventListener('mouseover', function(){
         hopcioncitas.style.textDecoration = 'underline'
@@ -56,7 +63,7 @@ window.addEventListener('load', function(){
         for (let i = 0; i < coverFotoss.results.length; i++) {
             coverfotos.innerHTML += `<li>
             <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
-            <img class="showfotos" src="https://image.tmdb.org/t/p/w500${coverFotoss.results[i].poster_path}" alt="${coverFotoss.results[i].title}" uk-cover>
+            <img class="showfotos" src="https://image.tmdb.org/t/p/w500${coverFotoss.results[i].backdrop_path}" alt="${coverFotoss.results[i].title}" uk-cover>
             </div>
         </li>
         `         
@@ -74,15 +81,12 @@ window.addEventListener('load', function(){
                     <div>
                         <img src="https://image.tmdb.org/t/p/w500${peliculasPopulares.results[i].poster_path}" alt="${peliculasPopulares.results[i].title}"/>
                     </div>
-                </a>         
-                <div>
-                    <a  id= '${JSON.stringify(peliculasPopulares.results[i])}' href= '#' class='btn btn-success btn-block botonMiLsta' >Mi lista </a>
-                </div> 
+                </a>          
             </div> 
             </li>
             ` 
         }
-        let botonMiLista = document.querySelectorAll('.botonMiLsta')
+        /*let botonMiLista = document.querySelectorAll('.botonMiLsta')
         let arrayMiListaDeFavoritas;
         //console.log(botonMiLista)
         botonMiLista.forEach(pelicula => {
@@ -99,7 +103,7 @@ window.addEventListener('load', function(){
 
             } )
 
-        });
+        });*/
 
     })
 
@@ -116,11 +120,9 @@ window.addEventListener('load', function(){
                         <img src="https://image.tmdb.org/t/p/w500${peliculasValoradas.results[i].poster_path}" alt="${peliculasValoradas.results[i].title}"/>
                     </div>
                 </a>
-            <div>
-            <a  id= '${JSON.stringify(peliculasValoradas.results[i])}' href= '#' class='btn btn-success btn-block botonMiLstaa' >Mi lista </a>
-            </div> </div> </li> `
+             </div> </li> `
         }
-        let botonMiListaa = document.querySelectorAll('.botonMiLstaa')
+        /*let botonMiListaa = document.querySelectorAll('.botonMiLstaa')
         let arrayMiListaDeFavoritass;
         console.log(botonMiListaa)
         botonMiListaa.forEach(peliculaa => {
@@ -138,7 +140,7 @@ window.addEventListener('load', function(){
 
             } )
 
-        });
+        });*/
     })
     fetch('https://api.themoviedb.org/3/tv/popular?api_key=18581b65b3e6ad002984aa4952878117&language=en-US&page=1')
     .then(respuesta =>{
@@ -152,13 +154,10 @@ window.addEventListener('load', function(){
                     <div>
                         <img src="https://image.tmdb.org/t/p/w500${seriesPopulares.results[i].poster_path}" alt="${seriesPopulares.results[i].name}"/>
                     </div>
-                </a>
-                <div>
-                    <a  id= '${JSON.stringify(seriesPopulares.results[i])}' href= '#' class='btn btn-success btn-block botonMiLsta2' >Mi lista </a>
-                </div> 
+                </a> 
                  </div> </li> `
         }
-        let botonMiLista2 = document.querySelectorAll('.botonMiLsta2')
+        /*let botonMiLista2 = document.querySelectorAll('.botonMiLsta2')
         let arrayMiListaDeFavoritas2;
         //console.log(botonMiLista)
         botonMiLista2.forEach(pelicula2 => {
@@ -174,7 +173,7 @@ window.addEventListener('load', function(){
                 localStorage.setItem('miLista2', JSON.stringify(arrayMiListaDeFavoritas2))
 
             })
-        });
+        });*/
 
     })
     fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=3fdb6796a354372e7fda65df33ed0329&language=en-US&page=1')
