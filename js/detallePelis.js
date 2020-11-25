@@ -84,7 +84,7 @@ window.addEventListener('load',function(){
                             </div>  
                         `
     */
-   let populares = document.querySelector('.info')
+   let populares = document.querySelector('.datoLista')
 
     let nombreGenero = []
     let idGenero = []
@@ -105,6 +105,27 @@ window.addEventListener('load',function(){
             //console.log(nombreGenero);
             
         })
+        for (let i = 0; i < peli.length; i++) {
+            populares.innerHTML += `<a id= '${JSON.stringify(peli[i])}' href= '#' class="botonMiLista">Agrgar a mi Lista</a>`
+        }
+        let botonMiLista = document.querySelectorAll('.botonMiLsta')
+        let arrayMiListaDeFavoritas;
+        //console.log(botonMiLista)
+        botonMiLista.forEach(pelicula => {
+            pelicula.addEventListener('click', function(e){
+            e.preventDefault()
+            let miListadePeliculas = localStorage.getItem('miLista')
+            if(miListadePeliculas == null){
+                arrayMiListaDeFavoritas = [];
+            }else{
+                 arrayMiListaDeFavoritas = JSON.parse(miListadePeliculas)
+            }
+            arrayMiListaDeFavoritas.push(JSON.parse(this.id))
+            localStorage.setItem('miLista', JSON.stringify(arrayMiListaDeFavoritas))
+        
+        })
+       })           
+
 
         
         detalle.innerHTML += `  <div class="desktop">
@@ -120,6 +141,7 @@ window.addEventListener('load',function(){
                                         </section>
                                         
                                         <section class="info">
+                                        <article class="datos"><h3 class="dato1">Mi Lista: </h3><p class="datoLista"></p></article>
                                             <article class="datos">
                                                 <h3 class="dato1">Genre: </h3> 
                                                 <a href="detalleGeneros.html?id= ${idGenero}&name=${nombreGenero}">
@@ -142,6 +164,7 @@ window.addEventListener('load',function(){
                                         <a href="#criticas" class="botonCriticas">Leer criticas</a>
                                     </div>
                                     <section class="infoCel">
+                                        <article class="datoCel"><h3 class="dato1Cel">Mi Lista: </h3><p class="datoLista"></p></article>
                                         <article class="datoCel"><h3 class="dato1Cel">Release date: </h3><p class="dato2Cel">${peli.release_date}</p></article>
                                         <article class="datoCel"><h3 class="dato1Cel">Genre: </h3><p class="dato2Cel">${peli.nombreGenero}</p></article>
                                         <article class="datoCel"><h3 class="dato1Cel">Popularity: </h3><p class="dato2Cel">${peli.popularity}</p></article>
@@ -157,28 +180,6 @@ window.addEventListener('load',function(){
                                 
                                 `
 
-        for (let i = 0; i < peli.results.length; i++) {
-            populares.innerHTML += `<article class="datos">
-                                        <a id= '${JSON.stringify(peli.results[i])}' href= '#' class="botonMiLista dato1">Agrgar a mi Lista</a>
-                                    </article>`
-        }
-        let botonMiLista = document.querySelectorAll('.botonMiLsta')
-        let arrayMiListaDeFavoritas;
-        //console.log(botonMiLista)
-        botonMiLista.forEach(pelicula => {
-            pelicula.addEventListener('click', function(e){
-            e.preventDefault()
-            let miListadePeliculas = localStorage.getItem('miLista')
-            if(miListadePeliculas == null){
-                arrayMiListaDeFavoritas = [];
-            }else{
-                 arrayMiListaDeFavoritas = JSON.parse(miListadePeliculas)
-            }
-            arrayMiListaDeFavoritas.push(JSON.parse(this.id))
-            localStorage.setItem('miLista', JSON.stringify(arrayMiListaDeFavoritas))
-        
-        })
-       })           
 
     })
 
