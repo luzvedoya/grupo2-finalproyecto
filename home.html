@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elit-home</title>
     <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/uikit.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main class="container-fluid">
+    <main class="container">
         <div class="hcontainer">
-            <header class="header fixed-top">
+            <header class="header">
                 <div class="desktop">
                     <figure class="hlogo">
                         <a href="home.html"><img class= "hfotologo" src="img/Logo.png"></a>
@@ -44,7 +43,7 @@
                     </nav>
                 </div>
                 <div class="celular">
-                    <div class="primeraparte">
+                    <div class="hprimeraparte">
                         <figure class="hlogo">
                             <a href="home.html"><img class= "hfotologo" src="img/Logo.png"></a>
                         </figure>
@@ -62,7 +61,7 @@
                         </form>
                     </div>
                     <nav class="clickmenu">
-                        <ul class="opciones">
+                        <ul class="hhopciones">
                             <li>
                                 <a href="home.html">Inicio</a>
                             </li>
@@ -96,7 +95,16 @@
                 <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow= "autoplay: true " uk-slideshow="autoplay-interval: 6000" >
 
                     <ul class="uk-slideshow-items" id="coverfotos">
-                    
+                        <li>
+                            <img src="img/ironman.jpg" alt="" uk-cover class="fotoIron">
+                        </li>
+                        <li>
+                            <img src="img/olaf.jpg" alt="" uk-cover class="fotoIron">
+                        </li>
+                        <li>
+                            <img src="img/piratas.jpg" alt="" uk-cover class="fotoIron">
+                        </li>
+                
                     </ul>
             
                     <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
@@ -104,7 +112,7 @@
             
                 </div>
             </section>
-            <section>
+            <section class="cadaCarruselsito">
                 <h2 class="subtituloHome"> Populares en Elit</h2>
                 <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="sets: true">
                     <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-4@m  uk-grid" id="populares">
@@ -113,7 +121,7 @@
                     <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>               
                 </div>
             </section>
-            <section>
+            <section  class="cadaCarruselsito">
                 <h2 class="subtituloHome">Más Valoradas</h2>
                 <section class="peliculas">
                     <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="sets: true">
@@ -124,7 +132,7 @@
                     </div>
                 </section>
             </section>
-            <section>
+            <section  class="cadaCarruselsito">
                 <h2 class="subtituloHome">Series dignas de maratón</h2>
                 <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="sets: true">
                     <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-4@m  uk-grid" id="spopulares">
@@ -133,7 +141,7 @@
                     <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>               
                 </div>
             </section>
-            <section>
+            <section  class="cadaCarruselsito">
                 <h2 class="subtituloHome"> Dramas de TV</h2>
                 <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="sets: true">
                     <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-4@m  uk-grid" id="svaloradas">
@@ -148,7 +156,7 @@
         </section>
         <footer class="footer">
             <article class="logo"><img class="fotuli" src="img/Logo.png"></article>
-            <article class="logo2"><img class="fotuli" src="img/TMDB1.jpg"></article>
+            <article class="logo2"><img class="fotuli2" src="img/TMDB1.jpg"></article>
             <article class="menu"> 
                 <ul class="opciones">
                     <li>
@@ -181,6 +189,7 @@
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     <script src="js/uikit-icons.min.js"></script>
     <script src="js/uikit.min.js"></script>
+    <script src="js/header.js"></script>
     <script src="js/home.js"></script>
 </body>
 </html>

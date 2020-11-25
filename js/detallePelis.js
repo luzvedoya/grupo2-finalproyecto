@@ -9,17 +9,6 @@ window.addEventListener('load',function(){
     //VARIABLES DEL JS
     let id = detallePeliculaObjeto.get('id');
 
-    /*
-    let titulo = detallePeliculaObjeto.get('titulo');
-    let overview = detallePeliculaObjeto.get('overview');
-    let popularity = detallePeliculaObjeto.get('popularity');
-    let portada = detallePeliculaObjeto.get('portada');
-    let fecha = detallePeliculaObjeto.get('fecha');
-    let duracion = detallePeliculaObjeto.get('duracion');
-    let votos = detallePeliculaObjeto.get('votos');
-    let genero =detallePeliculaObjeto.get('genero');
-    */
-
     //RECORRO LOS REVIEWS
     fetch(`https://api.themoviedb.org/3/movie/${id}/reviews?api_key=18581b65b3e6ad002984aa4952878117&language=en-US&page=1`)
     .then(function(respuesta){
@@ -42,49 +31,7 @@ window.addEventListener('load',function(){
     })
     
 
-    //LO AGREGO AL HTML
-   /* detalle.innerHTML += `  <div class="desktop">
-                                <div class="primeraParte">
-                                    <h1 class="tituloDesk">${titulo}</h1>
-                                    <section class="abajoTitulo">
-                                        <h2 class="fecha">${fecha}</h2>
-                                        <h2 class="duracion">${duracion}</h2>
-                                    </section>
-                                </div>
-                                <div class="todoDetalle">
-                                    <section class="portada">
-                                        <img src="https://image.tmdb.org/t/p/w500${portada}"/>
-                                    </section>
-                                    
-                                    <section class="info">
-                                        <article class="datos"><h3 class="dato1">Popularity: </h3><p class="dato2">${popularity}</p></article>
-                                        <article class="datos"><h3 class="dato1">Genero: </h3><p class="dato2">${genero}</p></article>
-                                        <article class="datos"><h3 class="dato1">Votes' average: </h3><p class="dato2">${votos}</p></article>
-                                        <article class="datos"><h3 class="dato1">Sinopsis: </h3><p class="dato2">${overview}</p></article>
-                                        
-                                    </section>
-
-                                </div>
-                            </div>
-                            <div class="celular">
-                                <div class="todoDetalleCel">
-                                    <h1 class="tituloCel">${titulo}</h1>
-                                    <section class="infoCel">
-                                        <article class="datoCel"><h3 class="dato1Cel">Release date: </h3><p class="dato2Cel">${fecha}</p></article>
-                                        <article class="datoCel"><h3 class="dato1Cel">Duracion: </h3><p class="dato2Cel">${duracion}</p></article>
-                                        <article class="datoCel"><h3 class="dato1Cel">Popularity: </h3><p class="dato2Cel">${popularity}</p></article>
-                                        <article class="datoCel"><h3 class="dato1Cel">Votes' average: </h3><p class="dato2Cel">${votos}</p></article>
-                                        <article class="datoCel"><h3 class="dato1Cel">Sinopsis: </h3><p class="dato2Cel">${overview}</p></article>                    
-                                        <section class="portadaCel">
-                                            <img src="https://image.tmdb.org/t/p/w500${portada}"/>
-                                        </section>
-                                    </section>
-
-                                </div>
-                            </div>  
-                        `
-    */
-   let populares = document.querySelector('.datoLista')
+   //let populares = document.querySelector('.datoLista')
 
     let nombreGenero = []
     let idGenero = []
@@ -125,7 +72,7 @@ window.addEventListener('load',function(){
                                         </section>
                                         
                                         <section class="info">
-                                        <article class="datos"><h3 class="dato1">Mi Lista: </h3><p class="datoLista"><a id= '${JSON.stringify(peli)}' href= '#' class="botonMiLista" onclick = agregar() >Agregar a mi Lista</a></p></article>
+                                        <article class="datos"><h3 class="dato1">Mi Lista: </h3><p class="datoLista"><a id= '${JSON.stringify(peli)}' href= '#' class="botonMiLista" onclick = agregar() >Agregar a mi Lista</a>  </p></article>
                                             <article class="datos">
                                                 <h3 class="dato1">Genre: </h3> 
                                                 <a href="detalleGeneros.html?id= ${idGenero}&name=${nombreGenero}">
@@ -148,9 +95,15 @@ window.addEventListener('load',function(){
                                         <a href="#criticas" class="botonCriticas">Leer criticas</a>
                                     </div>
                                     <section class="infoCel">
-                                        <article class="datoCel"><h3 class="dato1Cel">Mi Lista: </h3><p class="datoLista"><a id= '${JSON.stringify(peli)}' href= '#' class="botonMiLista" onclick = agregar() >Agregar a mi Lista</a>   </p></article>
+                                    <article class="datoCel">
+                                            <h3 class="dato1Cel">Genero: </h3>
+                                            <p class="dato2Cel">
+                                                <a href="detalleGeneros.html?id= ${idGenero}&name=${nombreGenero}">
+                                                    <p class="dato2">${nombreGenero}</p>
+                                                </a>
+                                            </p>
+                                        </article>
                                         <article class="datoCel"><h3 class="dato1Cel">Release date: </h3><p class="dato2Cel">${peli.release_date}</p></article>
-                                        <article class="datoCel"><h3 class="dato1Cel">Genre: </h3><p class="dato2Cel">${peli.nombreGenero}</p></article>
                                         <article class="datoCel"><h3 class="dato1Cel">Popularity: </h3><p class="dato2Cel">${peli.popularity}</p></article>
                                         <article class="datoCel"><h3 class="dato1Cel">Votes' average: </h3><p class="dato2Cel">${peli.vote_average}</p></article>
                                         <article class="datoCel"><h3 class="dato1Cel">Sinopsis: </h3><p class="dato2Cel">${peli.overview}</p></article>                    
@@ -186,14 +139,16 @@ window.addEventListener('load',function(){
                         
 
     })
-    let favoritos = document.querySelector('.favs')
+
+    /* DANI ACA INTENTAMOS HACERLO DE OTRA FORMA, PERO IGUAL NO NOS FUNCIONO (FORMA 2)
     let miListadePeliculas = localStorage.getItem('miLista')
-    let arrayMiListaDeFavoritas = '';
+    let favoritos = document.querySelector('.favs') //esto lo creamos en el html para internar traer el boton dirrecto de ahi
+    let arrayMiListaDeFavoritas = "";
 
     if(miListadePeliculas === null){
-        arrayMiListaDeFavoritas = []
+        arrayMiListaDeFavoritas = [];
     }else{
-         arrayMiListaDeFavoritas = JSON.parse(miListadePeliculas)
+        arrayMiListaDeFavoritas = JSON.parse(miListadePeliculas)
     }
 
 
@@ -201,11 +156,16 @@ window.addEventListener('load',function(){
 
 
     favoritos.addEventListener('click', function(){
-        arrayMiListaDeFavoritas.push(JSON.parse(botonMiLista.id))
+        arrayMiListaDeFavoritas.push({
+            tipo: tipo,
+            id: id
+        })
+
+
         localStorage.setItem('miLista', JSON.stringify(arrayMiListaDeFavoritas))
 
     })
-
+    */
 
 
 
@@ -218,6 +178,7 @@ window.addEventListener('load',function(){
     })*/
 
 
+    //<a id= '${JSON.stringify(peli)}' href= '#' class="botonMiLista" onclick = agregar() >Agregar a mi Lista</a>  
 
 
 

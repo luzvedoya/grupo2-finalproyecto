@@ -15,6 +15,10 @@ li{
 
 /*HEADER*/
 
+.header{
+    background-color: rgb(33, 37, 41);
+}
+
 .desktoph{
     display: none;
 }
@@ -164,7 +168,7 @@ li{
     width: 4rem;
     text-align: center;
     align-items: center;
-    margin-left: 11rem;
+    margin-left: 8rem;
 
 }
 

@@ -1,61 +1,14 @@
 window.addEventListener('load', function(){
-    let clickmenu = document.querySelector('.clickmenu');
-    let hopciones = document.querySelector('.hopciones');
-    let hopcioncitas = document.getElementById('hopcioncitas')
-    let hopcioncitas1 = document.getElementById('hopcioncitas1')
-    let hopcioncitas2 = document.getElementById('hopcioncitas2')
-    let hopcioncitas3 = document.getElementById('hopcioncitas3')
-    let lupita = document.querySelector('.lupita')
-    let hbuscador = document.querySelector('.hbuscador')
-
-    const menuham = document.querySelector('.menuham')
-            hamenu = document.querySelector('#hamenu')
-    menuham.addEventListener('click', function(){
-        //clickmenu.style.display = 'block'
-        clickmenu.classList.toggle('clickmenujs')   
-    })
-    lupita.addEventListener('click', function(){
-        hbuscador.classList.toggle('hbuscadorjs')   
-    })
-
-
-    hopcioncitas.addEventListener('mouseover', function(){
-        hopcioncitas.style.textDecoration = 'underline'
-    })
-    hopcioncitas.addEventListener('mouseout', function(){
-        hopcioncitas.style.textDecoration = 'none'
-    })
-    hopcioncitas1.addEventListener('mouseover', function(){
-        hopcioncitas1.style.textDecoration = 'underline'
-    })
-    hopcioncitas1.addEventListener('mouseout', function(){
-        hopcioncitas1.style.textDecoration = 'none'
-    })
-    hopcioncitas2.addEventListener('mouseover', function(){
-        hopcioncitas2.style.textDecoration = 'underline'
-    })
-    hopcioncitas2.addEventListener('mouseout', function(){
-        hopcioncitas2.style.textDecoration = 'none'
-    })
-    hopcioncitas3.addEventListener('mouseover', function(){
-        hopcioncitas3.style.textDecoration = 'underline'
-    })
-    hopcioncitas3.addEventListener('mouseout', function(){
-        hopcioncitas3.style.textDecoration = 'none'
-    })
-    hopcioncitas4.addEventListener('mouseover', function(){
-        hopcioncitas4.style.textDecoration = 'underline'
-    })
-    hopcioncitas4.addEventListener('mouseout', function(){
-        hopcioncitas4.style.textDecoration = 'none'
-    })
+   
     let coverfotos = document.querySelector ('#coverfotos')
     let populares = document.querySelector('#populares')
     let valoradas = document.getElementById('valoradas')
     let spopulares = document.getElementById('spopulares')
     let svaloradas = document.getElementById('svaloradas')
     let peliculas = document.querySelector('.peliculas')
-    fetch('https://api.themoviedb.org/3/trending/all/day?api_key=3fdb6796a354372e7fda65df33ed0329')
+
+
+    /*fetch('https://api.themoviedb.org/3/trending/all/day?api_key=3fdb6796a354372e7fda65df33ed0329')
     .then(respuesta =>{
         return respuesta.json()
     })
@@ -68,7 +21,7 @@ window.addEventListener('load', function(){
         </li>
         `         
         }
-    })
+    })*/
     fetch('https://api.themoviedb.org/3/movie/popular?api_key=18581b65b3e6ad002984aa4952878117&language=en-US&page=1')
     .then(respuesta =>{
         return respuesta.json()

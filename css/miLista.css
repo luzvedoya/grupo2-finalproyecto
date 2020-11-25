@@ -5,22 +5,25 @@
     padding: 0;
     outline: 0;
 }
-.peliculas{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 10px;
-}
+
 img{
     width: 100%;
 }
-/*HEADER*/
-.desktop{
+
+
+/*CSS HEADER*/
+.header{
+    background-color: rgb(33, 37, 41);
+    margin: 0;
+}
+.desktoph{
     display: none;
 }
-.primeraparte{
+.primeraparteh{
     display: flex;
     justify-content: space-between;
     background-color: rgb(33, 37, 41);
+    margin: 0;
 
 }
 .hlogo{
@@ -37,11 +40,6 @@ img{
     margin-top: 9px;
     margin-right: 20px;
 }
-.clickmenu{
-    background-color: rgb(33, 37, 41);
-    width: 100vw;
-    display: none;
-}
 .lupita{
     color: white;
     font-size: 1.6rem;
@@ -56,17 +54,27 @@ img{
 .hbuscadorjs{
     display: block;
 }
+.clickmenu{
+    background-color: rgb(33, 37, 41);
+    width: 100vw;
+    display: none;
+}
 .clickmenujs{
     display: block;  
 }
-.clickmenu .opciones li{
-    margin-top: 10px;
-    margin-bottom: 10px;
+
+.clickmenu .hhopciones li{
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
-.clickmenu .opciones li a{
+.clickmenu .hhopciones li a{
     text-decoration: none;
     color: white;
 }
+
+
+
+
 /*RESTOPAGINA*/
 .articulo{
     min-height: 400px;
@@ -84,6 +92,14 @@ img{
     text-align: center;
 
 }
+.peliculas{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+
+
 /*FOOTER*/
 .footer{
     display: grid;
@@ -99,19 +115,22 @@ img{
     text-align: center;
     align-items: center;
     margin-left: 33%;
-   
+    margin-top: 1rem;
+
 
 }
 .logo2{
     display: grid;
     height: 4.5rem;
     width: 4rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     text-align: center;
     align-items: center;
-   
+    /*padding-left: 3rem;*/
+    margin-left: 110px;
 
 }
+
 
 .fotuli{
     display: grid;
@@ -172,15 +191,16 @@ h2 a{
 }
 @media (min-width: 1024px){
     /*HEADER*/
-    .celular{
-        display: none;
+     /*HEADER*/
+   .hcelular{
+    display: none;
     }
-    .desktop{
+    .desktoph{
         display: block;
         display: grid;
         grid-template-columns: 0.25fr 1fr;
         background-color:  rgb(33, 37, 41);
-        
+        margin-bottom: 1px;
     }
     .hlogo{
         width: 8rem;

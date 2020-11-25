@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generos Grupo 2 </title>
     <link rel="stylesheet" href="css/generos.css">
+    <link rel="stylesheet" href="css/uikit.min.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
     
 </head>
@@ -100,7 +102,27 @@
         
 
         <h1 class="titulo">Géneros</h1>
-        <section class="fotocover" id="fotocover"></section>
+        <section class="covercover">
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow= "autoplay: true " uk-slideshow="autoplay-interval: 6000" >
+
+                <ul class="uk-slideshow-items" id="coverfotos">
+                    <li>
+                        <img src="img/ironman.jpg" alt="" uk-cover class="fotoIron">
+                    </li>
+                    <li>
+                        <img src="img/olaf.jpg" alt="" uk-cover class="fotoIron">
+                    </li>
+                    <li>
+                        <img src="img/piratas.jpg" alt="" uk-cover class="fotoIron">
+                    </li>
+            
+                </ul>
+        
+                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+        
+            </div>
+        </section>
         
         <section class="listaGeneros">
             
@@ -139,6 +161,8 @@
     
     </main>
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <script src="js/uikit.min.js"></script>
     <script src="js/generos.js"></script>
     <script src="js/header.js"></script>
     <script src="js/soloBuscador.js"></script>
