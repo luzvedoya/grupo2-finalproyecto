@@ -26,7 +26,7 @@ window.addEventListener('load',function(){
         return respuesta.json()
     })
     .then(function(reviews){
-        console.log(reviews);
+        //console.log(reviews);
         reviews.results.forEach(review => {
            critica.innerHTML += `
                     <div class="parteCritica">
@@ -105,26 +105,10 @@ window.addEventListener('load',function(){
             //console.log(nombreGenero);
             
         })
-        for (let i = 0; i < peli.length; i++) {
-            populares.innerHTML += `<a id= '${JSON.stringify(peli[i])}' href= '#' class="botonMiLista">Agrgar a mi Lista</a>`
-        }
-        let botonMiLista = document.querySelectorAll('.botonMiLsta')
-        let arrayMiListaDeFavoritas;
-        //console.log(botonMiLista)
-        botonMiLista.forEach(pelicula => {
-            pelicula.addEventListener('click', function(e){
-            e.preventDefault()
-            let miListadePeliculas = localStorage.getItem('miLista')
-            if(miListadePeliculas == null){
-                arrayMiListaDeFavoritas = [];
-            }else{
-                 arrayMiListaDeFavoritas = JSON.parse(miListadePeliculas)
-            }
-            arrayMiListaDeFavoritas.push(JSON.parse(this.id))
-            localStorage.setItem('miLista', JSON.stringify(arrayMiListaDeFavoritas))
-        
-        })
-       })           
+        /*for (let i = 0; i < peli.length; i++) {
+            populares.innerHTML += `<a id= '${JSON.stringify(peli.length[i])}' href= '#' class="botonMiLista">Agregar a mi Lista</a>`
+        }*/
+                
 
 
         
@@ -141,11 +125,11 @@ window.addEventListener('load',function(){
                                         </section>
                                         
                                         <section class="info">
-                                        <article class="datos"><h3 class="dato1">Mi Lista: </h3><p class="datoLista"></p></article>
+                                        <article class="datos"><h3 class="dato1">Mi Lista: </h3><p class="datoLista"><a id= '${JSON.stringify(peli)}' href= '#' class="botonMiLista" onclick = agregar() >Agregar a mi Lista</a></p></article>
                                             <article class="datos">
                                                 <h3 class="dato1">Genre: </h3> 
                                                 <a href="detalleGeneros.html?id= ${idGenero}&name=${nombreGenero}">
-                                                    <p class="dato2">${nombreGenero.toString()}</p>
+                                                    <p class="dato2">${nombreGenero}</p>
                                                 </a>
                                             </article>
                                             <article class="datos"><h3 class="dato1">Release date: </h3><p class="dato2">${peli.release_date}</p></article>
@@ -164,7 +148,7 @@ window.addEventListener('load',function(){
                                         <a href="#criticas" class="botonCriticas">Leer criticas</a>
                                     </div>
                                     <section class="infoCel">
-                                        <article class="datoCel"><h3 class="dato1Cel">Mi Lista: </h3><p class="datoLista"></p></article>
+                                        <article class="datoCel"><h3 class="dato1Cel">Mi Lista: </h3><p class="datoLista"><a id= '${JSON.stringify(peli)}' href= '#' class="botonMiLista" onclick = agregar() >Agregar a mi Lista</a>   </p></article>
                                         <article class="datoCel"><h3 class="dato1Cel">Release date: </h3><p class="dato2Cel">${peli.release_date}</p></article>
                                         <article class="datoCel"><h3 class="dato1Cel">Genre: </h3><p class="dato2Cel">${peli.nombreGenero}</p></article>
                                         <article class="datoCel"><h3 class="dato1Cel">Popularity: </h3><p class="dato2Cel">${peli.popularity}</p></article>
@@ -179,9 +163,52 @@ window.addEventListener('load',function(){
                             </div>  
                                 
                                 `
+                                
+                                /*let botonMiLista = document.querySelector('.botonMiLista')
+                                let arrayMiListaDeFavoritas
+                                console.log(botonMiLista)
+                                //botonMiLista.addEventListener('click', function(e){
+                                    //console.log('hola'+'-----------------------------')
+                                    //console.log(e)
+                                    //e.preventDefault()
 
+                                    let miListadePeliculas = localStorage.getItem('miLista')
+                                    if(miListadePeliculas == null){
+                                        arrayMiListaDeFavoritas = []
+                                    }else{
+                                         arrayMiListaDeFavoritas = JSON.parse(miListadePeliculas)
+                                    }
+                                    arrayMiListaDeFavoritas.push(JSON.parse(botonMiLista.id))
+                                    localStorage.setItem('miLista', JSON.stringify(arrayMiListaDeFavoritas))
+                                
+                               // })*/
+
+                        
 
     })
+    let favoritos = document.querySelector('.favs')
+    let miListadePeliculas = localStorage.getItem('miLista')
+    let arrayMiListaDeFavoritas = '';
+
+    if(miListadePeliculas === null){
+        arrayMiListaDeFavoritas = []
+    }else{
+         arrayMiListaDeFavoritas = JSON.parse(miListadePeliculas)
+    }
+
+
+
+
+
+    favoritos.addEventListener('click', function(){
+        arrayMiListaDeFavoritas.push(JSON.parse(botonMiLista.id))
+        localStorage.setItem('miLista', JSON.stringify(arrayMiListaDeFavoritas))
+
+    })
+
+
+
+
 
     /*botonCriticas.addEventListener('mouseover', function(){
         botonCriticas.style.textDecoration = 'underline'
