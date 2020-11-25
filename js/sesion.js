@@ -1,41 +1,35 @@
 window.addEventListener('load', function(){
 
-    //Funciones de validaciones de cada uno de mis campos
-    function validacionEmail(email){
-        let errorEmail = document.getElementById('errorEmail');
-        console.log(errorEmail);
-        if(email.value == ""){
-            errorEmail.innerHTML = 'No puede dejar en blanco este campo';
-            errorEmail.classList.add('alert-danger');
-            email.classList.add('is-invalid');
-            return false;
-        }else{
-            errorEmail.innerHTML = "";
-            errorEmail.classList.remove('alert-danger');
-            email.classList.remove('is-invalid');
-            email.classList.add('is-valid');
-            formulario.elements.email.focus();
-            return true;
-        }
+let nombre = document.getElementById("name")
+let email = document.getElementById("email")
+let pass = document.getElementById("password")
+let form = document.getElementById("form")
+let avisando = document.getElementById("aviso")
+
+form.addEventListener("submit", enviar=>{
+    enviar.preventDefault()
+    let aviso = ""
+    let entrar = false
+    let elEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{3})+$/
+    avisando.innerHTML = ""
+    if(nombre.value.length <8){
+        aviso += `El nombre es invalido <br>`
+        entrar = true
+    }
+    if(!elEmail.test(email.value)){
+        aviso += `El email es invalido <br>`
+        entrar = true
+    }
+    if(pass.value.length < 9){
+        aviso += `La contraseña es invalida <br>`
+        entrar = true
     }
 
-    function validacionContraseña(contraseña){
-        let errorContraseña = document.getElementById('errorContraseña');
-        console.log(errorContraseña);
-        if(contraseña.value == ""){
-            errorContraseña.innerHTML = 'No puede dejar en blanco este campo';
-            errorContraseña.classList.add('alert-danger');
-            email.classList.add('is-invalid');
-            return false;
-        }else{
-            errorEmail.innerHTML = "";
-            errorEmail.classList.remove('alert-danger');
-            contraseña.classList.remove('is-invalid');
-            contraseña.classList.add('is-valid');
-            formulario.elements.contraseña.focus();
-            return true;
-        }
+    if(entrar){
+        avisando.innerHTML = aviso
+    }else{
+        avisando.innerHTML = "Enviado"
     }
-
+})
 
 })

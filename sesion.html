@@ -9,26 +9,26 @@
 </head>
 <body>
     <main class="container">
-        <div class="formulario">
-            <section>
-            <h1 class="titulo">Inicia sesión</h1>
-            </section>
-            <br>
-            <form action="perfil.html" method="POST">
-                <div class="rellenar">
-                    <label for="email">Email </label>
-                    <input type="text" name="email" id="email" class="escribe">
-                    <div id="errorEmail" class="invalid-feedback"></div>
+        <form class="form" action="" method="POST" id="form">
+            <div class="form">
+                <h1 class="titulo">Iniciar sesión</h1>
+                <div class="completa">
+                    <input class="input" type="text" name="" id="name" >
+                    <label for="">Name</label>
                 </div>
-                <div class="rellenar">
-                    <label for="Contraseña">Contraseña</label>
-                    <input type="password" name="contraseña" id="contraseña" class="escribe">
-                    <div id="errorContraseña" class="invalid-feedback"></div>
+                <div class="completa">
+                    <input type="email" name="" id="email" >
+                    <label for="">Email</label>
                 </div>
-            
-                <section class="boton"><button id="boton" type="submit"> Iniciar sesión</button></section>
-                <br>
-        </div>
+                <div class="completa">
+                    <input type="password" name="" id="password" >
+                    <label for="">Password</label>
+                </div>
+                
+                <button type="submit">Iniciar sesión</button>
+                <p class="aviso" id="aviso"></p>
+            </div>
+        </form>
     </main>
 
     <script src ="js/sesion.js"></script>

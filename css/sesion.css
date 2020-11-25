@@ -1,43 +1,99 @@
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family:  'Slabo 27px', serif;
-    /*background-color: #1d3557;*/
-    margin: 0%;
 }
 
-img{
-    width: 100%;
-}
-
-li{
-    list-style-type: none;
-    
-}
-.container{
-    background-image: url("/img/generos.jpg");
-}
-
-.formulario{
-    display: grid;
+body {
+    background-color: rgb(1, 22, 39);
+    height: 700px;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center;
-    background-color: grey ;
-
 }
 
-.boton{
-    display: grid;
-    justify-content: center;
+h1{
+    text-align: center;
+    font-weight: 700;
+    color:  rgb(1, 22, 39) ;
+}
+
+form{
+    background:white;
+    padding: 40px 0;
+    box-shadow: 0 0 12px 0 rgba(255, 255, 255, 0.8);
+    border-radius: 30px;
+}
+
+.form{
+    width: 100%;
     
 }
 
-.titulo{
-    font-size: 2rem;
+form .completa{
+    position: relative;
+    margin: 45px ;
 }
 
-#boton{
-    background-color:  rgb(33, 37, 41);
-    color: white;
+input{
+    background: none;
+    font-size: 20px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
     
 }
 
+
+
+input:focus{ 
+    outline: none;
+    color: #5e5d5d;
+}
+
+label{
+    
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    pointer-events: none;
+}
+
+input:focus~label,
+input:valid~label{
+    top: -14px;
+    font-size: 16px;
+    color:  rgb(1, 22, 39); 
+}
+
+
+
+.aviso{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color:  rgb(1, 22, 39) ;
+    padding-top: 20px;
+}
+
+button{
+    font-family: 'roboto';
+    background: rgb(1, 22, 39);
+    border: none;
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    color: #fff;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+@media screen and (max-width:500px){
+    form{
+        width: 80%;
+    }
+}
