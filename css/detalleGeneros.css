@@ -1,7 +1,8 @@
 *{
     box-sizing: border-box;
     font-family:  'Slabo 27px', serif;
-    background-color: rgb(1, 22, 39);
+    margin: 0%;
+    
     
 }
 
@@ -70,21 +71,44 @@ li{
     color: white;
 }
 
-
 /*DETALLE GENERO*/
+
+.losgeneros{
+    background-color: rgb(1, 22, 39);
+    padding-bottom: 30px;
+}
+
+.gpelis{
+    padding: 30px;
+}
+
+.gseries{
+    margin-bottom: 3rem;
+    margin-top: 3.5rem;
+}
 
 .cadaGenerop{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+.cadaGenerop .adetalle a{
+    text-decoration: none;
+}
+
+
 .cadaGeneros{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
+.cadaGeneros .adetalle a{
+    text-decoration: none;
+}
+
 .movies{
     color: white;
-    font-size: 1rem;
+    font-size: 2rem;
     text-decoration: underline;
     text-align: center;
 
@@ -92,7 +116,7 @@ li{
 
 .series{
     color: white;
-    font-size: 1rem;
+    font-size: 2rem;
     text-decoration: underline;
     text-align: center;
 }
@@ -105,35 +129,125 @@ li{
     text-align: center;
 }
 
+/*CSS FOOTER*/
+
+.footer{
+    display: grid;
+    background-color: rgb(33, 37, 41);
+    width: 100%;
+    border-top: 4px solid white;
+    margin-top: 0;
+}
+
+.flogo{
+    display: grid;
+    width: 35%;
+    height: 30%;
+    text-align: center;
+    align-items: center;
+    margin-left: 33%;
+   
+
+}
+
+.flogo2{
+    display: grid;
+    height: 4.5rem;
+    width: 4rem;
+    text-align: center;
+    align-items: center;
+    margin-left: 11rem;
+
+}
+
+.ffotuli{
+    display: grid;
+    align-items: center;
+    text-align: center;
+   
+}
+
+.fopciones{
+    margin-right: 45px;
+}
+
+.fopciones li{
+    padding: 10px;
+    margin: 0%;
+}
+
+.fopciones li a{
+    display: grid;
+    color:white;
+    text-decoration: none;
+    font-size: 10px;
+    justify-content: center;
+    
+
+}
+
+.fopciones li a:hover{ 
+    text-decoration: underline;
+}
+
+.fredes{
+    display: grid;
+    align-items: center;
+    text-align: center;
+
+}
+h2 a{
+    color:white;
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+
+}
+
+
+.fcopyright{
+    display: grid;
+    color: white;
+    background-color: rgb(33, 37, 41);
+    text-align: center;
+    justify-content: center;
+    font-weight: 0;
+    font-size: 8px;
+    width: 100%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
 @media (min-width: 1024px){
 
     /*HEADER*/
 
-    .hcelular{
-        display: none;
-        }
-        .desktoph{
-            display: block;
-            display: grid;
-            grid-template-columns: 0.25fr 1fr;
-            background-color:  rgb(33, 37, 41);
-        }
-        .hlogo{
-            width: 8rem;
-        }
-        .hopciones{
-            display: flex;
-            justify-content: space-between;
-            margin-right: 0.6rem;
-        }
-        .hmenu .hopciones li a{
-            text-decoration: none;
-            color: white;
-            font-size: 1.5rem;
-        }
-        .hmenu .hopciones li{
-            margin-top: 1.5rem;
-        }
+   .hcelular{
+    display: none;
+    }
+    .desktoph{
+        display: block;
+        display: grid;
+        grid-template-columns: 0.25fr 1fr;
+        background-color:  rgb(33, 37, 41);
+        margin-bottom: 1px;
+    }
+    .hlogo{
+        width: 8rem;
+    }
+    .hopciones{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 0.6rem;
+    }
+    .hmenu .hopciones li a{
+        text-decoration: none;
+        color: white;
+        font-size: 1.5rem;
+    }
+    .hmenu .hopciones li{
+        margin-top: 1.5rem;
+    }
 
     /*DETALLE GENEROS*/
 
@@ -159,6 +273,79 @@ li{
     .cadaUno{
         padding: 0.2rem;
     }
+
+    /*FOOTER*/
+
+    .footer{
+        display: flex;
+        background-color: rgb(33, 37, 41);
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+    .ffotuli{
+        margin-left: 30px;
+        height: 70px;
+        width: 120px;
+        align-items: center;
+        
+    }
+
+    .flogo{
+    
+        height: 50px;
+        width: 75px;
+        margin: 0%;
+        
+    }
+
+    .flogo2{
+        display: grid;
+        height: 4rem;
+        width: 4rem;
+        margin-top: 1.5rem;
+        text-align: center;
+        align-items: center;
+       
+    
+    }
+    
+    .fopciones{
+        display: flex;
+        margin-right: 100px;
+        
+    }
+    
+    .fopciones li a{
+        display: grid;
+        color:white;
+        text-decoration: none;
+        font-size: 20px;
+        margin-right: 30px;
+        margin-left: 30px;
+        align-items: center;
+        text-align: center;
+    }
+
+    h2 a{
+        color:white;
+        font-size: 30px;
+    }
+    
+    
+    .fcopyright{
+        display: grid;
+        color: white;
+        background-color: rgb(33, 37, 41);
+        text-align: center;
+        justify-content: center;
+        font-weight: 0;
+        font-size: 15px;
+        width: 100%;
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+    
     
 
     }
