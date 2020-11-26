@@ -52,7 +52,7 @@ window.addEventListener('load', function(){
     })
 
 
-    let sesion= documentquerySelector('.sesion')
+    let sesion= document.querySelector('.sesion')
     let datos = location.search;
     let datosObjeto = new URLSearchParams('datos');
     datosObjeto.get('nombre');

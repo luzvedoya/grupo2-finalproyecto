@@ -1,19 +1,19 @@
 window.addEventListener('load', function(){
     let miListaDeFavoritas =  JSON.parse(localStorage.getItem('miLista'))
-    let nuestrosFavoritos = location.search;
-    let nuestrosFavoritosObjeto = new URLSearchParams(nuestrosFavoritos);
-    let id = nuestrosFavoritosObjeto.get("id");
+    //let nuestrosFavoritos = location.search;
+    //let nuestrosFavoritosObjeto = new URLSearchParams(nuestrosFavoritos);
+    //let id = nuestrosFavoritosObjeto.get("id");
 
     let misFavoritos = document.querySelector(".todosLosFavoritos")
-    let miListadePeliculas = JSON.parse(localStorage.getItem("miLista"))
-    console.log(miListadePeliculas);
+    //let miListadePeliculas = JSON.parse(localStorage.getItem("miLista"))
+    //console.log(miListadePeliculas);
 
 
 
 
 
 
-    /*console.log(miListaDeFavoritas);
+    console.log(miListaDeFavoritas);
     let peliculas = document.querySelector('.peliculas')
     for(let i = 0; i < miListaDeFavoritas.length; i++){
         //console.log(populares.results[i].poster_path);
@@ -27,7 +27,7 @@ window.addEventListener('load', function(){
         peliculas.append(articulo)
     }
     let miListaDeFavoritass =  JSON.parse(localStorage.getItem('miListaa'))
-    console.log(miListaDeFavoritass);*/
+    console.log(miListaDeFavoritass);
 
 
 })

@@ -72,7 +72,7 @@ window.addEventListener('load',function(){
                                         </section>
                                         
                                         <section class="info">
-                                        <article class="datos"><h3 class="dato1">Mi Lista: </h3><p class="datoLista"><a id= '${JSON.stringify(peli)}' href= '#' class="botonMiLista" onclick = agregar() >Agregar a mi Lista</a>  </p></article>
+                                        <article class="datos"><h3 
                                             <article class="datos">
                                                 <h3 class="dato1">Genre: </h3> 
                                                 <a href="detalleGeneros.html?id= ${idGenero}&name=${nombreGenero}">
@@ -116,15 +116,15 @@ window.addEventListener('load',function(){
                             </div>  
                                 
                                 `
-                                
+
                                 /*let botonMiLista = document.querySelector('.botonMiLista')
                                 let arrayMiListaDeFavoritas
                                 console.log(botonMiLista)
-                                //botonMiLista.addEventListener('click', function(e){
+                                botonMiLista.addEventListener('click', function(e){
                                     //console.log('hola'+'-----------------------------')
                                     //console.log(e)
-                                    //e.preventDefault()
-
+                                    e.preventDefault()
+                            
                                     let miListadePeliculas = localStorage.getItem('miLista')
                                     if(miListadePeliculas == null){
                                         arrayMiListaDeFavoritas = []
@@ -134,11 +134,33 @@ window.addEventListener('load',function(){
                                     arrayMiListaDeFavoritas.push(JSON.parse(botonMiLista.id))
                                     localStorage.setItem('miLista', JSON.stringify(arrayMiListaDeFavoritas))
                                 
-                               // })*/
+                                })*/
+                                
+
 
                         
 
     })
+    let botonMiLista = document.querySelector('.botonMiLista')
+    let arrayMiListaDeFavoritas;
+    console.log(botonMiLista);
+    JSON.stringify('botonMiLista')
+
+    
+    botonMiLista.addEventListener('click', function(e){
+            e.preventDefault()
+
+            let miListadePeliculas = localStorage.getItem('miLista')
+            if(miListadePeliculas == null){
+            arrayMiListaDeFavoritas = []
+            }else{
+                arrayMiListaDeFavoritas = JSON.parse(miListadePeliculas)
+            }
+            arrayMiListaDeFavoritas.push(JSON.parse(botonMiLista.id))
+            window.localStorage.setItem('miLista', JSON.stringify(arrayMiListaDeFavoritas))
+    
+    })
+    
 
     /* DANI ACA INTENTAMOS HACERLO DE OTRA FORMA, PERO IGUAL NO NOS FUNCIONO (FORMA 2)
     let miListadePeliculas = localStorage.getItem('miLista')
