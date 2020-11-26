@@ -113,7 +113,7 @@ li{
     text-decoration: none;
     text-align: center;
 }
-.proxima .adetalle3 a{
+.proxima .adetalle3 a {
     text-decoration: none;
     text-align: center;
 }
@@ -123,6 +123,16 @@ li{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+.fotoDePopus{
+    min-width: 150px;
+    max-width: 150px;
+    min-height: 200px;
+    max-height: 200px;
 }
 
 .aclamadasPor{
@@ -131,11 +141,26 @@ li{
     gap: 8px;
 }
 
+.fotoDeAcla{
+    min-width: 150px;
+    max-width: 150px;
+    min-height: 200px;
+    max-height: 200px;
+}
 .proxima{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
 }
+
+.fotoDeProx{
+    min-width: 150px;
+    max-width: 150px;
+    min-height: 200px;
+    max-height: 200px;
+}
+
+
 
 /*CSS FOOTER*/
 
@@ -263,18 +288,42 @@ h2 a{
         padding-left: 10px;
         padding-right: 10px;
     }
+
+    .fotoDePopus{
+        min-width: 200px;
+        max-width: 200px;
+        min-height: 280px;
+        max-height: 280px;
+    }
     .aclamadasPor{
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         gap: 10px;
         padding-left: 10px;
         padding-right: 10px;
     }
+
+    .fotoDeAcla{
+        min-width: 200px;
+        max-width: 200px;
+        min-height: 280px;
+        max-height: 280px;
+    }
+    
+    
     .proxima{
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         gap: 10px;
         padding-left: 10px;
         padding-right: 10px;
     }
+    
+    .fotoDeProx{
+        min-width: 200px;
+        max-width: 200px;
+        min-height: 280px;
+        max-height: 280px;
+    }
+
     .subtitulo{
         font-size: 2rem;
         padding-left: 10px;

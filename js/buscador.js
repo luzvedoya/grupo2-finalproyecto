@@ -29,14 +29,14 @@ window.addEventListener('load', function(){
             console.log(element.media_type);
 
             if (element.media_type == "tv") {
-                lista.innerHTML +=  `<a href='detalleSeries.html?id=${element.id}&titulo=${element.name}&overview=${element.overview}&popularity=${element.popularity}&portada=${element.poster_path}&fecha=${element.first_air_date}&votos=${element.vote_average}&genero=${element.genre_ids.id}'>
+                lista.innerHTML +=  `<a href='detalleSeries.html?id=${element.id}'>
                                         <div class="resultadoBuscador">
                                             <img src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt="${element.name}"/>
                                             <h2 class="cadaTitulo">${element.name}</h2>
                                         </div>
                                     </a>`
             } if (element.media_type == "movie") {
-                lista.innerHTML += `<a href='detallePelis.html?id=${element.id}&titulo=${element.title}&overview=${element.overview}&popularity=${element.popularity}&portada=${element.poster_path}&fecha=${element.release_date}&duracion=${element.runtime}&votos=${element.vote_average}&genero=${element.genre_ids}'
+                lista.innerHTML += `<a href='detallePelis.html?id=${element.id}'
                 <div class="resultadoBuscador">
                     <img src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt="${element.title}"/>
                     <h2 class="cadaTitulo">${element.title}</h2>
