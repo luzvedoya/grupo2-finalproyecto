@@ -105,6 +105,20 @@ li{
     text-decoration: none;
 }
 
+.cadaPeliPopu .adetalle a{
+    text-decoration: none;
+    text-align: center;
+}
+.aclamadasPor .adetalle2 a{
+    text-decoration: none;
+    text-align: center;
+}
+.proxima .adetalle3 a{
+    text-decoration: none;
+    text-align: center;
+}
+
+
 .cadaPeliPopu{
     display: grid;
     grid-template-columns: 1fr 1fr;

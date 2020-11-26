@@ -13,13 +13,13 @@ window.addEventListener('load', function(){
         console.log(seriesPopulares)
 
         seriesPopulares.results.forEach(popular => {  
-            cadaSeriePopular.innerHTML += `
+            cadaSeriePopular.innerHTML += `<article class="adetalle">
                                         <a href='detalleSeries.html?id=${popular.id}&titulo=${popular.name}&overview=${popular.overview}&popularity=${popular.popularity}&portada=${popular.poster_path}&fecha=${popular.first_air_date}&votos=${popular.vote_average}&genero=${popular.genre_ids.id}'>
                                             <div>
                                                  <img src="https://image.tmdb.org/t/p/w500${popular.poster_path}" alt="${popular.name}"/>
                                                 <h2 class="cadaTitulo">${popular.name}</h2>
                                             </div>
-                                        </a>
+                                        </a></article>
                                     `
         });
     })
@@ -35,13 +35,13 @@ window.addEventListener('load', function(){
         console.log(seriesAclamadas)
 
         seriesAclamadas.results.forEach(aclamada => {  
-            aclamadasPor.innerHTML += `
+            aclamadasPor.innerHTML += `<article class="adetalle2">
                                         <a href='detalleSeries.html?id=${aclamada.id}&titulo=${aclamada.name}&overview=${aclamada.overview}&popularity=${aclamada.popularity}&portada=${aclamada.poster_path}&fecha=${aclamada.first_air_date}&votos=${aclamada.vote_average}&genero=${aclamada.genre_ids.id}'>
                                             <div>
                                                  <img src="https://image.tmdb.org/t/p/w500${aclamada.poster_path}" alt="${aclamada.name}"/>
                                                 <h2 class="cadaTitulo">${aclamada.name}</h2>
                                             </div>
-                                        </a>
+                                        </a></article>
                                     `
         });
     })
@@ -57,13 +57,13 @@ window.addEventListener('load', function(){
         console.log(agregadas)
 
         agregadas.results.forEach(agregada => {  
-            cadaAgregada.innerHTML += `
+            cadaAgregada.innerHTML += `<article class="adetalle3">
                                         <a href='detalleSeries.html?id=${agregada.id}&titulo=${agregada.name}&overview=${agregada.overview}&popularity=${agregada.popularity}&portada=${agregada.poster_path}&fecha=${agregada.first_air_date}&votos=${agregada.vote_average}&genero=${agregada.genre_ids.id}'>
                                             <div>
                                                  <img src="https://image.tmdb.org/t/p/w500${agregada.poster_path}" alt="${agregada.name}"/>
                                                 <h2 class="cadaTitulo">${agregada.name}</h2>
                                             </div>
-                                        </a>
+                                        </a></article>
                                     `
         });
     })

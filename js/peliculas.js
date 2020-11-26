@@ -29,12 +29,12 @@ window.addEventListener('load', function(){
         console.log(peliculasPopulares)
 
         peliculasPopulares.results.forEach(populares => {  
-            cadaPeliPopu.innerHTML += `<a href='detallePelis.html?id=${populares.id}&titulo=${populares.title}&overview=${populares.overview}&popularity=${populares.popularity}&portada=${populares.poster_path}&fecha=${populares.release_date}&duracion=${populares.runtime}&votos=${populares.vote_average}&genero=${populares.genre_ids}'
-                                    <div>
+            cadaPeliPopu.innerHTML += `<article class="adetalle"><a href='detallePelis.html?id=${populares.id}&titulo=${populares.title}&overview=${populares.overview}&popularity=${populares.popularity}&portada=${populares.poster_path}&fecha=${populares.release_date}&duracion=${populares.runtime}&votos=${populares.vote_average}&genero=${populares.genre_ids}'
+                                    <div class="saco">
                                         <img src="https://image.tmdb.org/t/p/w500${populares.poster_path}" alt="${populares.title}"/>
                                         <h2 class="cadaTitulo">${populares.title}</h2>
                                     </div>
-                                    </a>`
+                                    </a></article>`
         });
     })
     .catch(function(error){
@@ -50,12 +50,12 @@ window.addEventListener('load', function(){
         console.log(aclamadasPublico)
 
         aclamadasPublico.results.forEach(aclamadas => {  
-            aclamadasPor.innerHTML += `<a href='detallePelis.html?id=${aclamadas.id}&titulo=${aclamadas.title}&overview=${aclamadas.overview}&popularity=${aclamadas.popularity}&portada=${aclamadas.poster_path}&fecha=${aclamadas.release_date}&duracion=${aclamadas.runtime}&votos=${aclamadas.vote_average}'
+            aclamadasPor.innerHTML += `<article class="adetalle2"><a href='detallePelis.html?id=${aclamadas.id}&titulo=${aclamadas.title}&overview=${aclamadas.overview}&popularity=${aclamadas.popularity}&portada=${aclamadas.poster_path}&fecha=${aclamadas.release_date}&duracion=${aclamadas.runtime}&votos=${aclamadas.vote_average}'
                                     <div>
                                     <img src="https://image.tmdb.org/t/p/w500${aclamadas.poster_path}" alt="${aclamadas.title}"/>
                                     <h2 class="cadaTitulo">${aclamadas.title}</h2>
                                     </div>
-                                    </a>`
+                                    </a></article>`
         });
     })
     .catch(function(error){
@@ -71,12 +71,12 @@ window.addEventListener('load', function(){
         console.log(proximamente)
 
         proximamente.results.forEach(prox => {  
-            proxima.innerHTML += `<a href='detallePelis.html?id=${prox.id}&titulo=${prox.title}&overview=${prox.overview}&popularity=${prox.popularity}&portada=${prox.poster_path}&fecha=${prox.release_date}&duracion=${prox.runtime}&votos=${prox.vote_average}'
+            proxima.innerHTML += `<article class="adetalle3"><a href='detallePelis.html?id=${prox.id}&titulo=${prox.title}&overview=${prox.overview}&popularity=${prox.popularity}&portada=${prox.poster_path}&fecha=${prox.release_date}&duracion=${prox.runtime}&votos=${prox.vote_average}'
                                     <div>
                                     <img src="https://image.tmdb.org/t/p/w500${prox.poster_path}" alt="${prox.title}"/>
                                     <h2 class="cadaTitulo">${prox.title}</h2>
                                     </div>
-                                    </a>`
+                                    </a></article>`
         });
     })
     .catch(function(error){

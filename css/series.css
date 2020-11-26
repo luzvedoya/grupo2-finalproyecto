@@ -101,6 +101,22 @@ li{
     padding-top: 20px ;
 }
 
+
+.cadaSeriePopular .adetalle a{
+    text-decoration: none;
+    text-align: center;
+}
+.aclamadasPor .adetalle2 a{
+    text-decoration: none;
+    text-align: center;
+}
+.cadaAgregada .adetalle3 a{
+    text-decoration: none;
+    text-align: center;
+}
+
+
+
 .cadaTitulo{
     color: white;
     font-size: 1rem;

@@ -1,73 +1,153 @@
 *{
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
+    font-family:  'Slabo 27px', serif;
+    margin: 0%;
+    padding: 0;
+    
 }
 
-body {
+img{
+    width: 100%;
+}
+
+li{
+    list-style-type: none;
+}
+
+/*HEADER*/
+
+
+.desktoph{
+    display: none;
+}
+.primeraparteh{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(33, 37, 41);
+
+}
+.hlogo{
+    width: 4.5rem;
+}
+.hfotologo{
+    margin-top: 4px;
+    margin-left: 10px;
+}
+
+.menuham{
+    color: white;
+    font-size: 1.8rem;
+    margin-top: 9px;
+    margin-right: 20px;
+}
+.lupita{
+    color: white;
+    font-size: 1.6rem;
+    margin-top: 9px;
+    margin-left: 140px;
+}
+.hbuscador{
+    background-color: rgb(33, 37, 41);
+    width: 100vw;
+    display: none;   
+}
+.hbuscadorjs{
+    display: block;
+}
+.clickmenu{
+    background-color: rgb(33, 37, 41);
+    width: 100vw;
+    display: none;
+}
+.clickmenujs{
+    display: block;  
+}
+
+.clickmenu .hhopciones li{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.clickmenu .hhopciones li a{
+    text-decoration: none;
+    color: white;
+}
+
+/*SESION*/
+
+.sesion{
     background-color: rgb(1, 22, 39);
-    height: 700px;
+    text-align: center;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
-h1{
+
+.forms{
+    width: 18rem;
     text-align: center;
-    font-weight: 700;
-    color:  rgb(1, 22, 39) ;
-}
-
-form{
-    background:white;
+    height: 36rem;
+    background: white;
     padding: 40px 0;
     box-shadow: 0 0 12px 0 rgba(255, 255, 255, 0.8);
     border-radius: 30px;
+    margin: 50px;
 }
 
-.form{
-    width: 100%;
+.forms .completa{
+    position: relative;
+    margin: 46px ;
     
 }
 
-form .completa{
-    position: relative;
-    margin: 45px ;
-}
 
-input{
+.inputs{
     background: none;
     font-size: 20px;
     padding: 10px 10px 10px 5px;
-    display: block;
     width: 100%;
     border: none;
+    margin-top: 24px;
+    
+    
     
 }
 
+.inputs:focus{ 
+    outline: none;/*Para que no me marque alredor del imput en negro cuando me paro ahi*/
+    color:rgb(1, 22, 39);
+}
 
-
-input:focus{ 
+.boton:focus{
     outline: none;
-    color: #5e5d5d;
 }
 
-label{
+.titulo{
+    text-align: center;
+    font-weight: 700;
+    color:  rgb(1, 22, 39);
+    font-size: 30px;
     
-    font-size: 16px;
+}
+
+.sesion .forms .completa .palabra{
+    
+    font-size: 20px;
     position: absolute;
     left: 5px;
-    top: 10px;
-    pointer-events: none;
+    
+    
+    
 }
 
-input:focus~label,
-input:valid~label{
+/*Para que cuando input esté en focus, su hermano "palabra" que es label, como a palabra le di 10, cuando toque el imput, este label va a quedar 4 pixeles arriba del imput*/
+
+/*.inputs:focus~.palabra,
+.inputs:valid~.palabra{
     top: -14px;
     font-size: 16px;
     color:  rgb(1, 22, 39); 
 }
-
+*/
 
 
 .aviso{
@@ -75,13 +155,14 @@ input:valid~label{
     text-align: center;
     margin: auto;
     color:  rgb(1, 22, 39) ;
-    padding-top: 20px;
+    font-size: 15px;
 }
 
-button{
-    font-family: 'roboto';
+.boton{
+
     background: rgb(1, 22, 39);
     border: none;
+    padding-top: 0%;
     display: block;
     width: 80%;
     margin: 10px auto;
@@ -92,8 +173,235 @@ button{
     border-radius: 15px;
 }
 
-@media screen and (max-width:500px){
-    form{
-        width: 80%;
-    }
+
+/*FOOTER*/
+
+.footer{
+    display: grid;
+    background-color: rgb(33, 37, 41);
+    width: 100%;
+    border-top: 4px solid white;
+    margin-top: 0;
 }
+
+.logo{
+    display: grid;
+    height: 30%;
+    text-align: center;
+    align-items: center;
+    margin-left: 33%;
+    width: 4.5rem;
+   
+
+}
+
+.logo2{
+    display: grid;
+    height: 4.5rem;
+    width: 4rem;
+    text-align: center;
+    align-items: center;
+    margin-left: 8rem;
+
+}
+
+.fotuli{
+    display: grid;
+    align-items: center;
+    text-align: center;
+    width: 4.5rem;
+   
+}
+
+.logo .fotuli{
+    margin-left: 30px;
+
+}
+
+.logo2 .fotuli2{
+    margin-left: 40px;
+}
+
+.opciones{
+    margin-right: 45px;
+}
+
+.opciones li{
+    padding: 10px;
+    margin-left: 34px;
+}
+
+.opciones li a{
+    display: grid;
+    color:white;
+    text-decoration: none;
+    font-size: 10px;
+    justify-content: center;
+    
+
+}
+
+.opciones li a:hover{ 
+    text-decoration: underline;
+}
+
+.redes{
+    display: grid;
+    align-items: center;
+    text-align: center;
+    
+
+}
+h2 a{
+    color:white;
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+
+}
+
+.redes h2 a:hover{
+    color: rgb(1, 22, 39);;
+}
+
+
+.copyright h6{
+    display: grid;
+    color: white;
+    background-color: rgb(33, 37, 41);
+    text-align: center;
+    justify-content: center;
+    font-weight: 0;
+    font-size: 8px;
+    width: 100%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+
+@media (min-width: 1024px){
+
+/*HEADER*/
+
+.hcelular{
+    display: none;
+    }
+    .desktoph{
+        display: block;
+        display: grid;
+        grid-template-columns: 0.25fr 1fr;
+        background-color:  rgb(33, 37, 41);
+        margin-bottom: 2px;
+    }
+    .hlogo{
+        width: 8rem;
+    }
+    .hopciones{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 0.6rem;
+    }
+    .hmenu .hopciones li a{
+        text-decoration: none;
+        color: white;
+        font-size: 1.5rem;
+    }
+    .hmenu .hopciones li{
+        margin-top: 1.5rem;
+    }
+
+
+/*SESION*/
+
+
+.forms{
+    width: 25rem;
+    height: 37rem;
+
+}
+
+
+.sesion .forms .completa .palabra{
+    
+    font-size: 16px;
+    
+}
+
+.aviso{
+    padding-top: 0%;
+}
+
+/*FOOTER*/
+
+.footer{
+    display: flex;
+    background-color: rgb(33, 37, 41);
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+.fotuli{
+    margin-left: 30px;
+    height: 70px;
+    width: 120px;
+}
+
+.logo{
+    height: 50px;
+    width: 100px;
+    margin: 0%;
+}
+
+.logo2{
+    display: grid;
+    height: 4rem;
+    width: 4rem;
+    margin-top: 1.5rem;
+    margin-left: 3rem;
+    text-align: center;
+    align-items: center;
+   
+}
+
+.logo .fotuli{
+    width: 100px;
+}
+
+.opciones{
+    display: flex;
+}
+
+.opciones li a{
+    display: grid;
+    color:white;
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 30px;
+    margin-left: 30px;
+    align-items: center;
+    text-align: center;
+}
+
+h2 a{
+    color:white;
+    font-size: 30px;
+}
+
+
+.copyright{
+    display: grid;
+    color: white;
+    background-color: rgb(33, 37, 41);
+    text-align: center;
+    justify-content: center;
+    font-weight: 0;
+    font-size: 15px;
+    width: 100%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+
+}    
+
+
