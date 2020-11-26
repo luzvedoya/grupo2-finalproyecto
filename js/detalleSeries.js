@@ -19,8 +19,8 @@ window.addEventListener('load',function(){
         reviews.results.forEach(review => {
            critica.innerHTML += `
                     <div class="parteCritica">
-                        <article class="datosCritica"><h3 class="dato1">Autor:</h3><p class="dato2Critica">${review.author}</p></article>
-                        <article class="datosCritica"><h3 class="dato1">Puntuacion:</h3><p class="dato2Critica">${review.author_details.rating}</p></article>
+                        <article class="datosCritica"><h3 class="dato1">Author:</h3><p class="dato2Critica">${review.author}</p></article>
+                        <article class="datosCritica"><h3 class="dato1">Puntuation:</h3><p class="dato2Critica">${review.author_details.rating}</p></article>
                         <p class="infoCritica">${review.content}</p>
                     </div>
            `
@@ -58,7 +58,7 @@ window.addEventListener('load',function(){
                                 <div class="primeraParte">
                                     <h1 class="tituloDesk">${serie.name}</h1>
                                     <div class="parteBotonCriticas">
-                                        <a href="#criticas" class="botonCriticas">Leer criticas</a>
+                                        <a href="#criticas" class="botonCriticas">Read reviews</a>
                                     </div>
                                 </div>
                                 <div class="todoDetalle">
@@ -79,7 +79,7 @@ window.addEventListener('load',function(){
                                     <article class="datos"><h3 class="dato1">Episodes:: </h3><p class="dato2">${serie.number_of_episodes}</p></article>
                                     <article class="datos"><h3 class="dato1">Popularity: </h3><p class="dato2">${serie.popularity}</p></article>
                                     <article class="datos"><h3 class="dato1">Votes' average: </h3><p class="dato2">${serie.vote_average}</p></article>
-                                    <article class="datos"><h3 class="dato1">Sinopsis: </h3><p class="dato2">${serie.overview}</p></article>
+                                    <article class="datos"><h3 class="dato1">Overview: </h3><p class="dato2">${serie.overview}</p></article>
                                     </section>
 
                                 </div>
@@ -88,7 +88,7 @@ window.addEventListener('load',function(){
                                 <div class="todoDetalleCel">
                                     <h1 class="tituloCel">${serie.name}</h1>
                                     <div class="parteBotonCriticas">
-                                        <a href="#criticas" class="botonCriticas">Leer criticas</a>
+                                        <a href="#criticas" class="botonCriticas">Read reviews</a>
                                     </div>
                                     <section class="infoCel">
                                         <article class="datoCel"><h3 class="dato1Cel">Release date: </h3><p class="dato2Cel">${serie.first_air_date}</p></article>
@@ -102,7 +102,7 @@ window.addEventListener('load',function(){
                                                 </a>
                                             </p>
                                         </article>
-                                        <article class="datoCel"><h3 class="dato1Cel">Sinopsis: </h3><p class="dato2Cel">${serie.overview}</p></article>                    
+                                        <article class="datoCel"><h3 class="dato1Cel">Overview: </h3><p class="dato2Cel">${serie.overview}</p></article>                    
                                         <section class="portadaCel">
                                             <img src="https://image.tmdb.org/t/p/w500${serie.poster_path}"/>
                                         </section>
