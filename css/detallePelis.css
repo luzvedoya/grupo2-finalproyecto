@@ -157,12 +157,25 @@ li{
 .parteBotonCriticas{
     text-align: center;
     margin-bottom: 2rem;
+    
 }
 
+.trailer{
+    background-color: rgb(1, 22, 39) ;
+}
 
+.tituloTrailer{
+    color: white;
+    text-align: center;
+    font-size: 3rem;;
 
+}
 
-
+.videoTrailer{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
 
 /*CSS FOOTER*/
 
@@ -358,6 +371,17 @@ h2 a{
         text-align: center;
     }
 
+    .videito{
+        width: 560px;
+        height: 315px;
+    }
+    
+    .videoTrailer{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    
  
     /*FOOTER*/
     .footer{

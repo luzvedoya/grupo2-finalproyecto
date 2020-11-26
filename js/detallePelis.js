@@ -1,6 +1,7 @@
 window.addEventListener('load',function(){
     //VARIABLES DEL HTML Y QUERY STRING
     let critica = document.querySelector('.critica');
+    let trailer = document.querySelector ('.trailer');
     let detalle = document.querySelector('.detalle');
     let botonCriticas = document.querySelector('.botonCriticas');
     let detallePelicula = location.search;
@@ -25,6 +26,26 @@ window.addEventListener('load',function(){
                     </div>
            `
         });
+    })
+    .catch(function(error){
+        console.log(error)
+    })
+    
+    //RECORRO EL TRAILER
+    fetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=18581b65b3e6ad002984aa4952878117&language=en-US&page=1`)
+    .then(function(respuesta){
+        return respuesta.json()
+    })
+    .then(function(videos){
+        //console.log(videos);
+        
+           if (videos.results != 0) {
+               trailer.innerHTML += `<div class="videoTrailer"><iframe class="videito" src="https://www.youtube.com/embed/${videos.results[0].key}?start=2" autoplay></iframe></div>`
+        
+           }else{
+                trailer.innerHTML = `<h2 class="noVideo">No video</h2>`
+           }
+        
     })
     .catch(function(error){
         console.log(error)
@@ -72,6 +93,7 @@ window.addEventListener('load',function(){
                                         <h1 class="tituloDesk">${peli.title}</h1>
                                         <div class="parteBotonCriticas">
                                             <a href="#criticas" class="botonCriticas">Read reviews</a>
+                                            <a href="#trailer" class="botonCriticas">Watch the trailer</a>
                                         </div>
                                     </div>
                                     <div class="todoDetalle">
@@ -101,6 +123,7 @@ window.addEventListener('load',function(){
                                     <h1 class="tituloCel">${peli.title}</h1>
                                     <div class="parteBotonCriticas">
                                         <a href="#criticas" class="botonCriticas">Read reviews</a>
+                                        <a href="#trailer" class="botonCriticas">Watch the trailer</a>
                                     </div>
                                     <section class="infoCel">
                                     <article class="datoCel">
@@ -132,11 +155,19 @@ window.addEventListener('load',function(){
                                     console.log(miListadePeliculas + '-----------')
                                     if(miListadePeliculas === null){
                                         arrayMiListaDeFavoritas = []
+                                        arrayMiListaDeFavoritas.push(peli)
                                     }else{
                                          arrayMiListaDeFavoritas = JSON.parse(miListadePeliculas)
+                                         for (let i =0; i < arrayMiListaDeFavoritas.length; i++) {
+                                             if (arrayMiListaDeFavoritas[i].id != peli.id) {
+                                                arrayMiListaDeFavoritas.push(peli)
+                                                 
+                                             }
+                                             
+                                         }
                                     }
                                     //console.log(JSON.parse(peli))
-                                    arrayMiListaDeFavoritas.push(peli)
+                                    
                                     localStorage.setItem('miLista', JSON.stringify(arrayMiListaDeFavoritas))
                                     
                                 })

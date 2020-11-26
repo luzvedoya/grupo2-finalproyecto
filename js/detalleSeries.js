@@ -108,17 +108,24 @@ window.addEventListener('load',function(){
                         let arraySeriesPreferidas
                         seriesBoton.addEventListener('click', function(event){
                             event.preventDefault()
-                                                                alert('Added to favorites!')       
+                                alert('Added to favorites!')       
 
                             let misSeriesFavoritas = localStorage.getItem('seriesFavs')
                             if (misSeriesFavoritas === null) {
                                 arraySeriesPreferidas = []
+                                arraySeriesPreferidas.push(serie)
+                                
                                 
                             } else {
                                 arraySeriesPreferidas = JSON.parse(misSeriesFavoritas)
-
+                                for (let i =0; i < arraySeriesPreferidas.length; i++) {
+                                    if (arraySeriesPreferidas[i].id != serie.id) {
+                                       arraySeriesPreferidas.push(serie)
+                                        
+                                    }
+                                }
                             }
-                            arraySeriesPreferidas.push(serie)
+                            
                             localStorage.setItem('seriesFavs', JSON.stringify(arraySeriesPreferidas))
 
 
