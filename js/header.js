@@ -50,7 +50,9 @@ window.addEventListener('load', function(){
         hopcioncitas4.style.textDecoration = 'none'
     })
 
-
+var queryString = location.search;
+var queryStringObj = new URLSearchParams[queryString];
+querystringObj.get['nombre'];
    
 
 })
