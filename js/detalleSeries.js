@@ -111,6 +111,24 @@ window.addEventListener('load',function(){
                                 </div>
                             </div>  
                         `
+                        let seriesBoton = document.querySelector('.seriesBoton')
+                        let arraySeriesPreferidas
+                        seriesBoton.addEventListener('click', function(event){
+                            event.preventDefault()
+                            let misSeriesFavoritas = localStorage.getItem('seriesFavs')
+                            if (misSeriesFavoritas === null) {
+                                arraySeriesPreferidas = []
+                                
+                            } else {
+                                arraySeriesPreferidas = JSON.parse(misSeriesFavoritas)
+
+                            }
+                            arraySeriesPreferidas.push(serie)
+                            localStorage.setItem('seriesFavs', JSON.stringify(arraySeriesPreferidas))
+
+
+                        })
+
 
    })
 

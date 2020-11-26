@@ -1,4 +1,6 @@
 let misPeliculasFavoritas =  JSON.parse( localStorage.getItem('miLista'))
+let lasMejoresSeries =  JSON.parse( localStorage.getItem('seriesFavs'))
+
 console.log(misPeliculasFavoritas);
 function sacarDeMiLista(idEliminar){
     let miListaDeFavoritas = []
@@ -12,5 +14,20 @@ function sacarDeMiLista(idEliminar){
     location.href = 'miLista.html'
 
     }
+
+
+    function sacarDeMiLista(idEliminar){
+        let seriesDeMiLista = []
+        
+        for (let preferida of lasMejoresSeries) {
+            if(preferida.id != idEliminar){
+                seriesDeMiLista.push(preferida)
+            }
+        }
+        localStorage.setItem('seriesFavs', JSON.stringify(seriesDeMiLista))
+        location.href = 'miLista.html'
+    
+        }
+    
 
     
