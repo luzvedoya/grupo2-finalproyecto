@@ -49,6 +49,7 @@ function validateRegisterForm() {
       formulario.elements.email.focus();
       return true;
     }
+}
 
 
 
