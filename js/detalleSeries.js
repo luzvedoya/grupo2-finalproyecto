@@ -31,8 +31,8 @@ window.addEventListener('load',function(){
     })
 
 
-    let nombreGenero = []
-    let idGenero = []
+    //let nombreGenero = []
+    //let idGenero = []
 
     
     
@@ -43,12 +43,11 @@ window.addEventListener('load',function(){
    })
    .then(function(serie){
 
+    let generos = ''
     serie.genres.forEach(genero => { 
-        //console.log(genero);
-        nombreGenero.push(genero.name) 
-        idGenero.push(genero.id)
-        //console.log(idGenero);
-        //console.log(nombreGenero);
+        generos += `<a href="detalleGeneros.html?id= ${genero.id}&name=${genero.name}">
+        <p class="dato2">${genero.name}</p>
+    </a>`
         
     })
 
@@ -70,9 +69,7 @@ window.addEventListener('load',function(){
                                     
                                     <article class="datos">
                                         <h3 class="dato1">Genre: </h3> 
-                                        <a href="detalleGeneros.html?id= ${idGenero}&name=${nombreGenero}">
-                                            <p class="dato2">${nombreGenero.toString()}</p>
-                                        </a>
+                                        <div id="geneross">${generos}</div>
                                     </article>
                                     <article class="datos"><h3 class="dato1">Release date: </h3><p class="dato2">${serie.first_air_date}</p></article>
                                     <article class="datos"><h3 class="dato1">Seasons: </h3><p class="dato2">${serie.number_of_seasons}</p></article>
@@ -96,11 +93,7 @@ window.addEventListener('load',function(){
                                         <article class="datoCel"><h3 class="dato1Cel">Votes' average: </h3><p class="dato2Cel">${serie.vote_average}</p></article>
                                         <article class="datoCel">
                                             <h3 class="dato1Cel">Genero: </h3>
-                                            <p class="dato2Cel">
-                                                <a href="detalleGeneros.html?id= ${idGenero}&name=${nombreGenero}">
-                                                    <p class="dato2">${nombreGenero.toString()}</p>
-                                                </a>
-                                            </p>
+                                            <div id="geneross">${generos}</div>
                                         </article>
                                         <article class="datoCel"><h3 class="dato1Cel">Overview: </h3><p class="dato2Cel">${serie.overview}</p></article>                    
                                         <section class="portadaCel">
@@ -115,6 +108,8 @@ window.addEventListener('load',function(){
                         let arraySeriesPreferidas
                         seriesBoton.addEventListener('click', function(event){
                             event.preventDefault()
+                                                                alert('Added to favorites!')       
+
                             let misSeriesFavoritas = localStorage.getItem('seriesFavs')
                             if (misSeriesFavoritas === null) {
                                 arraySeriesPreferidas = []

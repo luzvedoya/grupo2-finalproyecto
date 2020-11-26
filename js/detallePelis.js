@@ -19,8 +19,8 @@ window.addEventListener('load',function(){
         reviews.results.forEach(review => {
            critica.innerHTML += `
                     <div class="parteCritica">
-                        <article class="datosCritica"><h3 class="dato1">Autor:</h3><p class="dato2Critica">${review.author}</p></article>
-                        <article class="datosCritica"><h3 class="dato1">Puntuacion:</h3><p class="dato2Critica">${review.author_details.rating}</p></article>
+                        <article class="datosCritica"><h3 class="dato1">Author:</h3><p class="dato2Critica">${review.author}</p></article>
+                        <article class="datosCritica"><h3 class="dato1">Puntuation:</h3><p class="dato2Critica">${review.author_details.rating}</p></article>
                         <p class="infoCritica">${review.content}</p>
                     </div>
            `
@@ -44,18 +44,26 @@ window.addEventListener('load',function(){
     .then(function(peli){
         //console.log(peli);
 
-        peli.genres.forEach(genero => { 
-            //console.log(genero);
-            nombreGenero.push(genero.name) 
-            idGenero.push(genero.id)
-            //console.log(idGenero);
-            //console.log(nombreGenero);
+        
+
+        /*peli.genres.forEach(genero => { 
+            let nombreGenero = genero.name
+            let idGenero = genero.id
             
-        })
-        /*for (let i = 0; i < peli.length; i++) {
-            populares.innerHTML += `<a id= '${JSON.stringify(peli.length[i])}' href= '#' class="botonMiLista">Agregar a mi Lista</a>`
-        }*/
-                
+        })*/
+
+        let generos = ''
+                                peli.genres.forEach(genero => { 
+                                    //console.log(genero);
+                                    generos += `<a href="detalleGeneros.html?id= ${genero.id}&name=${genero.name}">
+                                    <p class="dato2">${genero.name}</p>
+                                </a>`
+                                    
+                                    //console.log(idGenero);
+                                    //console.log(nombreGenero);
+                                    
+                                })
+         
 
 
         
@@ -63,7 +71,7 @@ window.addEventListener('load',function(){
                                     <div class="primeraParte">
                                         <h1 class="tituloDesk">${peli.title}</h1>
                                         <div class="parteBotonCriticas">
-                                            <a href="#criticas" class="botonCriticas">Leer criticas</a>
+                                            <a href="#criticas" class="botonCriticas">Read reviews</a>
                                         </div>
                                     </div>
                                     <div class="todoDetalle">
@@ -72,17 +80,17 @@ window.addEventListener('load',function(){
                                         </section>
                                         
                                         <section class="info">
+
                                         <article class="datos"><h3 
                                             <article class="datos">
                                                 <h3 class="dato1">Genre: </h3> 
-                                                <a href="detalleGeneros.html?id= ${idGenero}&name=${nombreGenero}">
-                                                    <p class="dato2">${nombreGenero}</p>
-                                                </a>
+                                                <div id="geneross">${generos}</div>
+                                                
                                             </article>
                                             <article class="datos"><h3 class="dato1">Release date: </h3><p class="dato2">${peli.release_date}</p></article>
                                             <article class="datos"><h3 class="dato1">Popularity: </h3><p class="dato2">${peli.popularity}</p></article>
                                             <article class="datos"><h3 class="dato1">Votes' average: </h3><p class="dato2">${peli.vote_average}</p></article>
-                                            <article class="datos"><h3 class="dato1">Sinopsis: </h3><p class="dato2">${peli.overview}</p></article>
+                                            <article class="datos"><h3 class="dato1">Overview: </h3><p class="dato2">${peli.overview}</p></article>
                                             
                                         </section>
 
@@ -92,21 +100,17 @@ window.addEventListener('load',function(){
                                 <div class="todoDetalleCel">
                                     <h1 class="tituloCel">${peli.title}</h1>
                                     <div class="parteBotonCriticas">
-                                        <a href="#criticas" class="botonCriticas">Leer criticas</a>
+                                        <a href="#criticas" class="botonCriticas">Read reviews</a>
                                     </div>
                                     <section class="infoCel">
                                     <article class="datoCel">
-                                            <h3 class="dato1Cel">Genero: </h3>
-                                            <p class="dato2Cel">
-                                                <a href="detalleGeneros.html?id= ${idGenero}&name=${nombreGenero}">
-                                                    <p class="dato2">${nombreGenero}</p>
-                                                </a>
-                                            </p>
+                                            <h3 class="dato1Cel">Genre: </h3>
+                                            <div id="geneross">${generos}</div>
                                         </article>
                                         <article class="datoCel"><h3 class="dato1Cel">Release date: </h3><p class="dato2Cel">${peli.release_date}</p></article>
                                         <article class="datoCel"><h3 class="dato1Cel">Popularity: </h3><p class="dato2Cel">${peli.popularity}</p></article>
                                         <article class="datoCel"><h3 class="dato1Cel">Votes' average: </h3><p class="dato2Cel">${peli.vote_average}</p></article>
-                                        <article class="datoCel"><h3 class="dato1Cel">Sinopsis: </h3><p class="dato2Cel">${peli.overview}</p></article>                    
+                                        <article class="datoCel"><h3 class="dato1Cel">Overview: </h3><p class="dato2Cel">${peli.overview}</p></article>                    
                                         <section class="portadaCel">
                                             <img src="https://image.tmdb.org/t/p/w500${peli.poster_path}"/>
                                         </section>
@@ -116,13 +120,14 @@ window.addEventListener('load',function(){
                             </div>  
                                 
                                 `
-
+                                
                                 let botonMiLista = document.querySelector('.botonMiLista')
                                 let arrayMiListaDeFavoritas
                                 console.log(botonMiLista)
                                 botonMiLista.addEventListener('click', function(e){
                                     e.preventDefault()
-                            
+                                    alert('Added to favorites!')       
+                                    
                                     let miListadePeliculas = localStorage.getItem('miLista')
                                     console.log(miListadePeliculas + '-----------')
                                     if(miListadePeliculas === null){
@@ -136,73 +141,11 @@ window.addEventListener('load',function(){
                                     
                                 })
                                 
+                                
 
 
                         
 
     })
-    /*let botonMiLista = document.querySelector('.botonMiLista')
-    let arrayMiListaDeFavoritas;
-    console.log(botonMiLista);
-    JSON.stringify('botonMiLista')
-
-    
-    botonMiLista.addEventListener('click', function(e){
-            e.preventDefault()
-
-            let miListadePeliculas = localStorage.getItem('miLista')
-            if(miListadePeliculas == null){
-            arrayMiListaDeFavoritas = []
-            }else{
-                arrayMiListaDeFavoritas = JSON.parse(miListadePeliculas)
-            }
-            arrayMiListaDeFavoritas.push(JSON.parse(botonMiLista.id))
-            window.localStorage.setItem('miLista', JSON.stringify(arrayMiListaDeFavoritas))
-    
-    })*/
-    
-
-    /* DANI ACA INTENTAMOS HACERLO DE OTRA FORMA, PERO IGUAL NO NOS FUNCIONO (FORMA 2)
-    let miListadePeliculas = localStorage.getItem('miLista')
-    let favoritos = document.querySelector('.favs') //esto lo creamos en el html para internar traer el boton dirrecto de ahi
-    let arrayMiListaDeFavoritas = "";
-
-    if(miListadePeliculas === null){
-        arrayMiListaDeFavoritas = [];
-    }else{
-        arrayMiListaDeFavoritas = JSON.parse(miListadePeliculas)
-    }
-
-
-
-
-
-    favoritos.addEventListener('click', function(){
-        arrayMiListaDeFavoritas.push({
-            tipo: tipo,
-            id: id
-        })
-
-
-        localStorage.setItem('miLista', JSON.stringify(arrayMiListaDeFavoritas))
-
-    })
-    */
-
-
-
-
-    /*botonCriticas.addEventListener('mouseover', function(){
-        botonCriticas.style.textDecoration = 'underline'
-    })
-    botonCriticas.addEventListener('mouseout', function(){
-        botonCriticas.style.textDecoration = 'none'
-    })*/
-
-
-    //<a id= '${JSON.stringify(peli)}' href= '#' class="botonMiLista" onclick = agregar() >Agregar a mi Lista</a>  
-
-
-
 
 })

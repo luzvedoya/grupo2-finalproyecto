@@ -1,19 +1,19 @@
 let misPeliculasFavoritas =  JSON.parse( localStorage.getItem('miLista'))
 let lasMejoresSeries =  JSON.parse( localStorage.getItem('seriesFavs'))
 
-console.log(misPeliculasFavoritas);
-function sacarDeMiLista(idEliminar){
-    let miListaDeFavoritas = []
-    
-    for (let favorita of misPeliculasFavoritas) {
-        if(favorita.id != idEliminar){
-            miListaDeFavoritas.push(favorita)
+//console.log(misPeliculasFavoritas);
+    function sacarDeMiListaPeli(idEliminar){
+        let miListaDeFavoritas = []
+        
+        for (let favorita of misPeliculasFavoritas) {
+            if(favorita.id != idEliminar){
+                miListaDeFavoritas.push(favorita)
+            }
         }
-    }
-    localStorage.setItem('miLista', JSON.stringify(miListaDeFavoritas))
-    location.href = 'miLista.html'
+        localStorage.setItem('miLista', JSON.stringify(miListaDeFavoritas))
+        location.href = 'miLista.html'
 
-    }
+        }
 
 
     function sacarDeMiLista(idEliminar){
