@@ -52,12 +52,12 @@ window.addEventListener('load', function(){
     })
 
 
-    let sesion= document.querySelector('.sesion')
-    let datos = location.search;
-    let datosObjeto = new URLSearchParams('datos');
-    datosObjeto.get('nombre');
+    //let sesion= document.querySelector('.sesion')
+    //let datos = location.search;
+    //let datosObjeto = new URLSearchParams('datos');
+   // datosObjeto.get('nombre');
 
-    sesion.innerHTML = `Bienvenid@ ${datosObjeto.get('nombre')}`
+    //sesion.innerHTML = `Bienvenid@ ${datosObjeto.get('nombre')}`
     
 
     /*function bienvenida(nombre){

@@ -2,7 +2,7 @@ window.addEventListener('load', function(){
 
 //Aquí guardo el formulario con sus elementos
   //var registerForm = document.forms[0]
-  let fomulario = document.querySelector('.form');
+  /*let fomulario = document.querySelector('.form');
   formulario.elements.email.focus();
   console.log(formulario);
   //console.log(formulario.elements.email.value);
@@ -101,9 +101,9 @@ function validateRegisterForm() {
    
   }
   
+*/
 
-
-   /* 
+   
 let nombre = document.getElementById("name")
 let email = document.getElementById("email")
 let pass = document.getElementById("password")
@@ -135,5 +135,5 @@ form.addEventListener("submit", enviar=>{
         avisando.innerHTML = "Enviado"
     }
 })
-*/
+
 })

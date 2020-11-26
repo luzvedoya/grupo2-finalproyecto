@@ -245,13 +245,15 @@ li{
     text-decoration: underline;
 }
 
-.redes{
+.redes a{
     display: grid;
     align-items: center;
     text-align: center;
+    color: white;
     
-
 }
+
+
 h2 a{
     color:white;
     padding: 10px;
