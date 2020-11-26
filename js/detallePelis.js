@@ -117,31 +117,31 @@ window.addEventListener('load',function(){
                                 
                                 `
 
-                                /*let botonMiLista = document.querySelector('.botonMiLista')
+                                let botonMiLista = document.querySelector('.botonMiLista')
                                 let arrayMiListaDeFavoritas
                                 console.log(botonMiLista)
                                 botonMiLista.addEventListener('click', function(e){
-                                    //console.log('hola'+'-----------------------------')
-                                    //console.log(e)
                                     e.preventDefault()
                             
                                     let miListadePeliculas = localStorage.getItem('miLista')
-                                    if(miListadePeliculas == null){
+                                    console.log(miListadePeliculas + '-----------')
+                                    if(miListadePeliculas === null){
                                         arrayMiListaDeFavoritas = []
                                     }else{
                                          arrayMiListaDeFavoritas = JSON.parse(miListadePeliculas)
                                     }
-                                    arrayMiListaDeFavoritas.push(JSON.parse(botonMiLista.id))
+                                    //console.log(JSON.parse(peli))
+                                    arrayMiListaDeFavoritas.push(peli)
                                     localStorage.setItem('miLista', JSON.stringify(arrayMiListaDeFavoritas))
-                                
-                                })*/
+                                    
+                                })
                                 
 
 
                         
 
     })
-    let botonMiLista = document.querySelector('.botonMiLista')
+    /*let botonMiLista = document.querySelector('.botonMiLista')
     let arrayMiListaDeFavoritas;
     console.log(botonMiLista);
     JSON.stringify('botonMiLista')
@@ -159,7 +159,7 @@ window.addEventListener('load',function(){
             arrayMiListaDeFavoritas.push(JSON.parse(botonMiLista.id))
             window.localStorage.setItem('miLista', JSON.stringify(arrayMiListaDeFavoritas))
     
-    })
+    })*/
     
 
     /* DANI ACA INTENTAMOS HACERLO DE OTRA FORMA, PERO IGUAL NO NOS FUNCIONO (FORMA 2)
