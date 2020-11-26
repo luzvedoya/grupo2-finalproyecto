@@ -8,7 +8,6 @@
     
 }
 
-
 img{
     width: 100%;
 }
@@ -80,7 +79,17 @@ li{
 }
 
 
+
 /*CSS RESTOPAGINA*/
+
+
+
+#coverfotos{
+    height: 300px;
+    overflow: hidden;
+}
+
+
 .restopagina{
     background-color: rgb(1, 22, 39);
     padding-left: 0%;
@@ -266,9 +275,12 @@ h2 a{
     #svaloradas li{
         width: 12rem;
     }
-    
+    #carru{
+        height: 450px;
+        overflow: hidden;
+    }
     .covercover{
-        padding-bottom: 3rem;
+        padding-bottom: 0.5rem;
     }
 
     .subtituloHome{

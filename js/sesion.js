@@ -12,6 +12,7 @@ form.addEventListener("submit", enviar=>{
     let entrar = false
     let elEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{3})+$/
     avisando.innerHTML = ""
+
     if(nombre.value.length <1){
         aviso += `El nombre es invalido <br>`
         entrar = true
@@ -25,7 +26,7 @@ form.addEventListener("submit", enviar=>{
         entrar = true
     }
 
-    if(entrar){
+    if(entrar == true){
         avisando.innerHTML = aviso
     }else{
         avisando.innerHTML = "Enviado"
