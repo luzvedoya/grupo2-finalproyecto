@@ -59,13 +59,23 @@ li{
 .clickmenujs{
     display: block;  
 }
-.clickmenu .opciones li{
+.clickmenu .hhopciones li{
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.clickmenu .opciones li a{
+.clickmenu .hhopciones li a{
     text-decoration: none;
     color: white;
+}
+.estrellita{
+    color: white;
+    font-size: 1.3rem;
+}
+.film{
+    color: white;
+    font-size: 1.3rem;
+    top: 6px;
+
 }
 /*RESTOPAGINA*/
 .restopagina{
@@ -78,24 +88,44 @@ li{
     color: white;
     font-size: 3rem;
     text-align: center;
+    padding-bottom: 1rem;
 }
 .integrantes{
     color: white;
     font-size: 2rem;
-    text-align: centen;
+    text-align: center;
     cursor: pointer;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
 }
 .descripcion{
     color: white;
     font-size: 1.2rem;
     text-align: center;
 }
-/*FOOTER*/
+.nombresi{
+    display: grid;
+
+}
+.nombresi li{
+    grid-template-rows: auto ;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-right: 1.7rem;
+
+}
+.centrar{
+    text-align: center;
+}
+/*CSS FOOTER*/
+
 .footer{
     display: grid;
     background-color: rgb(33, 37, 41);
     width: 100%;
-    
+    border-top: 4px solid white;
+    margin-top: 0;
 }
 
 .logo{
@@ -108,14 +138,14 @@ li{
    
 
 }
+
 .logo2{
     display: grid;
     height: 4.5rem;
     width: 4rem;
-    margin-top: 1.5rem;
     text-align: center;
     align-items: center;
-   
+    margin-left: 8rem;
 
 }
 
@@ -176,6 +206,8 @@ h2 a{
     margin-top: 0%;
     margin-bottom: 0%;
 }
+
+
 @media (min-width: 1024px){
     /*HEADER*/
     .celular{
@@ -210,13 +242,16 @@ h2 a{
         
     }
     .titulo{
-        font-size: 3rem;
+        font-size: 4rem;
     }
     .integrantes{
-        font-size: 2rem;
+        font-size: 3rem;
     }
     .descripcion{
         font-size: 1.2rem;
+    }
+    .nombresi li{
+        font-size: 1.5rem;
     }
 
     /*FOOTER*/
