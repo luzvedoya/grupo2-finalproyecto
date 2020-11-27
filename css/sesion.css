@@ -72,6 +72,12 @@ li{
     color: white;
 }
 
+
+
+
+
+
+
 /*SESION*/
 
 .sesion{
@@ -85,7 +91,7 @@ li{
 .forms{
     width: 18rem;
     text-align: center;
-    height: 36rem;
+    height: 38rem;
     background: white;
     padding: 40px 0;
     box-shadow: 0 0 12px 0 rgba(255, 255, 255, 0.8);
@@ -138,6 +144,12 @@ li{
     
     
 }
+.errores{
+    color: rgb(1, 22, 39);
+    font-size: 19px;
+    
+}
+
 
 /*Para que cuando input esté en focus, su hermano "palabra" que es label, como a palabra le di 10, cuando toque el imput, este label va a quedar 4 pixeles arriba del imput*/
 
@@ -285,9 +297,10 @@ h2 a{
 
 /*HEADER*/
 
-.hcelular{
+    .hcelular{
     display: none;
     }
+
     .desktoph{
         display: block;
         display: grid;

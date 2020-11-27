@@ -95,7 +95,8 @@
 
     <!--SESION-->
         <section class="sesion">
-        <form class="form" action="home.html" method="GET" id="form">
+            
+        <form id="formulario"  class="form" name="formRegistro" novalidate action="home.html"  method="GET">
             <div class="forms">
                 <h1 class="titulo">Log in</h1>
 
@@ -104,6 +105,7 @@
                     <input class="inputs" type="text" name="nombre" id="name" >
                     <hr color="rgb(1, 22, 39)"></hr>
                 </div>
+                <div class="errores" id="avison"></div>
                 
 
                 <div class="completa">
@@ -111,6 +113,7 @@
                     <input class="inputs" type="email" name="mail" id="email" >
                     <hr color="rgb(1, 22, 39)"></hr>
                 </div>
+                <div class="errores" id="avisoe"></div>
                 
 
                 <div class="completa">
@@ -118,10 +121,12 @@
                     <input class="inputs" type="password" name="contraseña" id="password" >
                     <hr color="rgb(1, 22, 39)"></hr>
                 </div>
+                <div class="errores" id="avisop"></div>
                 
                 
                 <button class="boton" type="submit">Log in</button>
-                <div id="aviso"></div>
+                
+                
             
             </div>
         </form>
@@ -162,7 +167,9 @@
 
     </main>
 
-    <script src ="js/header.js"></script>
+
+    <script src="js/header.js"></script>
+    <script src ="js/home.js"></script>
     <script src="js/soloBuscador.js"></script>
     <script src ="js/sesion.js"></script>
     

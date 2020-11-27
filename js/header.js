@@ -51,15 +51,10 @@ window.addEventListener('load', function(){
         hopcioncitas4.style.textDecoration = 'none'
     })
 
-
-    //let sesion= document.querySelector('.sesion')
-    //let datos = location.search;
-    //let datosObjeto = new URLSearchParams('datos');
-   // datosObjeto.get('nombre');
-
-    //sesion.innerHTML = `Bienvenid@ ${datosObjeto.get('nombre')}`
     
 
+    
+    
     /*function bienvenida(nombre){
         let nombreRegistrado = "Martina";
         if(nombre == nombreRegistrado){
