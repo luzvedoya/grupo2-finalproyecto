@@ -76,27 +76,31 @@ img{
 
 
 /*RESTOPAGINA*/
-.articulo{
-    min-height: 400px;
-}
-.articulo img{
-    min-height: 400px;
-}
+
 .restopagina{
     background-color: rgb(1, 22, 39);
-    padding-top: 7rem;
+    padding-top: 2rem;
     padding-bottom: 23rem;
 }
 .titulolista{
     color: white;
     text-align: center;
+    font-size: 3rem;
 
 }
+
 .peliculas{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr  ;
+    gap: 10px;
+    padding-bottom: 1rem;
+}
+.series{
+    display: grid;
+    grid-template-columns: 1fr 1fr  ;
     gap: 10px;
 }
+
 
 
 
@@ -219,6 +223,16 @@ h2 a{
         margin-top: 1.5rem;
     }
     /*RESTOPAGINA*/
+    .peliculas{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+        gap: 30px;
+    }
+    .series{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+        gap: 30px;
+    }
     /*FOOTER*/
     .footer{
         display: flex;

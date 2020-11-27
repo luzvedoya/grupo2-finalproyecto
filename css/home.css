@@ -144,11 +144,13 @@ li{
 
 
 /*CSS FOOTER*/
+
 .footer{
     display: grid;
     background-color: rgb(33, 37, 41);
     width: 100%;
-    
+    border-top: 4px solid white;
+    margin-top: 0;
 }
 
 .logo{
@@ -161,18 +163,15 @@ li{
    
 
 }
+
 .logo2{
     display: grid;
     height: 4.5rem;
     width: 4rem;
-    margin-top: 1.5rem;
     text-align: center;
     align-items: center;
+    margin-left: 8rem;
 
-}
-
-.fotuli2{
-    text-align: center;
 }
 
 .fotuli{
@@ -233,10 +232,6 @@ h2 a{
     margin-bottom: 0%;
 }
 
-.copyright h6{
-    color: white;
-    font-size: 9px;
-}
 
 
 /*Media Queries*/
