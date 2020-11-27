@@ -37,7 +37,7 @@ function validateRegisterForm() {
       return false;
     
     } else{
-      avison.innerHTML = ""; 
+      errorn.innerHTML = ""; 
       formulario.elements.email.focus(); 
       return true;
     }
@@ -82,19 +82,6 @@ function validateRegisterForm() {
 
 
 
-/*let datos =location.search
-let datosObjetos = new URLSearchParams(datos)
-let nombre = datosObjetos.get('nombre')
-consonle.log (nombre);
-let nombreUsuario = document.querySelector ('.nombreUs')
-nombreUsuario.innerHTML = nombre 
-let log = document.getElementById('hopcioncitas4')
-if (nombre != undefined){
-  log.style.display = 'block'
-}else{
-  log.style.display = 'none'
-}
-console.log(log);
-*/
+
   
 })

@@ -100,7 +100,7 @@ window.addEventListener('load',function(){
                                     </article>
                                     <article class="datos"><h3 class="dato1">Release date: </h3><p class="dato2">${serie.first_air_date}</p></article>
                                     <article class="datos"><h3 class="dato1">Seasons: </h3><p class="dato2">${serie.number_of_seasons}</p></article>
-                                    <article class="datos"><h3 class="dato1">Episodes:: </h3><p class="dato2">${serie.number_of_episodes}</p></article>
+                                    <article class="datos"><h3 class="dato1">Episodes: </h3><p class="dato2">${serie.number_of_episodes}</p></article>
                                     <article class="datos"><h3 class="dato1">Popularity: </h3><p class="dato2">${serie.popularity}</p></article>
                                     <article class="datos"><h3 class="dato1">Votes' average: </h3><p class="dato2">${serie.vote_average}</p></article>
                                     <article class="datos"><h3 class="dato1">Overview: </h3><p class="dato2">${serie.overview}</p></article>
