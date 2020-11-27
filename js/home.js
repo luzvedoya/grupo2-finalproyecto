@@ -8,20 +8,7 @@ window.addEventListener('load', function(){
     let peliculas = document.querySelector('.peliculas')
 
 
-    /*fetch('https://api.themoviedb.org/3/trending/all/day?api_key=3fdb6796a354372e7fda65df33ed0329')
-    .then(respuesta =>{
-        return respuesta.json()
-    })
-    .then(function (coverFotoss) {
-        for (let i = 0; i < coverFotoss.results.length; i++) {
-            coverfotos.innerHTML += `<li>
-            <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
-            <img class="showfotos" src="https://image.tmdb.org/t/p/w500${coverFotoss.results[i].backdrop_path}" alt="${coverFotoss.results[i].title}" uk-cover>
-            </div>
-        </li>
-        `         
-        }
-    })*/
+    //traemos las peliculas para los carousels
     fetch('https://api.themoviedb.org/3/movie/popular?api_key=18581b65b3e6ad002984aa4952878117&language=en-US&page=1')
     .then(respuesta =>{
         return respuesta.json()
@@ -39,24 +26,7 @@ window.addEventListener('load', function(){
             </li>
             ` 
         }
-        /*let botonMiLista = document.querySelectorAll('.botonMiLsta')
-        let arrayMiListaDeFavoritas;
-        //console.log(botonMiLista)
-        botonMiLista.forEach(pelicula => {
-            pelicula.addEventListener('click', function(e){
-                e.preventDefault()
-                let miListadePeliculas = localStorage.getItem('miLista')
-                if(miListadePeliculas == null){
-                    arrayMiListaDeFavoritas = [];
-                }else{
-                    arrayMiListaDeFavoritas = JSON.parse(miListadePeliculas)
-                }
-                arrayMiListaDeFavoritas.push(JSON.parse(this.id))
-                localStorage.setItem('miLista', JSON.stringify(arrayMiListaDeFavoritas))
 
-            } )
-
-        });*/
 
     })
 
@@ -75,25 +45,7 @@ window.addEventListener('load', function(){
                 </a>
              </div> </li> `
         }
-        /*let botonMiListaa = document.querySelectorAll('.botonMiLstaa')
-        let arrayMiListaDeFavoritass;
-        console.log(botonMiListaa)
-        botonMiListaa.forEach(peliculaa => {
-            peliculaa.addEventListener('click', function(e){
-                e.preventDefault()
-                let miListadePeliculass = localStorage.getItem('miLista')
-                if(miListadePeliculass == null){
-                    arrayMiListaDeFavoritass = [];
-                }else{
-                    arrayMiListaDeFavoritass = JSON.parse(miListadePeliculass)
-                }
-                arrayMiListaDeFavoritass.push(JSON.parse(this.id))
-                localStorage.setItem('miLista', JSON.stringify(arrayMiListaDeFavoritass))
-                
 
-            } )
-
-        });*/
     })
     fetch('https://api.themoviedb.org/3/tv/popular?api_key=18581b65b3e6ad002984aa4952878117&language=en-US&page=1')
     .then(respuesta =>{
@@ -110,23 +62,7 @@ window.addEventListener('load', function(){
                 </a> 
                  </div> </li> `
         }
-        /*let botonMiLista2 = document.querySelectorAll('.botonMiLsta2')
-        let arrayMiListaDeFavoritas2;
-        //console.log(botonMiLista)
-        botonMiLista2.forEach(pelicula2 => {
-            pelicula2.addEventListener('click', function(e){
-                e.preventDefault()
-                let miListadePeliculas2 = localStorage.getItem('miLista2')
-                if(miListadePeliculas2 == null){
-                    arrayMiListaDeFavoritas2 = [];
-                }else{
-                    arrayMiListaDeFavoritas2 = JSON.parse(miListadePeliculas2)
-                }
-                arrayMiListaDeFavoritas2.push(JSON.parse(this.id))
-                localStorage.setItem('miLista2', JSON.stringify(arrayMiListaDeFavoritas2))
 
-            })
-        });*/
 
     })
     fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=3fdb6796a354372e7fda65df33ed0329&language=en-US&page=1')
@@ -149,4 +85,4 @@ window.addEventListener('load', function(){
 
 
 })
-// `` < > 18581b65b3e6ad002984aa4952878117
+

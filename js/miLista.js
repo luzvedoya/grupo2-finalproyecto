@@ -1,13 +1,7 @@
 window.addEventListener('load', function(){
     let miListaDeFavoritas =  JSON.parse(localStorage.getItem('miLista'))
     let seriesFavoritas = JSON.parse(localStorage.getItem('seriesFavs'))
-    //let nuestrosFavoritos = location.search;
-    //let nuestrosFavoritosObjeto = new URLSearchParams(nuestrosFavoritos);
-    //let id = nuestrosFavoritosObjeto.get("id");
 
-    //let misFavoritos = document.querySelector(".todosLosFavoritos")
-    //let miListadePeliculas = JSON.parse(localStorage.getItem("miLista"))
-    //console.log(miListadePeliculas);
 
 
 
