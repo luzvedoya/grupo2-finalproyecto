@@ -17,19 +17,28 @@ window.addEventListener('load',function(){
     })
     .then(function(reviews){
         //console.log(reviews);
-        reviews.results.forEach(review => {
-           critica.innerHTML += `
+
+            if (reviews.results == 0) {
+                critica.innerHTML += `<div class="noReview"><h2>No reviews yet</h2></div>`
+
+                
+            }else{
+                reviews.results.forEach(review => {
+                 critica.innerHTML += `
                     <div class="parteCritica">
                         <article class="datosCritica"><h3 class="dato1">Author:</h3><p class="dato2Critica">${review.author}</p></article>
                         <article class="datosCritica"><h3 class="dato1">Puntuation:</h3><p class="dato2Critica">${review.author_details.rating}</p></article>
                         <p class="infoCritica">${review.content}</p>
                     </div>
-           `
-        });
+                    `
+                })
+            }
+
     })
     .catch(function(error){
         console.log(error)
     })
+    
     
     //RECORRO EL TRAILER
     fetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=18581b65b3e6ad002984aa4952878117&language=en-US&page=1`)
@@ -74,11 +83,11 @@ window.addEventListener('load',function(){
         })*/
 
         let generos = ''
-                                peli.genres.forEach(genero => { 
-                                    //console.log(genero);
-                                    generos += `<a href="detalleGeneros.html?id= ${genero.id}&name=${genero.name}">
-                                    <p class="dato2">${genero.name}</p>
-                                </a>`
+        peli.genres.forEach(genero => { 
+            //console.log(genero);
+            generos += `<div class="todaParteGeneros"><a href="detalleGeneros.html?id= ${genero.id}&name=${genero.name}" class="infoGeneross">
+                                    <p class="dato2Generos">${genero.name}</p>
+                                </a></div>`
                                     
                                     //console.log(idGenero);
                                     //console.log(nombreGenero);
@@ -104,7 +113,7 @@ window.addEventListener('load',function(){
                                         <section class="info">
 
                                         <article class="datos"><h3 
-                                            <article class="datos">
+                                            <article class="datosGeneros">
                                                 <h3 class="dato1">Genre: </h3> 
                                                 <div id="geneross">${generos}</div>
                                                 
