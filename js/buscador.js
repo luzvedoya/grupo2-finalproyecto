@@ -50,15 +50,15 @@ window.addEventListener('load', function(){
     })
 
 
-    //capturo el boton que contiene el select       
+    //capturo el boton      
     let elBoton = document.querySelector('.elBoton')
 
-    //Pongo en escucha cambios en el boton
+    //BOTON
     elBoton.addEventListener("change", function(){
         let lista = document.querySelector('.listaPeliculas')
         lista.innerHTML = ""
 
-        //Queremos ver el value del select para ver que mostrarle al usuario
+        //VEMOS EL VALUE
         if (elBoton.value === "peliculas") {
             fetch(`https://api.themoviedb.org/3/search/multi?api_key=18581b65b3e6ad002984aa4952878117&language=en-US&query=${loBuscado}&page=1&include_adult=false`)
             .then(function(response){
@@ -71,7 +71,7 @@ window.addEventListener('load', function(){
                 info.results.forEach(element => {
                     console.log(element.media_type)
 
-                    if (element.media_type == "movie") { //se fija si lo trajo son peliculas, las muestra
+                    if (element.media_type == "movie") { //PELICULAS
                         lista.innerHTML += `<a href='detallePelis.html?id=${element.id}'
                         <div class="resultadoBuscador">
                             <img src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt="${element.title}"/>
@@ -91,7 +91,7 @@ window.addEventListener('load', function(){
 
 
 
-        }else if (elBoton.value === "series") { //le digo que mostrar si elige series
+        }else if (elBoton.value === "series") { //series
             fetch(`https://api.themoviedb.org/3/search/multi?api_key=18581b65b3e6ad002984aa4952878117&language=en-US&query=${loBuscado}&page=1&include_adult=false`)
             .then(function(response){
                 return response.json()
@@ -124,7 +124,7 @@ window.addEventListener('load', function(){
 
 
 
-        }else{ //le digo que hacer cuando dice all
+        }else{ //all
             fetch(`https://api.themoviedb.org/3/search/multi?api_key=18581b65b3e6ad002984aa4952878117&language=en-US&query=${loBuscado}&page=1&include_adult=false`)
     .then(function(response){
         return response.json()

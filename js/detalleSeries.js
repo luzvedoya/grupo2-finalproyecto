@@ -51,7 +51,7 @@ window.addEventListener('load',function(){
                 trailer.innerHTML += `<div class="videoTrailer"><iframe class="videito" src="https://www.youtube.com/embed/${videos.results[0].key}?start=2" autoplay></iframe></div>`
          
             }else{
-                 trailer.innerHTML = `<h2 class="noVideo">No video</h2>`
+                 trailer.innerHTML = `<h2 class="noReview">No video</h2>`
             }
          
      })
