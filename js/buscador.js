@@ -1,6 +1,6 @@
 window.addEventListener('load', function(){
 
-    //el loader
+    //LOADER: le agrego class para que desaparezca cuando carga la pag
     document.getElementById('loader').classList.toggle('loader2');
 
     //query string
@@ -10,21 +10,20 @@ window.addEventListener('load', function(){
     //variables del html
     let buscador = document.querySelector('.buscador');
     let loBuscado = quieroBuscar.get('inputbuscador');
-    //let todoAvanzado = document.querySelector('.todoAvanzado');
-    //let opcionesSeleccionarDos= document.querySelector('.opcionesSeleccionarDos');
 
+
+    //Que quiero que pase cuando el usuario busque antes de poner los filtros
     fetch(`https://api.themoviedb.org/3/search/multi?api_key=18581b65b3e6ad002984aa4952878117&language=en-US&query=${loBuscado}&page=1&include_adult=false`)
     .then(function(response){
         return response.json()
     })
     .then(function(info){
-        console.log(info);
-        let listaDePeliculas = info.results;
-        let lista = document.querySelector('.listaPeliculas');
+        console.log(info)
+        let listaDePeliculas = info.results
+        let lista = document.querySelector('.listaPeliculas')
         
         info.results.forEach(element => {
-            //const element = info.results;
-            console.log(element.media_type);
+            console.log(element.media_type)
 
             if (element.media_type == "tv") {
                 lista.innerHTML +=  `<a href='detalleSeries.html?id=${element.id}'>
@@ -40,10 +39,6 @@ window.addEventListener('load', function(){
                     <h2 class="cadaTitulo">${element.title}</h2>
                 </div>
                 </a>
-                
-                
-                
-                
                 `
             }
             
@@ -51,15 +46,17 @@ window.addEventListener('load', function(){
 
     })
     .catch(function(error){
-        console.log(error);
+        console.log(error)
     })
 
 
-    let elBoton = document.querySelector('.elBoton');
+    //capturo el boton que contiene el select       
+    let elBoton = document.querySelector('.elBoton')
 
+    //Pongo en escucha cambios en el boton
     elBoton.addEventListener("change", function(){
-        let lista = document.querySelector('.listaPeliculas');
-        lista.innerHTML = "";
+        let lista = document.querySelector('.listaPeliculas')
+        lista.innerHTML = ""
 
         //Queremos ver el value del select para ver que mostrarle al usuario
         if (elBoton.value === "peliculas") {
@@ -69,11 +66,10 @@ window.addEventListener('load', function(){
             })
             .then(function(info){
                 console.log(info);
-                let listaDePeliculas = info.results;
+                let listaDePeliculas = info.results
                 
                 info.results.forEach(element => {
-                    //const element = info.results;
-                    console.log(element.media_type);
+                    console.log(element.media_type)
 
                     if (element.media_type == "movie") { //se fija si lo trajo son peliculas, las muestra
                         lista.innerHTML += `<a href='detallePelis.html?id=${element.id}'
@@ -90,7 +86,7 @@ window.addEventListener('load', function(){
 
             })
             .catch(function(error){
-                console.log(error);
+                console.log(error)
             })
 
 
@@ -101,12 +97,12 @@ window.addEventListener('load', function(){
                 return response.json()
             })
             .then(function(info){
-                console.log(info);
-                let listaDePeliculas = info.results;
+                console.log(info)
+                let listaDePeliculas = info.results
                 
                 info.results.forEach(element => {
                     //const element = info.results;
-                    console.log(element.media_type);
+                    console.log(element.media_type)
 
                     if (element.media_type == "tv") {
                         lista.innerHTML +=  `<a href='detalleSeries.html?id=${element.id}'>
@@ -120,7 +116,7 @@ window.addEventListener('load', function(){
 
             })
             .catch(function(error){
-                console.log(error);
+                console.log(error)
             })
 
 
@@ -128,19 +124,18 @@ window.addEventListener('load', function(){
 
 
 
-        }else{ //le digo que hacer cuando no tiene ningun filtro
+        }else{ //le digo que hacer cuando dice all
             fetch(`https://api.themoviedb.org/3/search/multi?api_key=18581b65b3e6ad002984aa4952878117&language=en-US&query=${loBuscado}&page=1&include_adult=false`)
     .then(function(response){
         return response.json()
     })
     .then(function(info){
-        console.log(info);
+        console.log(info)
         let listaDePeliculas = info.results;
-        let lista = document.querySelector('.listaPeliculas');
+        let lista = document.querySelector('.listaPeliculas')
         
         info.results.forEach(element => {
-            //const element = info.results;
-            console.log(element.media_type);
+            console.log(element.media_type)
 
             if (element.media_type == "tv") {
                 lista.innerHTML +=  `<a href='detalleSeries.html?id=${element.id}'>
@@ -163,70 +158,13 @@ window.addEventListener('load', function(){
 
     })
     .catch(function(error){
-        console.log(error);
+        console.log(error)
     })
 
 
         }
     })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //BUSCADOR
-    /*
-    fetch(`https://api.themoviedb.org/3/search/multi?api_key=18581b65b3e6ad002984aa4952878117&language=en-US&query=${loBuscado}&page=1&include_adult=false`)
-    .then(function(response){
-        return response.json()
-    })
-    .then(function(info){
-        console.log(info);
-        let listaDePeliculas = info.results;
-        let lista = document.querySelector('.listaPeliculas');
-        
-        info.results.forEach(element => {
-            //const element = info.results;
-            console.log(element.media_type);
-
-            if (element.media_type == "tv") {
-                lista.innerHTML +=  `<a href='detalleSeries.html?id=${element.id}'>
-                                        <div class="resultadoBuscador">
-                                            <img src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt="${element.name}"/>
-                                            <h2 class="cadaTitulo">${element.name}</h2>
-                                        </div>
-                                    </a>`
-            } if (element.media_type == "movie") {
-                lista.innerHTML += `<a href='detallePelis.html?id=${element.id}'
-                <div class="resultadoBuscador">
-                    <img src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt="${element.title}"/>
-                    <h2 class="cadaTitulo">${element.title}</h2>
-                </div>
-                </a>
-                
-                
-                
-                
-                `
-            }
-            
-        });
-
-    })
-    .catch(function(error){
-        console.log(error);
-    })
-
-    */
 
 
 })

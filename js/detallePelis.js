@@ -16,7 +16,7 @@ window.addEventListener('load',function(){
         return respuesta.json()
     })
     .then(function(reviews){
-        //console.log(reviews);
+        //console.log(reviews)
 
             if (reviews.results == 0) {
                 critica.innerHTML += `<div class="noReview"><h2>No reviews yet</h2></div>`
@@ -61,12 +61,7 @@ window.addEventListener('load',function(){
     })
     
 
-   //let populares = document.querySelector('.datoLista')
-
-    let nombreGenero = []
-    let idGenero = []
-
-    //INTENTO DE TRAER DESDE DETAILS
+    //TRAIGLO LA INFO DESDE DETAILS
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=18581b65b3e6ad002984aa4952878117&language=en-US`)
     .then(function(respuesta){
         return respuesta.json()
@@ -74,24 +69,14 @@ window.addEventListener('load',function(){
     .then(function(peli){
         //console.log(peli);
 
-        
-
-        /*peli.genres.forEach(genero => { 
-            let nombreGenero = genero.name
-            let idGenero = genero.id
-            
-        })*/
-
         let generos = ''
         peli.genres.forEach(genero => { 
             //console.log(genero);
-            generos += `<div class="todaParteGeneros"><a href="detalleGeneros.html?id= ${genero.id}&name=${genero.name}" class="infoGeneross">
+            generos += `<div class="todaParteGeneros">
+                            <a href="detalleGeneros.html?id= ${genero.id}&name=${genero.name}" class="infoGeneross">
                                     <p class="dato2Generos">${genero.name}</p>
-                                </a></div>`
-                                    
-                                    //console.log(idGenero);
-                                    //console.log(nombreGenero);
-                                    
+                            </a></div>`
+                             
                                 })
          
 
@@ -152,7 +137,8 @@ window.addEventListener('load',function(){
                             </div>  
                                 
                                 `
-                                
+
+                                //BOTON AGREGAR A MI LISTA                               
                                 let botonMiLista = document.querySelector('.botonMiLista')
                                 let arrayMiListaDeFavoritas
                                 console.log(botonMiLista)

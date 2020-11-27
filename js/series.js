@@ -1,10 +1,13 @@
 window.addEventListener('load', function(){
+
+    //CAPTURO LAS VARIABLES DEL HTML
     let seriesPopulares = document.querySelector('.seriesPopulares');
     let cadaSeriePopular = document.querySelector('.cadaSeriePopular');
     let aclamadasPor = document.querySelector('.aclamadasPor');
     let cadaAgregada = document.querySelector('.cadaAgregada');
     let cadaTitulo = document.querySelector('.cadaTitulo');
 
+    //TRAIGO LAS SERIES POPULARES
     fetch('https://api.themoviedb.org/3/tv/popular?api_key=18581b65b3e6ad002984aa4952878117&language=en-US&page=1')
     .then(function(respuesta){
         return respuesta.json()
@@ -27,6 +30,7 @@ window.addEventListener('load', function(){
         console.log(error)
     })
 
+    //TRAIGO LAS SERIES ACLAMADAS
     fetch('https://api.themoviedb.org/3/tv/top_rated?api_key=18581b65b3e6ad002984aa4952878117&language=en-US&page=1')
     .then(function(respuesta){
         return respuesta.json()
@@ -49,6 +53,7 @@ window.addEventListener('load', function(){
         console.log(error)
     })
 
+    //TRAIGO LAS SERIES AGREGADAS RECIENTEMENTE
     fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=18581b65b3e6ad002984aa4952878117&language=en-US&page=1')
     .then(function(respuesta){
         return respuesta.json()

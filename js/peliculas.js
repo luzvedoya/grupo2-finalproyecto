@@ -1,4 +1,6 @@
 window.addEventListener('load', function(){
+
+    //CAPTURO LAS VARIABLES DEL HTML
     let peliculasPopulares = document.querySelector('.peliculasPopulares');
     let cadaPeliPopu = document.querySelector('.cadaPeliPopu');
     let cadaTitulo = document.querySelector('.cadaTitulo');
@@ -8,19 +10,8 @@ window.addEventListener('load', function(){
     let proxima = document.querySelector ('.proxima');
 
 
-    //NECESITO TRAER LAS REVIEWS
-    /*fetch('https://api.themoviedb.org/3/review/{review_id}?api_key=18581b65b3e6ad002984aa4952878117')
-    .then(function(respuesta){
-        return respuesta.json()
-    })
-    .then(function(resenia){
-        console.log(resenia);
-    })
-    .catch(function(error){
-        console.log(error)
-    })*/
 
-
+    //TRAIGO LAS PELICULAS POPULARES
     fetch('https://api.themoviedb.org/3/movie/popular?api_key=18581b65b3e6ad002984aa4952878117&language=en-US&page=1')
     .then(function(respuesta){
         return respuesta.json()
@@ -42,6 +33,7 @@ window.addEventListener('load', function(){
     })
 
 
+    //TRAIGO LAS PELICULAS ACLAMADAS
     fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=18581b65b3e6ad002984aa4952878117&language=en-US&page=1')
     .then(function(respuesta){
         return respuesta.json()
@@ -63,6 +55,7 @@ window.addEventListener('load', function(){
 
     })
 
+    //TRAIGO LAS PROXIMAS
     fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=18581b65b3e6ad002984aa4952878117&language=en-US&page=1')
     .then(function(respuesta){
         return respuesta.json()

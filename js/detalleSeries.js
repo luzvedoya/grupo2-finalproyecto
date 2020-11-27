@@ -62,7 +62,7 @@ window.addEventListener('load',function(){
 
     
     
-
+    //TRAIGO LA INFO DESDE DETAIL 
    fetch(`https://api.themoviedb.org/3/tv/${id}?api_key=18581b65b3e6ad002984aa4952878117&language=en-US`)
    .then(function(respuesta){
        return respuesta.json()
@@ -132,6 +132,9 @@ window.addEventListener('load',function(){
                                 </div>
                             </div>  
                         `
+
+
+                        //BOTON AGREGAR A MI LISTA
                         let seriesBoton = document.querySelector('.seriesBoton')
                         let arraySeriesPreferidas
                         seriesBoton.addEventListener('click', function(event){
