@@ -2,6 +2,7 @@ window.addEventListener('load',function(){
     //VARIABLES DEL HTML Y QUERY STRING
     let detalle = document.querySelector('.detalle');
     let critica = document.querySelector('.critica');
+    let trailer = document.querySelector ('.trailer');
     let detalleSerie = location.search;
     let detalleSerieObjeto = new URLSearchParams(detalleSerie);
 
@@ -16,23 +17,48 @@ window.addEventListener('load',function(){
     })
     .then(function(reviews){
         console.log(reviews);
-        reviews.results.forEach(review => {
-           critica.innerHTML += `
-                    <div class="parteCritica">
-                        <article class="datosCritica"><h3 class="dato1">Author:</h3><p class="dato2Critica">${review.author}</p></article>
-                        <article class="datosCritica"><h3 class="dato1">Puntuation:</h3><p class="dato2Critica">${review.author_details.rating}</p></article>
-                        <p class="infoCritica">${review.content}</p>
-                    </div>
-           `
-        });
+
+        if (reviews.results == 0) {
+            critica.innerHTML += `<div class="noReview"><h2>No reviews yet</h2></div>`
+
+            
+        }else{
+            reviews.results.forEach(review => {
+             critica.innerHTML += `
+                <div class="parteCritica">
+                    <article class="datosCritica"><h3 class="dato1">Author:</h3><p class="dato2Critica">${review.author}</p></article>
+                    <article class="datosCritica"><h3 class="dato1">Puntuation:</h3><p class="dato2Critica">${review.author_details.rating}</p></article>
+                    <p class="infoCritica">${review.content}</p>
+                </div>
+                `
+            })
+        }
+        
     })
     .catch(function(error){
         console.log(error)
     })
 
+     //RECORRO EL TRAILER
+     fetch(`https://api.themoviedb.org/3/tv/${id}/videos?api_key=18581b65b3e6ad002984aa4952878117&language=en-US&page=1`)
+     .then(function(respuesta){
+         return respuesta.json()
+     })
+     .then(function(videos){
+         //console.log(videos);
+         
+            if (videos.results != 0) {
+                trailer.innerHTML += `<div class="videoTrailer"><iframe class="videito" src="https://www.youtube.com/embed/${videos.results[0].key}?start=2" autoplay></iframe></div>`
+         
+            }else{
+                 trailer.innerHTML = `<h2 class="noVideo">No video</h2>`
+            }
+         
+     })
+     .catch(function(error){
+         console.log(error)
+     })
 
-    //let nombreGenero = []
-    //let idGenero = []
 
     
     
@@ -45,8 +71,8 @@ window.addEventListener('load',function(){
 
     let generos = ''
     serie.genres.forEach(genero => { 
-        generos += `<a href="detalleGeneros.html?id= ${genero.id}&name=${genero.name}">
-        <p class="dato2">${genero.name}</p>
+        generos += `<div class="todaParteGeneros"><a href="detalleGeneros.html?id= ${genero.id}&name=${genero.name}" class="infoGeneross">
+        <p class="dato2Generos">${genero.name}</p></div>
     </a>`
         
     })
@@ -58,6 +84,7 @@ window.addEventListener('load',function(){
                                     <h1 class="tituloDesk">${serie.name}</h1>
                                     <div class="parteBotonCriticas">
                                         <a href="#criticas" class="botonCriticas">Read reviews</a>
+                                        <a href="#trailer" class="botonCriticas">Watch the trailer</a>
                                     </div>
                                 </div>
                                 <div class="todoDetalle">
@@ -86,6 +113,7 @@ window.addEventListener('load',function(){
                                     <h1 class="tituloCel">${serie.name}</h1>
                                     <div class="parteBotonCriticas">
                                         <a href="#criticas" class="botonCriticas">Read reviews</a>
+                                        <a href="#trailer" class="botonCriticas">Watch the trailer</a>
                                     </div>
                                     <section class="infoCel">
                                         <article class="datoCel"><h3 class="dato1Cel">Release date: </h3><p class="dato2Cel">${serie.first_air_date}</p></article>

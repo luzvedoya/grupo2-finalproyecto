@@ -108,7 +108,7 @@ li{
 }
 
 .portadaCel{
-    margin: 10px;
+    padding: 10px;
 }
 
 
@@ -131,6 +131,7 @@ li{
     text-align: center;
     font-size: 3rem;
     margin-bottom: 0px;
+    padding-top: 15px;
 }
 
 .datosCritica{
@@ -150,13 +151,72 @@ li{
     /*text-decoration: none;*/
     color: white;
     font-size: 1.25rem;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 .parteBotonCriticas{
     text-align: center;
     margin-bottom: 2rem;
 }
 
+.trailer{
+    background-color: rgb(1, 22, 39) ;
+}
 
+.tituloTrailer{
+    color: white;
+    text-align: center;
+    font-size: 3rem;;
+    padding-top: 15px;
+}
+
+.videoTrailer{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.noReview{
+    background-color: rgb(1, 22, 39) ;
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding-bottom: 1rem;
+}
+
+.todaParteGeneros{
+    color: white;
+
+}
+
+.infoGeneross{
+    color: white;
+}
+
+.dato2Generos{
+    color: white;
+    margin-top: 3px;
+    margin-left: 8px;
+
+}
+
+.seriesParteBotonGrande{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(1, 22, 39) ;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+#seriesBotonGrande{
+    width: 10rem;
+}
+
+#seriesBotonAdentro{
+    color: black;
+    text-decoration: none;
+}
 
 
 
@@ -325,6 +385,28 @@ h2 a{
         font-size: 1.75rem;
         text-align: center;
     }
+
+    .videito{
+        width: 560px;
+        height: 315px;
+    }
+    
+    .videoTrailer{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    #seriesBotonGrande{
+        width: 25rem;
+        height: 2rem;
+    }
+
+    #seriesBotonAdentro{
+        font-size: 1rem;
+    }
+    
 
 
  
