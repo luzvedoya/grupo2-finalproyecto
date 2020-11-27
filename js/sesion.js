@@ -1,15 +1,14 @@
 window.addEventListener('load', function(){
   
-//Aquí guardo el formulario con sus elementos
-  //var registerForm = document.forms[0]
+//Guardo el formulario con sus elementos
   let fomulario = document.querySelector('.form');
   formulario.elements.name.focus();
   console.log(formulario);
-  //console.log(formulario.elements.email.value);
+  
  
-//Aquí armo mi función para que se ejecute una vez que el usuario envie ó de enter en cada input
+//Función para que se ejecute una vez que el usuario envie ó de enter en cada input
   formulario.onsubmit = function(evento) {
-    //Aquí evito que por defecto se envie el formulario
+    //Evito que por defecto se envie el formulario
     //Si el formulario pasa las validaciones doy el ingreso al usuario
     if (!validateRegisterForm()) {
       evento.preventDefault()
@@ -20,13 +19,8 @@ window.addEventListener('load', function(){
 }
 //Esta es la función que valida todos los campos del formulario
 function validateRegisterForm() {
-  //Esta manera de programarlo en ECMA6, se llama destructuración de código.
-  let { name, email, password} = formulario.elements
-  //De esta forma se programaba antes del 2015
-  //email = registerForm.elements.email
-  //password = registerForm.elements.password
-  //Y así con cada una de las variables
-  //Esta es una forma mas corta de hacer un if simple  
+  let {name, email, password} = formulario.elements
+
   
   if (!validateName(name)) return false;
   if (!validateEmail(email)) return false;
@@ -36,43 +30,28 @@ function validateRegisterForm() {
  
   function validateName(name) {
     let errorn = document.getElementById('avison');
+    
     if (name.value.length < 5){
       errorn.innerHTML = "It must have more than 5 characters";
-      errorn.classList.add('alert-danger');
-      name.classList.add('is-invalid');
       return false;
+    
     } else{
-      avison.innerHTML = "";
-      errorn.classList.remove('alert-danger');
-      name.classList.remove('is-invalid');
-      name.classList.add('is-valid');
-      formulario.elements.email.focus();
+      avison.innerHTML = ""; //Si es mayor a 5 digitos, no hay texto
+      formulario.elements.email.focus(); //Entonces pasa el focus a email
       return true;
     }
 }
  
- 
- 
- 
   function validateEmail(email) {
-    let re = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+    let er = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
     let errore = document.getElementById('avisoe');
- 
- 
-    if (!re.test(email.value)){ 
-      
-      email.classList.add('is-invalid'); 
-      console.log(avisoe);
+    
+    if (!er.test(email.value)){ 
       errore.innerHTML= "You must write a valid email";
-      errore.classList.add('alert-danger');
-      //errorEmail.classList.add('alert-danger');
-     // email.addEventListener('change',cambioNombre);
     return false
+
   }else{
     errore.innerHTML= "";
-    errore.classList.remove('alert-danger');
-    email.classList.remove('is-invalid'); 
-    email.classList.add('is-valid');
     formulario.elements.password.focus()
     return true;
   }
@@ -84,61 +63,14 @@ function validateRegisterForm() {
  
     if (!rep.test(password.value)) {
       errorp.innerHTML = `You must write a valid password`;
-      errorp.classList.add('alert-danger');
-      password.classList.add('is-invalid');
       return false;  
  
     }else{
       errorp.innerHTML = "";
-      errorp.classList.remove('alert-danger');
-      password.classList.remove('is-invalid');
-      password.classList.add('is-valid');
-      formulario.elements.passwordRepeat.focus();
-      // swal('Error', 'Ingrese una contraseña válida', 'error')
       return true;
     }
- 
 
    
   }
   
-
-
-
-
-
-/*
-let nombre = document.getElementById("name")
-let email = document.getElementById("email")
-let pass = document.getElementById("password")
-let form = document.getElementById("form")
-let avisando = document.getElementById("aviso")
-
-form.addEventListener("submit", enviar=>{
-    enviar.preventDefault()
-    let aviso = ""
-    let entrar = false
-    let elEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{3})+$/
-    avisando.innerHTML = ""
-
-    if(nombre.value.length <1){
-        aviso += `El nombre es invalido <br>`
-        entrar = true
-    }
-    if(!elEmail.test(email.value)){
-        aviso += `El email es invalido <br>`
-        entrar = true
-    }
-    if(pass.value.length < 6){
-        aviso += `La contraseña es invalida <br>`
-        entrar = true
-    }
-
-    if(entrar == true){
-        avisando.innerHTML = aviso
-    }else{
-        avisando.innerHTML = "Enviado"
-    }
-})
-*/
 })
