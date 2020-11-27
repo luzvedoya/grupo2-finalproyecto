@@ -1,7 +1,7 @@
 window.addEventListener('load',function(){
    
     //GENEROS
-    //VARIABLES DEL HTML Y QUERY STRING
+
     let cadaGenerop =  document.querySelector('.cadaGenerop')
     let cadaGeneros =  document.querySelector('.cadaGeneros')
     
@@ -26,22 +26,18 @@ window.addEventListener('load',function(){
         //console.log(generos);
         generos.results.forEach(genero => {
             cadaGenerop.innerHTML += 
-            `<article class="adetalle"><a href='detallePelis.html?id=${genero.id}&titulo=${genero.title}&overview=${genero.overview}&popularity=${genero.popularity}&portada=${genero.poster_path}&fecha=${genero.release_date}&duracion=${genero.runtime}&votos=${genero.vote_average}&genero=${genero.genre_ids}'
+            `<article class="adetalle"><a href='detallePelis.html?id=${genero.id}'
                                     <div>
                                         <article class= "cadaUno"><img src="https://image.tmdb.org/t/p/w500${genero.poster_path}" alt="${genero.title}"/>
                                         <h2 class="cadaTitulo">${genero.title}</h2></article>
                                     </div>
                                     </a></article>`
 
-            //`<div class="cadaUno">
-            //<img src="https://image.tmdb.org/t/p/w500${genero.poster_path}" />
-            //<h2 class="gtitulo">${genero.title}</h2>
-            //</div>`
+           
 
         });
 
-        
-
+    
     
     })
     .catch(function(error){
@@ -63,21 +59,16 @@ window.addEventListener('load',function(){
         //console.log(generos);
         generos.results.forEach(genero => {
             cadaGeneros.innerHTML += 
-            `<article class="adetalle"><a href='detalleSeries.html?id=${genero.id}&titulo=${genero.name}&overview=${genero.overview}&popularity=${genero.popularity}&portada=${genero.poster_path}&fecha=${genero.release_date}&duracion=${genero.runtime}&votos=${genero.vote_average}&genero=${genero.genre_ids}'
+            `<article class="adetalle"><a href='detalleSeries.html?id=${genero.id}'
                                     <div>
                                         <article class= "cadaUno"><img src="https://image.tmdb.org/t/p/w500${genero.poster_path}" alt="${genero.title}"/>
                                         <h2 class="cadaTitulo">${genero.name}</h2></article>
                                     </div>
                                     </a></article>`
 
-            //`<div class="cadaUno">
-            //<img src="https://image.tmdb.org/t/p/w500${genero.poster_path}" />
-            //<h2 class="gtitulo">${genero.title}</h2>
-            //</div>`
+    
 
         });
-
-        
 
     
     })

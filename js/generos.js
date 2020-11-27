@@ -12,7 +12,7 @@ window.addEventListener('load', function(){
         return respuesta.json()
     })
     .then(function(generos){
-        console.log(generos);
+        console.log(generos)
         generos.genres.forEach(genero => {
             listaGeneros.innerHTML += 
             `<article class="adetalle"><a href="detalleGeneros.html?id= ${genero.id}&name=${genero.name}">

@@ -1,33 +1,34 @@
 window.addEventListener('load', function(){
   
-//Guardo el formulario con sus elementos
-  let fomulario = document.querySelector('.form');
-  formulario.elements.name.focus();
+
+  //Capturo el formulario 
+  let formulario = document.querySelector('.form'); 
+  formulario.elements.name.focus(); 
   console.log(formulario);
   
  
-//Función para que se ejecute una vez que el usuario envie ó de enter en cada input
-  formulario.onsubmit = function(evento) {
-    //Evito que por defecto se envie el formulario
-    //Si el formulario pasa las validaciones doy el ingreso al usuario
+//Función para cuando el usuario envie ó de enter en cada input
+  formulario.onsubmit = function(evento) { 
     if (!validateRegisterForm()) {
-      evento.preventDefault()
-    }else{
-      fomulario.submit()
+      evento.preventDefault() 
     }
  
 }
-//Esta es la función que valida todos los campos del formulario
+//Función para validar todos los campos del formulario
 function validateRegisterForm() {
   let {name, email, password} = formulario.elements
 
-  
+  //Cada campo en específico
+
   if (!validateName(name)) return false;
   if (!validateEmail(email)) return false;
   if (!validatePassword(password)) return false;
   return true;
   }
  
+
+  //NAME
+
   function validateName(name) {
     let errorn = document.getElementById('avison');
     
@@ -36,11 +37,14 @@ function validateRegisterForm() {
       return false;
     
     } else{
-      avison.innerHTML = ""; //Si es mayor a 5 digitos, no hay texto
-      formulario.elements.email.focus(); //Entonces pasa el focus a email
+      avison.innerHTML = ""; 
+      formulario.elements.email.focus(); 
       return true;
     }
 }
+
+
+//EMAIL
  
   function validateEmail(email) {
     let er = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
@@ -56,12 +60,15 @@ function validateRegisterForm() {
     return true;
   }
   }
+
+
+  //PASSWORD
  
   function validatePassword(password) {
-    let rep = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/
+    let exp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/
     let errorp = document.getElementById('avisop');
  
-    if (!rep.test(password.value)) {
+    if (!exp.test(password.value)) {
       errorp.innerHTML = `You must write a valid password`;
       return false;  
  
@@ -72,5 +79,22 @@ function validateRegisterForm() {
 
    
   }
+
+
+
+/*let datos =location.search
+let datosObjetos = new URLSearchParams(datos)
+let nombre = datosObjetos.get('nombre')
+consonle.log (nombre);
+let nombreUsuario = document.querySelector ('.nombreUs')
+nombreUsuario.innerHTML = nombre 
+let log = document.getElementById('hopcioncitas4')
+if (nombre != undefined){
+  log.style.display = 'block'
+}else{
+  log.style.display = 'none'
+}
+console.log(log);
+*/
   
 })
