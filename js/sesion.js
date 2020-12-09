@@ -7,18 +7,18 @@ window.addEventListener('load', function(){
   console.log(formulario);
   
  
-//Función para cuando el usuario envie ó de enter en cada input
+//Función para cuando el usuario envie, formulario entero.
   formulario.onsubmit = function(evento) { 
     if (!validateRegisterForm()) {
       evento.preventDefault() 
+    }else{
+      formulario.submit()
     }
  
 }
 //Función para validar todos los campos del formulario
 function validateRegisterForm() {
   let {name, email, password} = formulario.elements
-
-  //Cada campo en específico
 
   if (!validateName(name)) return false;
   if (!validateEmail(email)) return false;
@@ -65,7 +65,7 @@ function validateRegisterForm() {
   //PASSWORD
  
   function validatePassword(password) {
-    let exp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/
+    let exp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{5,}$/
     let errorp = document.getElementById('avisop');
  
     if (!exp.test(password.value)) {
@@ -80,21 +80,4 @@ function validateRegisterForm() {
    
   }
 
-
-
-/*let datos =location.search
-let datosObjetos = new URLSearchParams(datos)
-let nombre = datosObjetos.get('nombre')
-consonle.log (nombre);
-let nombreUsuario = document.querySelector ('.nombreUs')
-nombreUsuario.innerHTML = nombre 
-let log = document.getElementById('hopcioncitas4')
-if (nombre != undefined){
-  log.style.display = 'block'
-}else{
-  log.style.display = 'none'
-}
-console.log(log);
-*/
-  
 })
