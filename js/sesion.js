@@ -7,18 +7,18 @@ window.addEventListener('load', function(){
   console.log(formulario);
   
  
-//Función para cuando el usuario envie ó de enter en cada input
+//Función para cuando el usuario envie, formulario entero.
   formulario.onsubmit = function(evento) { 
     if (!validateRegisterForm()) {
       evento.preventDefault() 
+    }else{
+      formulario.submit()
     }
  
 }
 //Función para validar todos los campos del formulario
 function validateRegisterForm() {
   let {name, email, password} = formulario.elements
-
-  //Cada campo en específico
 
   if (!validateName(name)) return false;
   if (!validateEmail(email)) return false;
@@ -65,7 +65,7 @@ function validateRegisterForm() {
   //PASSWORD
  
   function validatePassword(password) {
-    let exp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/
+    let exp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{5,}$/
     let errorp = document.getElementById('avisop');
  
     if (!exp.test(password.value)) {
@@ -80,8 +80,11 @@ function validateRegisterForm() {
    
   }
 
+<<<<<<< HEAD
 
 
 
   
+=======
+>>>>>>> martina
 })
